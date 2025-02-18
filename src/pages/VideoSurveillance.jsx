@@ -1,7 +1,10 @@
-import React from "react";
+import Hero from "../components/products/video-servillance/Hero";
+
 
 const VideoSurveillance = () => {
-  return <div>VideoSurveillance</div>;
+  return <div>
+      <Hero/>
+  </div>;
 };
 
 export default VideoSurveillance;
