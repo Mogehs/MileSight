@@ -71,7 +71,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden p-4 sm:p-8">
+    <div className="relative h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Carousel container */}
       <div className="relative w-full">
         {/* Navigation buttons */}
