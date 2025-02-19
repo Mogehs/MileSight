@@ -1,13 +1,8 @@
 import AiVideo from "./AiVideo";
 import Whatshot from "./Whatshot";
 
-
 const Hero = () => {
-  return <div>
-
-        <AiVideo/>
-        <Whatshot/>
-  </div>
+  return <div></div>;
 };
 
 export default Hero;

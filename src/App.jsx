@@ -11,7 +11,7 @@ import CoCreatedProgram from "./pages/CoCreatedProgram";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
-    <Navbar />
+    {/* <Navbar /> */}
     <Outlet />
     <Footer />
   </div>
