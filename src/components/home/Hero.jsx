@@ -3,36 +3,34 @@ import "./Hero.css";
 
 const slides = [
   {
-    img: "/iot-sensing/iot-img-1.jpg",
-    title: "Digital Prism",
-    description:
-      "Where geometry meets art in a stunning display of light and form.",
+    img: "/home/bg.jpg",
+    title: "2025 New Product Launch Event",
+    description: "Feb - March 2025",
     gradient: "from-violet-500/40 to-purple-500/40",
-    type: "image", // Indicate the type of media
+    type: "image",
+    style: "text-white mt-5",
+    headStyle: "text-white mt-5",
+    pStyle: "text-white",
   },
   {
-    img: "/iot-sensing/iot-img-2.jpg",
-    title: "Digital Prism",
-    description:
-      "Where geometry meets art in a stunning display of light and form.",
+    img: "/home/Patient.jpg",
+    title: "Radar Fall Detection Center",
+    description: "Single Person Fall Detection System with Radar Technology",
     gradient: "from-violet-500/40 to-purple-500/40",
-    type: "image", // Indicate the type of media
+    pStyle: "text-[#333333]",
+    headStyle: "text-[#333333] mt-5",
+    type: "image",
   },
+
   {
-    video: "/iot-sensing/video1.mp4",
-    title: "Tech Haven",
-    description:
-      "Immerse yourself in the cutting edge of technology and innovation.",
-    gradient: "from-fuchsia-500/40 to-pink-500/40",
-    type: "video",
-  },
-  {
-    img: "/iot-sensing/iot-img-3.jpg",
+    img: "/home/developer-zone-banner-pc.jpg",
     title: "Neural Dreams",
     description:
       "AI-generated masterpieces that blur the line between human and machine creativity.",
     gradient: "from-pink-500/40 to-rose-500/40",
     type: "image",
+    headStyle: "text-white mt-5",
+    pStyle: "text-white",
   },
   {
     img: "/iot-sensing/iot-img-4.png",
@@ -41,6 +39,8 @@ const slides = [
       "AI-generated masterpieces that blur the line between human and machine creativity.",
     gradient: "from-pink-500/40 to-rose-500/40",
     type: "image",
+    pStyle: "text-[#333333]",
+    headStyle: "text-[#333333] mt-5",
   },
   {
     video: "/iot-sensing/video2.mp4",
@@ -48,6 +48,8 @@ const slides = [
     description: "Exploring the world of tomorrow with AI-powered creativity.",
     gradient: "from-blue-500/40 to-indigo-500/40",
     type: "video",
+    pStyle: "text-[#333333]",
+    headStyle: "text-[#333333] mt-5",
   },
 ];
 
@@ -58,7 +60,7 @@ export default function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 50000);
     return () => clearInterval(timer);
   }, [currentSlide]);
 
@@ -71,7 +73,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative md:h-[100vh] flex items-center justify-center overflow-hidden">
+    <div className="relative h-fit flex items-center justify-center overflow-hidden">
       {/* Carousel container */}
       <div className="relative w-full">
         {/* Navigation buttons */}
@@ -92,7 +94,7 @@ export default function Hero() {
         </button>
 
         {/* Carousel track */}
-        <div className="relative h-[400px] sm:h-[500px] md:h-[400px] overflow-hidden">
+        <div className="relative h-[400px] sm:h-[500px] md:h-[450px] overflow-hidden">
           {slides.map((slide, index) => (
             <div
               key={index}
@@ -122,13 +124,34 @@ export default function Hero() {
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${slide.gradient} mix-blend-overlay`}
                 ></div>
-                <div className="absolute inset-x-0 bottom-0 p-4 sm:p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-                  <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3">
+                <div className="absolute inset-x-0 top-14 p-4 left-18 sm:p-8">
+                  <h3
+                    className={` text-xl sm:text-2xl md:text-5xl font-bold mb-2 sm:mb-3 w-[40%] ${slide.headStyle}`}
+                  >
                     {slide.title}
                   </h3>
-                  <p className="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl">
+                  <p
+                    className={`text-sm sm:text-base md:text-lg max-w-lg  ${slide.style} ${slide.pStyle}`}
+                  >
                     {slide.description}
                   </p>
+                  {slide.title.includes("2025") && (
+                    <p
+                      className={`text-gray-200 text-sm sm:text-base md:text-lg max-w-lg ${slide.style}`}
+                    >
+                      <div className="flex gap-5 items-center text-[12px] mt-10">
+                        {["Enter IoT RoadMap", "Enter CCTV RoadMap"].map(
+                          (item) => (
+                            <>
+                              <button className="bg-blue-600 p-1 rounded-sm">
+                                {item}
+                              </button>
+                            </>
+                          )
+                        )}
+                      </div>
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
