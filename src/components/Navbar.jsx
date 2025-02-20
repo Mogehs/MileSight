@@ -16,20 +16,20 @@ export default function Navbar() {
   const [selectedLanguage, setSelectedLanguage] = useState("English");
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null); // Track active dropdown
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
   return (
     <div>
       <nav
         className="flex items-center justify-between bg-white text-black p-4 shadow-lg relative"
-        onMouseLeave={() => setActiveDropdown(null)} // Hide dropdown when leaving navbar
+        onMouseLeave={() => setActiveDropdown(null)}
       >
         <Link to="/">
           <div className="flex items-center">
             <img
-              src="/MileSightLogo.png"
+              src="/Nexyws.png"
               alt="Logo"
-              className="w-40 h-12 object-cover"
+              className="w-50 h-12 object-cover"
             />
           </div>
         </Link>
