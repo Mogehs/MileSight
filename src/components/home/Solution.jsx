@@ -39,7 +39,7 @@ const Solution = () => {
           and effective society.
         </p>
       </div>
-      <div className="bg-red-600 w-[90%] h-[20rem] mx-auto gap-2 overflow-auto flex">
+      <div className="w-[90%] h-[20rem] mx-auto gap-2 overflow-auto flex">
         {items.map((item, index) => (
           <>
             <div className="">
