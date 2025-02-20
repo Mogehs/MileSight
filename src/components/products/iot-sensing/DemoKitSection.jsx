@@ -1,5 +1,6 @@
 import React from "react";
 import ImageCarousel from "./ImageCarousel";
+import Carousel from "./Carousel";
 
 const data = [
   {
@@ -66,7 +67,7 @@ const data = [
 
 function DemoKitSection() {
   return (
-    <div className="mt-4 p-4">
+    <div id="lorawan-demo-kit" className="mt-4 p-4">
       <div
         className="p-4 relative inset-0 bg-cover bg-center z-0 flex flex-col"
         style={{ backgroundImage: "url('/iot-sensing/demo-bg-img.jpg')" }}
@@ -82,8 +83,9 @@ function DemoKitSection() {
             alt="not found"
           />
         </div>
-        <div className=" bg-[#fff] rounded-3xl mt-4">
+        <div className=" bg-white rounded-3xl mt-4">
           <ImageCarousel data={data} />
+          {/* <Carousel /> */}
         </div>
       </div>
       <div>
@@ -115,19 +117,19 @@ function DemoKitSection() {
             alt="not found"
           />
         </div>
-        <div className="flex md:flex-row flex-col justify-center gap-8 mt-12">
+        <div className="flex md:flex-row flex-col justify-center items-center gap-8 mt-12">
           <img
-            className="md:h-[14rem]"
+            className="md:h-[14rem] w-fit"
             src="/iot-sensing/demo-img-1.png"
             alt="not found"
           />
           <img
-            className="md:h-[14rem]"
+            className="md:h-[14rem] w-fit"
             src="/iot-sensing/demo-img-2.png"
             alt="not found"
           />
           <img
-            className="md:h-[14rem]"
+            className="md:h-[14rem] w-fit"
             src="/iot-sensing/demo-img-3.png"
             alt="not found"
           />
