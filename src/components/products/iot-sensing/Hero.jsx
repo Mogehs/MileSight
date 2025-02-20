@@ -71,7 +71,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden p-4 sm:p-8">
+    <div className="relative md:h-[100vh] flex items-center justify-center overflow-hidden">
       {/* Carousel container */}
       <div className="relative w-full">
         {/* Navigation buttons */}
@@ -92,7 +92,7 @@ export default function Hero() {
         </button>
 
         {/* Carousel track */}
-        <div className="relative h-[400px] sm:h-[500px] md:h-[600px] overflow-hidden">
+        <div className="relative h-[400px] sm:h-[500px] md:h-[400px] overflow-hidden">
           {slides.map((slide, index) => (
             <div
               key={index}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   return (
@@ -7,7 +8,7 @@ const Products = () => {
       <div className="w-full md:w-1/4 bg-gray-100 shadow-lg p-6">
         <ul className="space-y-4">
           <li className="text-gray-700 hover:text-blue-500 cursor-pointer text-[18px] font-base">
-            Iot Sensing
+            <Link to="/products/iot-sensing"> Iot Sensing</Link>
           </li>
           <li className="text-gray-700 hover:text-blue-500 cursor-pointer text-[18px] font-base">
             Video Surveillance

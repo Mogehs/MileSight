@@ -9,6 +9,7 @@ import Innovation from "./navbar/Innovation";
 import Company from "./navbar/Company";
 import Partners from "./navbar/Partenrs";
 import Resources from "./navbar/Resources";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [searchVisible, setSearchVisible] = useState(false);
@@ -23,14 +24,15 @@ export default function Navbar() {
         className="flex items-center justify-between bg-white text-black p-4 shadow-lg relative"
         onMouseLeave={() => setActiveDropdown(null)} // Hide dropdown when leaving navbar
       >
-        {/* Left Side - Logo */}
-        <div className="flex items-center">
-          <img
-            src="/MileSightLogo.png"
-            alt="Logo"
-            className="w-40 h-12 object-cover"
-          />
-        </div>
+        <Link to="/">
+          <div className="flex items-center">
+            <img
+              src="/MileSightLogo.png"
+              alt="Logo"
+              className="w-40 h-12 object-cover"
+            />
+          </div>
+        </Link>
 
         {/* Mobile Menu Button */}
         <button
@@ -47,21 +49,25 @@ export default function Navbar() {
           } absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none p-4 md:p-0 md:flex space-x-6 text-lg transition-all duration-300`}
         >
           {[
-            { label: "Products", component: <Products /> },
+            {
+              label: "Products",
+              component: <Products />,
+              link: "#",
+            },
             { label: "Solutions", component: <Solutions /> },
             { label: "Innovation", component: <Innovation /> },
             { label: "Company", component: <Company /> },
             { label: "Partners", component: <Partners /> },
             { label: "Resources", component: <Resources /> },
-          ].map(({ label, component }) => (
+          ].map(({ label, component, link }) => (
             <div
               key={label}
               className="relative inline-block"
               onMouseEnter={() => setActiveDropdown(label)}
             >
-              <a href="#" className="block md:inline hover:text-gray-600">
+              <Link to={link} className="block md:inline hover:text-gray-600">
                 {label}
-              </a>
+              </Link>
 
               {/* Full-Screen Dropdown Content */}
               {activeDropdown === label && (

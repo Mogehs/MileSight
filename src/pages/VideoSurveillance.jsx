@@ -9,19 +9,20 @@ import Support from "../components/products/video-servillance/Support";
 import Whatshot from "../components/products/video-servillance/Whatshot";
 
 
-
 const VideoSurveillance = () => {
-  return <div> 
-    <Hero />
-    <AiVideo />
-    <Whatshot />
-    <Innovation/>
-    <Solution/>
-    <Explore/>
-    <Integration/>
-    <Support/>
-    <ContactUs/>
-  </div>;
+  return (
+    <div>
+      <Hero />
+      <AiVideo />
+      <Whatshot />
+      <Innovation/>
+      <Solution/>
+      <Explore/>
+      <Integration/>
+      <Support/>
+      <ContactUs/>
+    </div>
+  );
 };
 
 export default VideoSurveillance;
