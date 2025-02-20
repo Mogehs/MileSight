@@ -25,7 +25,7 @@ const data = [
 
 function ControllerSection() {
   return (
-    <div className="mt-4 p-4">
+    <div id="lorawan-controller" className="mt-4 p-4">
       <div className="p-4 bg-[#f1f7ff] rounded-3xl">
         {" "}
         <h2 className="md:text-[3rem] text-[25px] text-center text-[#333]">

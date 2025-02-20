@@ -35,7 +35,7 @@ const data = [
 
 function GatewaySection() {
   return (
-    <div className="mt-4 p-4">
+    <div id="lorawan-gateway" className="mt-4 p-4">
       <div className="p-4">
         {" "}
         <h2 className="md:text-[3rem] text-[25px] text-center text-[#333]">

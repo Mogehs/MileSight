@@ -3,34 +3,50 @@ import { card1 } from "./data";
 
 function SensorCard1() {
   const [selectedSeries, setSelectedSeries] = useState("AM Series");
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   return (
     <div>
       {/* Section 1 */}
       <div className="bg-[#daecff] rounded-4xl p-4 mt-4">
         <div className="flex md:flex-row flex-col md:items-center justify-between">
           {/* Radio Buttons */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-3">
             {Object.keys(card1).map((series) => (
-              <div key={series} className="flex items-center">
+              <label
+                key={series}
+                htmlFor={series}
+                className={`flex items-center gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-300 
+                  ${
+                    selectedSeries === series
+                      ? "text-[#0299f4] font-semibold"
+                      : "text-black "
+                  }`}
+                onClick={() => setSelectedSeries(series)} // Ensure clicking applies styles
+              >
+                {/* ✅ This ensures the radio button remains filled when selected */}
                 <input
                   type="radio"
                   id={series}
                   name="sensor-series"
-                  className="w-4 h-4 text-blue-600 hover:cursor-pointer"
+                  className="hidden" // Hide default radio button
                   checked={selectedSeries === series}
-                  onChange={() => {
-                    setSelectedSeries(series);
-                    setCurrentImageIndex(0); // Reset image index when changing series
-                  }}
+                  onChange={() => setSelectedSeries(series)}
                 />
-                <label
-                  htmlFor={series}
-                  className="ms-2 text-sm hover:cursor-pointer"
+                {/* Custom radio button */}
+                <div
+                  className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all duration-300
+                    ${
+                      selectedSeries === series
+                        ? "bg-blue-600 border-blue-600"
+                        : "border-gray-400"
+                    }`}
                 >
-                  {series}
-                </label>
-              </div>
+                  {selectedSeries === series && (
+                    <div className="w-2.5 h-2.5 bg-white rounded-full"></div>
+                  )}
+                </div>
+                {series}
+              </label>
             ))}
           </div>
 
