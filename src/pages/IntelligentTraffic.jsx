@@ -1,7 +1,10 @@
-import React from "react";
+import TrafficIntelecence from "../components/products/intelligent-trafic/TrafficIntelecence";
+
 
 const IntelligentTraffic = () => {
-  return <div>IntelligentTraffic</div>;
+  return <div>
+    <TrafficIntelecence/>
+  </div>;
 };
 
 export default IntelligentTraffic;
