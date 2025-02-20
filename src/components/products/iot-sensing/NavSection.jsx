@@ -1,11 +1,11 @@
 import React from "react";
 import { FaGreaterThan } from "react-icons/fa6";
 
-function Section1() {
+function NavSection() {
   return (
-    <div>
-      <div className="btns text-[#666] flex justify-between items-center shadow-2xs">
-        <div className="flex items-center gap-8">
+    <div className=" md:sticky top-0 bg-white z-10">
+      <div className="btns text-[#666] flex justify-between items-center shadow-2xs py-8">
+        <div className="flex md:flex-row flex-col items-center gap-8">
           <button className="hover:text-[#0299f4] cursor-pointer">
             LoRaWAN® Sensor
           </button>
@@ -41,4 +41,4 @@ function Section1() {
   );
 }
 
-export default Section1;
+export default NavSection;

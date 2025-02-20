@@ -1,14 +1,24 @@
 import React from "react";
 import Hero from "../components/products/iot-sensing/Hero";
-import Section1 from "../components/products/iot-sensing/Section1";
-import Section2 from "../components/products/iot-sensing/Section2";
+import NavSection from "../components/products/iot-sensing/NavSection";
+import SensorSection from "../components/products/iot-sensing/SensorSection";
+import Gateway from "../components/products/iot-sensing/GatewaySection";
+import ControllerSection from "../components/products/iot-sensing/ControllerSection";
+import DisplaySection from "../components/products/iot-sensing/DisplaySection";
+import DemoKitSection from "../components/products/iot-sensing/DemoKitSection";
+import FormSection from "../components/products/iot-sensing/FormSection";
 
 const IoTSensing = () => {
   return (
     <div>
       <Hero />
-      <Section1 />
-      <Section2 />
+      <NavSection />
+      <SensorSection />
+      <Gateway />
+      <ControllerSection />
+      <DisplaySection />
+      <DemoKitSection />
+      <FormSection />
     </div>
   );
 };
