@@ -38,7 +38,7 @@ function FormSection() {
   };
 
   return (
-    <div className="p-4 my-20">
+    <div className="p-4">
       <div className="bg-[#f5f5f5] border border-[#d0d0d0] rounded p-4 md:px-[10rem] md:py-[2.5rem]">
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-10">
