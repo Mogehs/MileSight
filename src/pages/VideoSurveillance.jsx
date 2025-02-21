@@ -1,3 +1,4 @@
+import FormSection from "../components/products/iot-sensing/FormSection";
 import Hero from "../components/products/iot-sensing/Hero";
 import AiVideo from "../components/products/video-servillance/AiVideo";
 import ContactUs from "../components/products/video-servillance/ContactUs";
@@ -21,6 +22,7 @@ const VideoSurveillance = () => {
       <Integration/>
       <Support/>
       <ContactUs/>
+      <FormSection/>
     </div>
   );
 };

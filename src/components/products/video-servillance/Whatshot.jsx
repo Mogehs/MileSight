@@ -6,7 +6,8 @@ import cameraseries from "/VideoSurivilence/cameraseries.jpg";
 import one from "/VideoSurivilence/one.jpg";
 import threed from "/VideoSurivilence/threed.png";
 import { Card } from "./Cards";
-import { ChevronLeft, ChevronRight } from "lucide-react"; // Import icons
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 
 export default function Whatshot() {
     const sliderRef = useRef(null);
@@ -34,7 +35,7 @@ export default function Whatshot() {
 
     return (
         <div className="relative mt-10 ">
-            <h1 className="text-center font-semibold text-2xl sm:text-4xl">What's Hot</h1>
+            <h1 className="text-center font-semibold text-2xl sm:text-4xl">Whats Hot</h1>
 
             {/* Slider Container */}
             <div className="w-full sm:w-[90%] mx-auto mt-10 overflow-x-hidden h-[28rem] scrollbar-hide" ref={sliderRef}>

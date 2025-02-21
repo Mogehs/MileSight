@@ -11,8 +11,8 @@ export default function Inteligent() {
         }
     ]
   return (
-    <div className=' w-full h-[40vh] sm:h-[80vh] flex justify-center flex-col' style={{background:`url(${intelgent})`,backgroundSize:'cover'}}>
-        <div className=' flex justify-start items-center flex-col w-[40%] h-[50vh] '>
+    <div className=' w-full h-[60vh] sm:h-[80vh] flex justify-center flex-col' style={{background:`url(${intelgent})`,backgroundSize:'cover'}}>
+        <div className=' flex justify-start items-center flex-col w-full sm:w-[40%] h-[50vh] '>
                 {
                     data.map((item,index)=>(
                         <div className=' text-white px-10' key={index}>

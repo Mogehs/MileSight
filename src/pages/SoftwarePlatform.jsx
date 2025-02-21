@@ -1,7 +1,10 @@
-import React from "react";
+import MainLayout from "../components/products/software-platform/MainLayout";
+
 
 const SoftwarePlatform = () => {
-  return <div>SoftwarePlatform</div>;
+  return <div>
+      <MainLayout/>
+  </div>;
 };
 
 export default SoftwarePlatform;
