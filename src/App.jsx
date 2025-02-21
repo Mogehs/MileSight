@@ -8,7 +8,7 @@ import IntelligentTraffic from "./pages/IntelligentTraffic";
 import FiveGCellular from "./pages/FiveGCellular";
 import SoftwarePlatform from "./pages/SoftwarePlatform";
 import CoCreatedProgram from "./pages/CoCreatedProgram";
-
+import IntelligentTrafficSoluiton from "./pages/IntelligentTrafficSoluiton";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -31,6 +31,10 @@ const router = createBrowserRouter([
       { path: "/products/5g-cellular", element: <FiveGCellular /> },
       { path: "/products/softwware-platform", element: <SoftwarePlatform /> },
       { path: "/products/co-created", element: <CoCreatedProgram /> },
+      {
+        path: "/solutions/intelligent-traffic-solution",
+        element: <IntelligentTrafficSoluiton />,
+      },
     ],
   },
 ]);
