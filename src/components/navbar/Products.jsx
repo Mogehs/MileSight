@@ -11,22 +11,22 @@ const Products = () => {
             <Link to="/products/iot-sensing"> Iot Sensing</Link>
           </li>
           <li className="text-gray-700 hover:text-blue-500 cursor-pointer text-[18px] font-base">
-            Video Surveillance
+            <Link to="/products/video-surveillance">Video Surveillance</Link>
           </li>
           <li className="text-gray-700 hover:text-blue-500 cursor-pointer text-[18px] font-base">
-            Intelliget Traffic
+            <Link to="/products/intelligent-traffic">Intelliget Traffic</Link>
           </li>
           <li className="text-gray-700 hover:text-blue-500 cursor-pointer text-[18px] font-base">
-            Iot LoRaWAN® Series
+            <a href="/products/iot-sensing#lorawan">Iot LoRaWAN® Series</a>
           </li>
           <li className="text-gray-700 hover:text-blue-500 cursor-pointer text-[18px] font-base">
-            5G & Cellular Products
+            <Link to="/products/5g-cellular">5G & Cellular Products</Link>
           </li>
           <li className="text-gray-700 hover:text-blue-500 cursor-pointer text-[18px] font-base">
-            Software & Platform
+            <Link to="/products/software-platform">Software & Platform</Link>
           </li>
           <li className="text-gray-700 hover:text-blue-500 cursor-pointer text-[18px] font-base">
-            Co-Created Program
+            <Link to="/products/co-created">Co-Created Program</Link>
           </li>
         </ul>
       </div>
