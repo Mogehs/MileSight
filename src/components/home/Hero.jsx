@@ -124,9 +124,9 @@ export default function Hero() {
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${slide.gradient} mix-blend-overlay`}
                 ></div>
-                <div className="absolute inset-x-0 top-14 p-4 left-18 sm:p-8">
+                <div className="absolute inset-x-0 top-14 p-4 sm:left-18 sm:p-8">
                   <h3
-                    className={` text-xl sm:text-2xl md:text-5xl font-bold mb-2 sm:mb-3 w-[40%] ${slide.headStyle}`}
+                    className={` text-xl sm:text-2xl md:text-5xl font-bold mb-2 sm:mb-3 sm:w-[40%] ${slide.headStyle}`}
                   >
                     {slide.title}
                   </h3>
