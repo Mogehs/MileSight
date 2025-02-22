@@ -1,5 +1,5 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import IoTSensing from "./pages/IoTSensing";
@@ -8,10 +8,11 @@ import IntelligentTraffic from "./pages/IntelligentTraffic";
 import FiveGCellular from "./pages/FiveGCellular";
 import SoftwarePlatform from "./pages/SoftwarePlatform";
 import CoCreatedProgram from "./pages/CoCreatedProgram";
+import Navbar from "./components/Navbar";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
-    {/* <Navbar /> */}
+    <Navbar />
     <Outlet />
     <Footer />
   </div>
