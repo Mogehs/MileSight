@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import SensorCard1 from "./SensorCard1";
 import SensorCard2 from "./SensorCard2";
+import FloatingIcons from "../5g-cellular/FloatingIcons";
 
 function SensorSection() {
   const [selectedButton, setSelectedButton] = useState("By Product");
 
   return (
     <div id="lorawan-sensor" className="mt-4 p-4">
+      <FloatingIcons />
       <div className=" flex flex-col gap-2 items-center justify-center">
         <h2 className="md:text-[3rem] text-[25px]">LoRaWAN® Sensor</h2>
         <div className="toggle-buttons mt-2 bg-[#f5f6f7] rounded-4xl flex justify-between md:w-[40%] lg:w-[30%] sm:w-[50%]">
