@@ -5,7 +5,7 @@ const Solutions = () => {
   return (
     <div>
       {/* 4 Columns */}
-      <div className="flex justify-center items-center gap-8">
+      <div className="flex justify-center items-center gap-8 h-screen md:h-[15rem]">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
           {/* Column 1 */}
           <div>

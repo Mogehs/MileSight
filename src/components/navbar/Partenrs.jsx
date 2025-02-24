@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Partners = () => {
   return (
-    <div className="absolute left-0 w-full text-black shadow-lg bg-white py-8">
+    <div className="absolute left-0 w-full text-black shadow-lg bg-white py-8 h-screen md:h-[18rem]">
       <div className="max-w-[1200px] mx-auto px-6 flex flex-wrap md:flex-nowrap justify-start gap-12">
         {/* Column 1 */}
         <div className="w-full md:w-1/2">
