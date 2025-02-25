@@ -1,126 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+const solutionsData = [
+  ["Video Surveillance", "Smart Restroom", "Smart Space", "Smart Agriculture"],
+  [
+    "Intelligent Traffic Solution",
+    "Indoor Air Quality",
+    "People Counting",
+    "Space Occupancy",
+  ],
+  ["Smart Building", "Energy Efficiency", "Smart City", "Waste Management"],
+];
+
 const Solutions = () => {
   return (
-    <div>
-      {/* 4 Columns */}
-      <div className="flex justify-center items-center gap-8 h-screen md:h-[15rem]">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
-          {/* Column 1 */}
-          <div>
-            <ul className="space-y-5">
-              <li>
-                <Link
-                  to=""
-                  className="text-black text-[14px] sm:text-[16px] font-base hover:text-[#0299f4]"
-                >
-                  Video Surveillance
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to=""
-                  className="text-black text-[14px] sm:text-[16px] font-base hover:text-[#0299f4]"
-                >
-                  Smart Restroom
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to=""
-                  className="text-black text-[14px] sm:text-[16px] font-base hover:text-[#0299f4]"
-                >
-                  Smart Space
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to=""
-                  className="text-black text-[14px] sm:text-[16px] font-base hover:text-[#0299f4]"
-                >
-                  Smart Agriculture
-                </Link>
-              </li>
+    <div className="flex justify-center items-center h-fit bg-gray-50 p-6 absolute w-full z-50">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-16">
+        {solutionsData.map((column, colIndex) => (
+          <div key={colIndex}>
+            <ul className="space-y-4">
+              {column.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to=""
+                    className="text-gray-700 text-[15px] sm:text-[16px] hover:text-[#0299f4] transition-colors duration-300"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
-
-          {/* Column 2 */}
-          <div>
-            <ul className="space-y-5">
-              <li>
-                <Link
-                  to=""
-                  className="text-black text-[14px] sm:text-[16px] font-base hover:text-[#0299f4] text-nowrap"
-                >
-                  Intelligent Traffic Solution
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to=""
-                  className="text-black text-[14px] sm:text-[16px] font-base hover:text-[#0299f4]"
-                >
-                  Indoor Air Quality
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to=""
-                  className="text-black text-[14px] sm:text-[16px] font-base hover:text-[#0299f4]"
-                >
-                  People Counting
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to=""
-                  className="text-black text-[14px] sm:text-[16px] font-base hover:text-[#0299f4]"
-                >
-                  Space Occupancy
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 3 */}
-          <div>
-            <ul className="space-y-5">
-              <li>
-                <Link
-                  to=""
-                  className="text-black text-[14px] sm:text-[16px] font-base hover:text-[#0299f4]"
-                >
-                  Smart Building
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to=""
-                  className="text-black text-[14px] sm:text-[16px] font-base hover:text-[#0299f4]"
-                >
-                  Energy Efficiency
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to=""
-                  className="text-black text-[14px] sm:text-[16px] font-base hover:text-[#0299f4]"
-                >
-                  Smart City
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to=""
-                  className="text-black text-[14px] sm:text-[16px] font-base hover:text-[#0299f4]"
-                >
-                  Waste Management
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

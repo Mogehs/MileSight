@@ -1,58 +1,47 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+const partnersData = [
+  {
+    title: "Milesight Partner Ecosystem",
+    links: [
+      "Find a Technology Partner",
+      "Technology Partner Program",
+      "Find a Channel Partner",
+      "Channel Partner Program",
+      "Project Registration",
+      "IoT Collaboration Start Guide",
+    ],
+  },
+  {
+    title: "Developer Zone",
+    links: ["Developer Resource Hub", "Open Source", "Join the Community"],
+  },
+];
+
 const Partners = () => {
   return (
-    <div className="absolute left-0 w-full text-black shadow-lg bg-white py-8 h-screen md:h-[18rem]">
-      <div className="max-w-[1200px] mx-auto px-6 flex flex-wrap md:flex-nowrap justify-start gap-12">
-        {/* Column 1 */}
-        <div className="w-full md:w-1/2">
-          <Link to="" className="text-xl font-semibold mb-4 block">
-            Milesight Partner Ecosystem
-          </Link>
-          <ul className="mt-2 space-y-2">
-            {[
-              "Find a Technology Partner",
-              "Technology Partner Program",
-              "Find a Channel Partner",
-              "Channel Partner Program",
-              "Project Registration",
-              "IoT Collaboration Start Guide",
-            ].map((item, index) => (
-              <li key={index}>
-                <Link
-                  to=""
-                  className="block hover:text-[#0299f4] text-sm md:text-base font-medium transition duration-200"
-                >
-                  {item}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Column 2 */}
-        <div className="w-full md:w-1/2">
-          <Link to="" className="text-xl font-semibold mb-4 block">
-            Developer Zone
-          </Link>
-          <ul className="mt-2 space-y-2">
-            {[
-              "Developer Resource Hub",
-              "Open Source",
-              "Join the Community",
-            ].map((item, index) => (
-              <li key={index}>
-                <Link
-                  to=""
-                  className="block hover:text-[#0299f4] text-sm md:text-base font-medium transition duration-200"
-                >
-                  {item}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+    <div className="flex justify-center items-center h-fit bg-gray-50 p-6 absolute w-full z-50">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-16">
+        {partnersData.map((section, index) => (
+          <div key={index}>
+            <h2 className="text-lg sm:text-xl font-semibold mb-4">
+              {section.title}
+            </h2>
+            <ul className="space-y-4">
+              {section.links.map((item, linkIndex) => (
+                <li key={linkIndex}>
+                  <Link
+                    to=""
+                    className="text-gray-700 text-[15px] sm:text-[16px] hover:text-[#0299f4] transition-colors duration-300"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -1,92 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+const innovationData = [
+  ["Milesight D2D", "LoRaWAN®", "5G"],
+  ["AIoT", "AI VCA", "Image Processing"],
+  ["Heat Map", "Structure Design"],
+];
+
 const Innovation = () => {
   return (
-    <div>
-      {/* Grid Container */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 h-screen md:h-[8rem]">
-        {/* Column 1 */}
-        <div>
-          <ul className="space-y-4">
-            <li>
-              <Link
-                to=""
-                className="text-black text-[15px] font-base hover:text-[#0299f4] whitespace-nowrap"
-              >
-                Milesight D2D
-              </Link>
-            </li>
-            <li>
-              <Link
-                to=""
-                className="text-black text-[15px] font-base hover:text-[#0299f4] whitespace-nowrap"
-              >
-                LoRaWAN®
-              </Link>
-            </li>
-            <li>
-              <Link
-                to=""
-                className="text-black text-[15px] font-base hover:text-[#0299f4] whitespace-nowrap"
-              >
-                5G
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Column 2 */}
-        <div>
-          <ul className="space-y-4">
-            <li>
-              <Link
-                to=""
-                className="text-black text-[15px] font-base hover:text-[#0299f4] whitespace-nowrap"
-              >
-                AIoT
-              </Link>
-            </li>
-            <li>
-              <Link
-                to=""
-                className="text-black text-[15px] font-base hover:text-[#0299f4] whitespace-nowrap"
-              >
-                AI VCA
-              </Link>
-            </li>
-            <li>
-              <Link
-                to=""
-                className="text-black text-[15px] font-base hover:text-[#0299f4] whitespace-nowrap"
-              >
-                Image Processing
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Column 3 */}
-        <div>
-          <ul className="space-y-4">
-            <li>
-              <Link
-                to=""
-                className="text-black text-[15px] font-base hover:text-[#0299f4] whitespace-nowrap"
-              >
-                Heat Map
-              </Link>
-            </li>
-            <li>
-              <Link
-                to=""
-                className="text-black text-[15px] font-base hover:text-[#0299f4] whitespace-nowrap"
-              >
-                Structure Design
-              </Link>
-            </li>
-          </ul>
-        </div>
+    <div className="flex justify-center items-center h-fit bg-gray-50 p-6 absolute w-full z-50">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-16">
+        {innovationData.map((column, colIndex) => (
+          <div key={colIndex}>
+            <ul className="space-y-4">
+              {column.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to=""
+                    className="text-gray-700 text-[15px] sm:text-[16px] hover:text-[#0299f4] transition-colors duration-300"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
   );
