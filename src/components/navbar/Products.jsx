@@ -1,42 +1,51 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+const productLinks = [
+  { name: "IoT Sensing", path: "/products/iot-sensing" },
+  { name: "Video Surveillance", path: "/products/video-surveillance" },
+  { name: "Intelligent Traffic", path: "/products/intelligent-traffic" },
+  {
+    name: "IoT LoRaWAN® Series",
+    path: "/products/iot-sensing#lorawan",
+    external: true,
+  },
+  { name: "5G & Cellular Products", path: "/products/5g-cellular" },
+  { name: "Software & Platform", path: "/products/software-platform" },
+  { name: "Co-Created Program", path: "/products/co-created" },
+];
+
 const Products = () => {
   return (
-    <div className="flex flex-col md:flex-row bg-white min-h-screen md:min-h-0">
-      {/* Left Sidebar */}
-      <div className="w-full md:w-[20rem] bg-gray-100 shadow-lg p-6">
-        <ul className="space-y-4">
-          <li className="text-gray-700 hover:text-blue-500 cursor-pointer text-[18px] font-base text-nowrap" >
-            <Link to="/products/iot-sensing"> Iot Sensing</Link>
-          </li>
-          <li className="text-gray-700 hover:text-blue-500 cursor-pointer text-[18px] font-base text-nowrap">
-            <Link to="/products/video-surveillance">Video Surveillance</Link>
-          </li>
-          <li className="text-gray-700 hover:text-blue-500 cursor-pointer text-[18px] font-base text-nowrap">
-            <Link to="/products/intelligent-traffic">Intelliget Traffic</Link>
-          </li>
-          <li className="text-gray-700 hover:text-blue-500 cursor-pointer text-[18px] font-base text-nowrap">
-            <a href="/products/iot-sensing#lorawan">Iot LoRaWAN® Series</a>
-          </li>
-          <li className="text-gray-700 hover:text-blue-500 cursor-pointer text-[18px] font-base text-nowrap">
-            <Link to="/products/5g-cellular">5G & Cellular Products</Link>
-          </li>
-          <li className="text-gray-700 hover:text-blue-500 cursor-pointer text-[18px] font-base text-nowrap">
-            <Link to="/products/software-platform">Software & Platform</Link>
-          </li>
-          <li className="text-gray-700 hover:text-blue-500 cursor-pointer text-[18px] font-base text-nowrap">
-            <Link to="/products/co-created">Co-Created Program</Link>
-          </li>
+    <div className="flex flex-col md:flex-row bg-white h-fit z-50 w-full">
+      <div className="w-full md:w-[18rem] bg-gray-50 shadow-lg p-6">
+        <ul className="space-y-3">
+          {productLinks.map((item, index) => (
+            <li
+              key={index}
+              className="text-gray-700 hover:text-blue-500 transition-colors duration-300"
+            >
+              {item.external ? (
+                <a href={item.path} className="block py-1">
+                  {item.name}
+                </a>
+              ) : (
+                <Link to={item.path} className="block py-1">
+                  {item.name}
+                </Link>
+              )}
+            </li>
+          ))}
         </ul>
       </div>
 
-      {/* Right Content Area */}
-      <div className="w-full md:w-3/4 p-6">
-        <h1 className="text-2xl font-bold mb-4">Content Area</h1>
+      {/* Content Area */}
+      <div className="w-full md:flex-1 p-6">
+        <h1 className="text-xl md:text-2xl font-semibold mb-4">
+          Welcome to Products
+        </h1>
         <p className="text-gray-600">
-          This is the content area. When you click on a heading, you can display
-          related content here.
+          Explore our product categories by clicking on the menu items.
         </p>
       </div>
     </div>
@@ -44,5 +53,3 @@ const Products = () => {
 };
 
 export default Products;
-
-
