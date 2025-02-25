@@ -1,8 +1,9 @@
-import SmartBuilding from "../components/solutions/smart-building/SmartBuilding";
+import SmartBuild from "../components/solutions/smart-building/SmartBuild";
+
 const SmartBuilding = () => {
   return (
     <div>
-      <SmartBuilding />
+      <SmartBuild />
     </div>
   );
 };

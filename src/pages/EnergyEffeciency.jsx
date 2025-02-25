@@ -1,9 +1,9 @@
-import EnergyEffeciency from "../components/solutions/energy-effecieny/EnergyEffeciency";
+import EnEffeciency from "../components/solutions/energy-effecieny/EnEffeciency";
 
 const EnergyEffeciency = () => {
   return (
     <div>
-      <EnergyEffeciency />
+      <EnEffeciency />
     </div>
   );
 };
