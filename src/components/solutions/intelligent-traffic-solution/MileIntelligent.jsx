@@ -4,6 +4,7 @@ import Better from "./Better";
 import Diverse from "./Diverse";
 import DownloadPdf from "./DownloadPdf";
 import Enhanced from "./Enhanced";
+import Enriched from "./Enriched";
 import Gobeyond from "./Gobeyond";
 import OutStandingFea from "./OutStandingFea";
 import RoadEntPar from "./RoadEntPar";
@@ -19,6 +20,7 @@ const MileIntelligent = () => {
       <AiPowered/>
       <Diverse/>
       <Enhanced/>
+      <Enriched/>
       <VideoFuture/>
       <DownloadPdf/>
       <h1 className=" mt-5 text-center sm:text-4xl text-2xl font-semibold">Contact Us Today to Discuss Your Needs!</h1>

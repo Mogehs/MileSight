@@ -14,7 +14,7 @@ export default function RoadEntPar() {
     ];
 
     return (
-        <div className="mt-4 w-full h-[60vh] sm:h-[40vh] md:h-[45vh] lg:h-[40vh] xl:h-[70vh] relative flex flex-col items-center justify-center">
+        <div className="mt-4 w-full h-[50vh] sm:h-[50vh] md:h-[45vh] lg:h-[70vh]  relative flex flex-col items-center justify-center">
             {/* Navigation Section */}
             <div className="sm:w-11/12 mx-auto w-full left-[3%] shadow-lg rounded-lg absolute bottom-0">
                 <div className="flex w-full justify-around items-center">
@@ -29,7 +29,7 @@ export default function RoadEntPar() {
                             <div className="p-2 lg:p-4 rounded-full bg-blue-400 flex items-center justify-center text-white text-xl group-hover:text-black transition-all ease-in delay-75 group-hover:bg-gray-300">
                                 {item.icon}
                             </div>
-                            <h1 className="text-xs lg:text-xl group-hover:text-blue-500 transition-all ease-in delay-75 text-wrap">
+                            <h1 className="text-xs text-center lg:text-xl group-hover:text-blue-500 transition-all ease-in delay-75 text-wrap">
                                 {item.title}
                             </h1>
                         </div>
