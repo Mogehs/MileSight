@@ -12,6 +12,7 @@ import IntelligentTrafficSoluiton from "./pages/IntelligentTrafficSoluiton";
 import SmartRestroom from "./pages/SmartRestroom";
 import SmartBuilding from "./pages/SmartBuilding";
 import EnergyEffeciency from "./pages/EnergyEffeciency";
+import IndoorAirQuality from "./pages/IndoorAirQuality";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/solutions/intelligent-traffic-solution",
         element: <IntelligentTrafficSoluiton />,
+      },
+      {
+        path: "/solutions/indoor-air-quality-monitoring",
+        element: <IndoorAirQuality />,
       },
       {
         path: "/solutions/smart-building",
