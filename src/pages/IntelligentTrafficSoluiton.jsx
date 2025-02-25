@@ -1,4 +1,4 @@
-import React from "react";
+
 import MileIntelligent from "../components/solutions/intelligent-traffic-solution/MileIntelligent";
 
 const IntelligentTrafficSoluiton = () => {
