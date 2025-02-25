@@ -13,6 +13,7 @@ import SmartRestroom from "./pages/SmartRestroom";
 import SmartBuilding from "./pages/SmartBuilding";
 import EnergyEffeciency from "./pages/EnergyEffeciency";
 import IndoorAirQuality from "./pages/IndoorAirQuality";
+import { MenuProvider } from "./components/menueContext";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -52,7 +53,7 @@ const router = createBrowserRouter([
         element: <EnergyEffeciency />,
       },
       {
-        path: "/solutions/smart-city",
+        path: "/solutions/smart-restroom",
         element: <SmartRestroom />,
       },
     ],
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <MenuProvider>
+      <RouterProvider router={router} />;
+    </MenuProvider>
+  );
 }
 export default App;

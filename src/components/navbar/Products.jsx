@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useMenu } from "../menueContext";
 
 const productLinks = [
   { name: "IoT Sensing", path: "/products/iot-sensing" },
@@ -16,6 +17,7 @@ const productLinks = [
 ];
 
 const Products = () => {
+  const { closeMenu } = useMenu();
   return (
     <div className="flex flex-col md:flex-row bg-white h-fit z-50 w-full">
       <div className="w-full md:w-[18rem] bg-gray-50 shadow-lg p-6">
@@ -24,6 +26,7 @@ const Products = () => {
             <li
               key={index}
               className="text-gray-700 hover:text-blue-500 transition-colors duration-300"
+              onClick={closeMenu}
             >
               {item.external ? (
                 <a href={item.path} className="block py-1">

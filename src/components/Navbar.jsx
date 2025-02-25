@@ -1,12 +1,13 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { useMenu } from "./menueContext";
 import Products from "./navbar/Products";
 import Solutions from "./navbar/Solutions";
 import Innovation from "./navbar/Innovation";
 import Company from "./navbar/Company";
-import Partners from "./navbar/Partenrs";
+import Partners from "./navbar/Partners";
 import Resources from "./navbar/Resources";
+import { useState } from "react";
 
 const navLinks = [
   { name: "Products", path: "/products/iot-sensing", component: <Products /> },
@@ -33,16 +34,17 @@ const actionLinks = [
 ];
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const { menuOpen, toggleMenu, closeMenu } = useMenu(); // Use the menu context
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [mobileDropdown, setMobileDropdown] = useState(null);
 
   return (
     <>
       <nav
-        className="flex relative items-center justify-between bg-white text-black pr-1 sm:px-4 py-3 shadow-lg "
+        className="flex relative items-center justify-between bg-white text-black pr-1 sm:px-4 py-3 shadow-lg"
         onMouseLeave={() => setActiveDropdown(null)}
       >
-        <Link to="/">
+        <Link to="/" onClick={closeMenu}>
           <img
             src="/Nexyws.png"
             alt="Logo"
@@ -88,28 +90,41 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-2xl"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
+        <button className="md:hidden text-2xl" onClick={toggleMenu}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
         {/* Mobile Menu (Slide-in effect) */}
         <div
-          className={`absolute top-16 left-0 w-full bg-white shadow-md p-6 space-y-4 flex flex-col items-start transition-transform duration-300 z-100 h-screen ${
+          className={`absolute top-16 left-0 w-full bg-white shadow-md p-6 space-y-4 flex flex-col transition-transform duration-300 z-[200] h-screen overflow-y-auto ${
             menuOpen ? "translate-x-0" : "-translate-x-full"
           } md:hidden`}
         >
           {navLinks.map((item, index) => (
-            <Link
-              key={index}
-              to={item.path}
-              className="block text-lg hover:text-gray-600"
-              onClick={() => setMenuOpen(false)}
-            >
-              {item.name}
-            </Link>
+            <div key={index} className="w-full">
+              <button
+                onClick={() =>
+                  setMobileDropdown(
+                    mobileDropdown === item.name ? null : item.name
+                  )
+                }
+                className="flex justify-between items-center w-full text-lg hover:text-gray-600 py-2"
+              >
+                {item.name}
+                {mobileDropdown === item.name ? (
+                  <FaChevronUp />
+                ) : (
+                  <FaChevronDown />
+                )}
+              </button>
+
+              {/* Mobile Dropdown Menu */}
+              {mobileDropdown === item.name && item.component && (
+                <div className="bg-gray-100 rounded-md absolute w-full left-0">
+                  {item.component}
+                </div>
+              )}
+            </div>
           ))}
 
           {/* Action Buttons - Mobile */}
@@ -119,7 +134,7 @@ export default function Navbar() {
                 key={index}
                 to={item.path}
                 className={`${item.className} text-center w-full`}
-                onClick={() => setMenuOpen(false)}
+                onClick={closeMenu} // Close menu when clicking on a link
               >
                 {item.name}
               </Link>
