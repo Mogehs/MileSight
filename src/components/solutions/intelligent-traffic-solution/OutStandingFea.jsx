@@ -19,7 +19,7 @@ export default function OutStandingFea() {
     ];
 
     return (
-        <div className="mt-4 w-full h-[60vh] sm:h-[40vh] md:h-[45vh] lg:h-[40vh] xl:h-[70vh] relative flex flex-col items-center justify-center">
+        <div className="mt-4 w-full h-[50vh] sm:h-[50vh] md:h-[45vh] lg:h-[80vh] relative flex flex-col items-center justify-center">
             {/* Navigation Section */}
             
             <div className="sm:w-9/10 mx-auto w-full l13%] shadow-lg rounded-lg absolute bottom-0">
@@ -35,7 +35,7 @@ export default function OutStandingFea() {
                             <div className="p-2 lg:p-2 rounded-full flex items-center justify-center text-white text-xl border border-blue-500 group-hover:text-black transition-all ease-in delay-75 group-hover:bg-gray-300">
                                 <img src={item.icon} alt="" className=' h-7 md:h-10'/>
                             </div>
-                            <h1 className="text-xs text-blue-500 transition-all ease-in delay-75 text-wrap">
+                            <h1 className="text-xs text-center text-blue-500 transition-all ease-in delay-75 text-wrap">
                                 {item.title}
                             </h1>
                         </div>
