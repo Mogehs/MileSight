@@ -9,6 +9,7 @@ import FiveGCellular from "./pages/FiveGCellular";
 import SoftwarePlatform from "./pages/SoftwarePlatform";
 import CoCreatedProgram from "./pages/CoCreatedProgram";
 import IntelligentTrafficSoluiton from "./pages/IntelligentTrafficSoluiton";
+import SmartRestroom from "./pages/SmartRestroom";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/solutions/intelligent-traffic-solution",
         element: <IntelligentTrafficSoluiton />,
+      },
+      {
+        path: "/solutions/smart-restroom",
+        element: <SmartRestroom />,
       },
     ],
   },
