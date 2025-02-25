@@ -5,7 +5,7 @@ const Innovation = () => {
   return (
     <div>
       {/* Grid Container */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 h-screen md:h-[8rem]">
         {/* Column 1 */}
         <div>
           <ul className="space-y-4">

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Company = () => {
   return (
-    <div className="absolute left-0 w-full text-black shadow-lg bg-white py-8">
+    <div className="absolute left-0 w-full text-black shadow-lg bg-white py-8 h-screen md:h-[13rem]">
       <div className="max-w-[1200px] mx-auto flex flex-wrap justify-start gap-12 px-6">
         {/* Column 1 */}
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 mb-4">

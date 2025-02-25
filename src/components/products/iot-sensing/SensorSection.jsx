@@ -10,7 +10,9 @@ function SensorSection() {
     <div id="lorawan-sensor" className="mt-4 p-4">
       <FloatingIcons />
       <div className=" flex flex-col gap-2 items-center justify-center">
-        <h2 className="md:text-[3rem] text-[25px]">LoRaWAN® Sensor</h2>
+        <a name="lorawan">
+          <h2 className="md:text-[3rem] text-[25px]">LoRaWAN® Sensor</h2>
+        </a>
         <div className="toggle-buttons mt-2 bg-[#f5f6f7] rounded-4xl flex justify-between md:w-[40%] lg:w-[30%] sm:w-[50%]">
           <button
             className={`hover:cursor-pointer py-1 px-4 text-nowrap ${
