@@ -2,14 +2,60 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const solutionsData = [
-  ["Video Surveillance", "Smart Restroom", "Smart Space", "Smart Agriculture"],
   [
-    "Intelligent Traffic Solution",
-    "Indoor Air Quality",
-    "People Counting",
-    "Space Occupancy",
+    {
+      label: "Video Surveillance",
+      link: "/products/video-surveillance",
+    },
+    {
+      label: "Smart Restroom",
+      link: "/solutions/smart-restroom",
+    },
+    {
+      label: "Smart Space",
+      link: "",
+    },
+    {
+      label: "Smart Agriculture",
+      link: "",
+    },
   ],
-  ["Smart Building", "Energy Efficiency", "Smart City", "Waste Management"],
+  [
+    {
+      label: "Intelligent Traffic Solution",
+      link: "/solutions/intelligent-traffic-solution",
+    },
+    {
+      label: "Indoor Air Quality",
+      link: "",
+    },
+    {
+      label: "People Counting",
+      link: "",
+    },
+    {
+      label: "Space Occupancy",
+      link: "",
+    },
+  ],
+  [
+    {
+      label: "Smart Building",
+      link: "/solutions/smart-building",
+    },
+    {
+      label: "Energy Efficiency",
+      link: "/solutions/energy-efficiency",
+    },
+    {
+      label: "Smart City",
+      link: "",
+    },
+    {
+      label: "Waste Management",
+      link: "",
+    },
+  ],
 ];
 
 const Solutions = () => {
@@ -22,10 +68,10 @@ const Solutions = () => {
               {column.map((item, index) => (
                 <li key={index}>
                   <Link
-                    to=""
+                    to={item.link}
                     className="text-gray-700 text-[15px] sm:text-[16px] hover:text-[#0299f4] transition-colors duration-300"
                   >
-                    {item}
+                    {item.label}
                   </Link>
                 </li>
               ))}
