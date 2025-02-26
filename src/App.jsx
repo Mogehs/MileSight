@@ -19,7 +19,7 @@ import AiMiniDome from "./pages/product-details/AiMiniDome";
 import MotorCamera from "./pages/product-details/MotorCamera";
 
 const MainLayout = () => (
-  <div className="lg:mx-auto lg:max-w-7xl">
+  <div className="lg:mx-auto lg:max-w-7xl overflow-x-hidden">
     <Navbar />
     <Outlet />
     <Footer />
