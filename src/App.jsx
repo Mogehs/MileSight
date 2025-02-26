@@ -14,6 +14,9 @@ import SmartBuilding from "./pages/SmartBuilding";
 import EnergyEffeciency from "./pages/EnergyEffeciency";
 import IndoorAirQuality from "./pages/IndoorAirQuality";
 import { MenuProvider } from "./components/menueContext";
+import SmartSpace from "./pages/SmartSpace";
+import AiMiniDome from "./pages/product-details/AiMiniDome";
+import MotorCamera from "./pages/product-details/MotorCamera";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -36,6 +39,14 @@ const router = createBrowserRouter([
       { path: "/products/5g-cellular", element: <FiveGCellular /> },
       { path: "/products/software-platform", element: <SoftwarePlatform /> },
       { path: "/products/co-created", element: <CoCreatedProgram /> },
+      {
+        path: "/products/ai-motorized-mini-dome",
+        element: <AiMiniDome />,
+      },
+      {
+        path: "/products/ai-vandal-proof-motorized-mini-bullet-camera",
+        element: <MotorCamera />,
+      },
       {
         path: "/solutions/intelligent-traffic-solution",
         element: <IntelligentTrafficSoluiton />,
