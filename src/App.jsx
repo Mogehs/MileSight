@@ -10,6 +10,7 @@ import SoftwarePlatform from "./pages/SoftwarePlatform";
 import CoCreatedProgram from "./pages/CoCreatedProgram";
 import IntelligentTrafficSoluiton from "./pages/IntelligentTrafficSoluiton";
 import SmartRestroom from "./pages/SmartRestroom";
+import SmartSpace from "./pages/SmartSpace";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/solutions/smart-restroom",
         element: <SmartRestroom />,
+      },
+      {
+        path: "/solutions/smart-space",
+        element: <SmartSpace />,
       },
     ],
   },
