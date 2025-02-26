@@ -10,7 +10,10 @@ import SoftwarePlatform from "./pages/SoftwarePlatform";
 import CoCreatedProgram from "./pages/CoCreatedProgram";
 import IntelligentTrafficSoluiton from "./pages/IntelligentTrafficSoluiton";
 import SmartRestroom from "./pages/SmartRestroom";
-import SmartSpace from "./pages/SmartSpace";
+import SmartBuilding from "./pages/SmartBuilding";
+import EnergyEffeciency from "./pages/EnergyEffeciency";
+import IndoorAirQuality from "./pages/IndoorAirQuality";
+import { MenuProvider } from "./components/menueContext";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -38,6 +41,18 @@ const router = createBrowserRouter([
         element: <IntelligentTrafficSoluiton />,
       },
       {
+        path: "/solutions/indoor-air-quality-monitoring",
+        element: <IndoorAirQuality />,
+      },
+      {
+        path: "/solutions/smart-building",
+        element: <SmartBuilding />,
+      },
+      {
+        path: "/solutions/energy-efficiency",
+        element: <EnergyEffeciency />,
+      },
+      {
         path: "/solutions/smart-restroom",
         element: <SmartRestroom />,
       },
@@ -50,6 +65,10 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <MenuProvider>
+      <RouterProvider router={router} />;
+    </MenuProvider>
+  );
 }
 export default App;
