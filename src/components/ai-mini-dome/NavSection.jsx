@@ -3,7 +3,7 @@ import { FaGreaterThan } from "react-icons/fa6";
 import FeatureSection from "./FeatureSection";
 import Models from "./Models";
 import Accessories from "./Accessories";
-import Download from "./Download";
+import Downloads from "./Downloads";
 
 function NavSection() {
   // Set "FEATURES" as the default active component
@@ -14,7 +14,7 @@ function NavSection() {
     features: <FeatureSection />,
     models: <Models />,
     accessories: <Accessories />,
-    download: <Download />,
+    download: <Downloads />,
   };
 
   return (
