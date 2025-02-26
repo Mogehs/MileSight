@@ -4,7 +4,7 @@ import Profile from "../components/company/about-us/Profile";
 import Sensing from "../components/company/about-us/Sensing";
 import Technology from "../components/company/about-us/Technology";
 import Quality from "../components/company/about-us/Quality";
-import World from "../components/company/about-us/world";
+import World from "../components/company/about-us/World";
 
 const Company = () => {
   return (
