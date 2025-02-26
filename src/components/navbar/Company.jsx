@@ -1,44 +1,48 @@
+import React from "react";
 import { Link } from "react-router-dom";
+import { useMenu } from "../menueContext";
+
+const companyData = [
+  {
+    title: "Corporate Info",
+    links: [
+      { label: "About Us", path: "/company/about-us" },
+      { label: "Our Brand", path: "/company/our-brand" },
+      { label: "Events", path: "/company/events" },
+      { label: "Impact Awards", path: "/company/impact-awards" },
+    ],
+  },
+  {
+    title: "Library",
+    links: ["Blog", "News", "Newsletter"],
+  },
+];
 
 const Company = () => {
+  const { closeMenu } = useMenu();
+
   return (
-    <div className="absolute left-0 w-full text-black shadow-lg bg-white py-8 h-screen md:h-[13rem]">
-      <div className="max-w-[1200px] mx-auto flex flex-wrap justify-start gap-12 px-6">
-        {/* Column 1 */}
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 mb-4">
-          <h2 className="text-xl font-semibold mb-4">Corporate Info</h2>
-          <ul>
-            {["About Us", "Our Brand", "Events", "Impact Awards"].map(
-              (item, index) => (
-                <li key={index}>
+    <div className="flex justify-center items-center h-fit bg-gray-50 p-6 absolute w-full z-50">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-16">
+        {companyData.map((section, index) => (
+          <div key={index}>
+            <h2 className="text-lg sm:text-xl font-semibold mb-4">
+              {section.title}
+            </h2>
+            <ul className="space-y-4">
+              {section.links.map((item, linkIndex) => (
+                <li key={linkIndex} onClick={closeMenu}>
                   <Link
-                    to=""
-                    className="block hover:text-[#0299f4] text-sm font-medium transition duration-200"
+                    to={item.path}
+                    className="text-gray-700 text-[15px] sm:text-[16px] hover:text-[#0299f4] transition-colors duration-300"
                   >
-                    {item}
+                    {item.label}
                   </Link>
                 </li>
-              )
-            )}
-          </ul>
-        </div>
-
-        {/* Column 2 */}
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 mb-4">
-          <h2 className="text-xl font-semibold mb-4">Library</h2>
-          <ul>
-            {["Blog", "News", "Newsletter"].map((item, index) => (
-              <li key={index}>
-                <Link
-                  to=""
-                  className="block hover:text-[#0299f4] text-sm font-medium transition duration-200"
-                >
-                  {item}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
   );

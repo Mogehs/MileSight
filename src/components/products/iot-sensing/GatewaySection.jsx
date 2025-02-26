@@ -37,9 +37,8 @@ function GatewaySection() {
   return (
     <div id="lorawan-gateway" className="mt-4 p-4">
       <div className="p-4">
-        {" "}
         <h2 className="md:text-[3rem] text-[25px] text-center text-[#333]">
-          LoRaWAN® Gateway
+          <a name="lorawan">LoRaWAN® Gateway</a>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-center text-center">
           {data.map((item, index) => (

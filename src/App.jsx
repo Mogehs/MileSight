@@ -9,10 +9,18 @@ import FiveGCellular from "./pages/FiveGCellular";
 import SoftwarePlatform from "./pages/SoftwarePlatform";
 import CoCreatedProgram from "./pages/CoCreatedProgram";
 import IntelligentTrafficSoluiton from "./pages/IntelligentTrafficSoluiton";
-import Contact from "./pages/Contact";
+import SmartRestroom from "./pages/SmartRestroom";
+import SmartBuilding from "./pages/SmartBuilding";
+import EnergyEffeciency from "./pages/EnergyEffeciency";
+import IndoorAirQuality from "./pages/IndoorAirQuality";
+import { MenuProvider } from "./components/menueContext";
+import SmartSpace from "./pages/SmartSpace";
+import AiMiniDome from "./pages/product-details/AiMiniDome";
+import MotorCamera from "./pages/product-details/MotorCamera";
+import Company from "./pages/Company";
 
 const MainLayout = () => (
-  <div className="lg:mx-auto lg:max-w-7xl">
+  <div className="lg:mx-auto lg:max-w-7xl overflow-x-hidden">
     <Navbar />
     <Outlet />
     <Footer />
@@ -33,15 +41,50 @@ const router = createBrowserRouter([
       { path: "/products/software-platform", element: <SoftwarePlatform /> },
       { path: "/products/co-created", element: <CoCreatedProgram /> },
       {
+        path: "/products/ai-motorized-mini-dome",
+        element: <AiMiniDome />,
+      },
+      {
+        path: "/products/ai-vandal-proof-motorized-mini-bullet-camera",
+        element: <MotorCamera />,
+      },
+      {
         path: "/solutions/intelligent-traffic-solution",
         element: <IntelligentTrafficSoluiton />,
       },
-      { path: "/products/contact", element: <Contact /> },
+      {
+        path: "/solutions/indoor-air-quality-monitoring",
+        element: <IndoorAirQuality />,
+      },
+      {
+        path: "/solutions/smart-building",
+        element: <SmartBuilding />,
+      },
+      {
+        path: "/solutions/energy-efficiency",
+        element: <EnergyEffeciency />,
+      },
+      {
+        path: "/solutions/smart-restroom",
+        element: <SmartRestroom />,
+      },
+      {
+        path: "/solutions/smart-space",
+        element: <SmartSpace />,
+      },
+      {
+        path: "/company/about-us",
+        element: <Company />,
+      },
     ],
   },
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <MenuProvider>
+      <RouterProvider router={router} />;
+    </MenuProvider>
+  );
 }
 export default App;
