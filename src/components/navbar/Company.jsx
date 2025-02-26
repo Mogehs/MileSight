@@ -5,7 +5,12 @@ import { useMenu } from "../menueContext";
 const companyData = [
   {
     title: "Corporate Info",
-    links: ["About Us", "Our Brand", "Events", "Impact Awards"],
+    links: [
+      { label: "About Us", path: "/company/about-us" },
+      { label: "Our Brand", path: "/company/our-brand" },
+      { label: "Events", path: "/company/events" },
+      { label: "Impact Awards", path: "/company/impact-awards" },
+    ],
   },
   {
     title: "Library",
@@ -28,10 +33,10 @@ const Company = () => {
               {section.links.map((item, linkIndex) => (
                 <li key={linkIndex} onClick={closeMenu}>
                   <Link
-                    to=""
+                    to={item.path}
                     className="text-gray-700 text-[15px] sm:text-[16px] hover:text-[#0299f4] transition-colors duration-300"
                   >
-                    {item}
+                    {item.label}
                   </Link>
                 </li>
               ))}
