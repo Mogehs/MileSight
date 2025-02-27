@@ -17,9 +17,12 @@ import { MenuProvider } from "./components/menueContext";
 import SmartSpace from "./pages/SmartSpace";
 import AiMiniDome from "./pages/product-details/AiMiniDome";
 import MotorCamera from "./pages/product-details/MotorCamera";
+import Company from "./pages/Company";
+import Contact from "./pages/Contact";
+import SmartCity from "./pages/SmartCity";
 
 const MainLayout = () => (
-  <div className="lg:mx-auto lg:max-w-7xl">
+  <div className="lg:mx-auto lg:max-w-7xl overflow-x-hidden">
     <Navbar />
     <Outlet />
     <Footer />
@@ -70,6 +73,18 @@ const router = createBrowserRouter([
       {
         path: "/solutions/smart-space",
         element: <SmartSpace />,
+      },
+      {
+        path: "/solutions/smart-city",
+        element: <SmartCity />,
+      },
+      {
+        path: "/company/about-us",
+        element: <Company />,
+      },
+      {
+        path: "/contact-us",
+        element: <Contact />,
       },
     ],
   },
