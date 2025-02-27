@@ -1,11 +1,11 @@
 import React from "react";
 
-function Section9() {
+function Section9({ modelData }) {
   return (
     <div className="flex md:flex-row flex-col items-center gap-4 justify-around p-4 my-8">
       <img
         className="md:w-[40%]"
-        src="/mini-dome/section9-img.png"
+        src={`${modelData.modelImg4}`}
         alt="not found"
       />
       <div className="md:w-[50%]">

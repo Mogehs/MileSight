@@ -1,6 +1,6 @@
 import React from "react";
 
-function Section7() {
+function Section7({ modelData }) {
   return (
     <div className="my-8 p-4 flex flex-col md:gap-8 gap-4 md:items-center">
       <h1 className="md:text-[3rem] text-[20px] text-[#333]">
@@ -13,7 +13,7 @@ function Section7() {
       </p>
       <img
         className="md:w-[70%]"
-        src="/mini-dome/section7-img.png"
+        src={`${modelData.modelImg2}`}
         alt="not found"
       />
     </div>

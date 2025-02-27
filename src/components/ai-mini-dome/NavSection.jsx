@@ -5,13 +5,11 @@ import Models from "./Models";
 import Accessories from "./Accessories";
 import Downloads from "./Downloads";
 
-function NavSection() {
-  // Set "FEATURES" as the default active component
+function NavSection({ modelData }) {
   const [activeComponent, setActiveComponent] = useState("features");
 
-  // Define available components
   const components = {
-    features: <FeatureSection />,
+    features: <FeatureSection modelData={modelData} />,
     models: <Models />,
     accessories: <Accessories />,
     download: <Downloads />,

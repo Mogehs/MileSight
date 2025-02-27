@@ -21,14 +21,22 @@ export default function MiniSeries({ filter }) {
     },
     {
       name: "AI Weather proof Mini Dome Camera",
-      img: camera,
+      img: "/VideoSurivilence/ai-weather-prof-mini-dome-camera.png",
       category: "Mini",
     },
-    { name: "AI Weather proof Mini Bullet Camera", img: cam, category: "Mini" },
-    { name: "AI IR Mini Dome Camera", img: vandal, category: "Mini" },
     {
-      name: "AI Color+ Vandal-proof Mini Bullet Camera",
-      img: statics,
+      name: "AI Weather proof Mini Bullet Camera",
+      img: "/VideoSurivilence/ai-weather-prof-mini-bullet-camera.png",
+      category: "Mini",
+    },
+    {
+      name: "AI IR Mini Dome Camera",
+      img: "/VideoSurivilence/ai-ir-mini-dome-camera.png",
+      category: "Mini",
+    },
+    {
+      name: "AI Color + Vandal-proof Mini Bullet Camera",
+      img: "/VideoSurivilence/ai-color-vandal-proof-mini-bullet-camera.png",
       category: "Mini",
     },
   ];
