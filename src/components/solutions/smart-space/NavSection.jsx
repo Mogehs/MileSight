@@ -39,7 +39,7 @@ function NavSection() {
   }, []);
 
   return (
-    <div className="sticky hidden md:flex top-0 bg-white z-10">
+    <div className="sticky top-0 hidden md:flex bg-white z-10">
       <div className="btns text-[#666] w-full flex flex-row justify-between px-8 items-center shadow-2xs border-b-[#f5f5f5] py-4">
         <div className="flex flex-row items-center gap-8">
           {[
