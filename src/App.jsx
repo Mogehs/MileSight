@@ -22,7 +22,7 @@ import Contact from "./pages/Contact";
 import SmartCity from "./pages/SmartCity";
 
 const MainLayout = () => (
-  <div className="lg:mx-auto lg:max-w-7xl overflow-x-hidden">
+  <div className="lg:mx-auto lg:max-w-7xl ">
     <Navbar />
     <Outlet />
     <Footer />
