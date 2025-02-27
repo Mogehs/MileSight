@@ -34,7 +34,7 @@ const actionLinks = [
 ];
 
 export default function Navbar() {
-  const { menuOpen, toggleMenu, closeMenu } = useMenu(); // Use the menu context
+  const { menuOpen, toggleMenu, closeMenu } = useMenu();
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileDropdown, setMobileDropdown] = useState(null);
 
