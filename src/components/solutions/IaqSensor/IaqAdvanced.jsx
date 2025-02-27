@@ -1,9 +1,7 @@
+import FormSection from "../smart-restroom/FormSection";
 import AdvancedIndoor from "./AdvancedIndoor";
-import Bouncing from "./Bouncing";
-import Indoor from "./Indoor";
-import Occupant from "./Occupant";
-import PromotingEne from "./PromotingEne";
-import Sensing from "./Sensing";
+import Faq from "./Faq";
+
 import WhatIAQ from "./WhatIAQ";
 
 export default function IaqAdvanced() {
@@ -11,11 +9,8 @@ export default function IaqAdvanced() {
     <div>
         <AdvancedIndoor/>
         <WhatIAQ/>
-        <Indoor/>
-        <Bouncing/>
-        <Occupant/>
-        <PromotingEne/>
-        <Sensing/>
+        <Faq/>
+        <FormSection/>
     </div>
   )
 }
