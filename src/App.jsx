@@ -13,6 +13,7 @@ import SmartRestroom from "./pages/SmartRestroom";
 import SmartBuilding from "./pages/SmartBuilding";
 import EnergyEffeciency from "./pages/EnergyEffeciency";
 import IndoorAirQuality from "./pages/IndoorAirQuality";
+import WasteManagement from "./pages/WasteManagement";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "/solutions/smart-city",
         element: <SmartRestroom />,
+      },
+      {
+        path: "/solutions/waste-management",
+        element: <WasteManagement />,
       },
     ],
   },
