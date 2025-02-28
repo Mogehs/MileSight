@@ -23,6 +23,8 @@ import Contact from "./pages/Contact";
 import SmartCity from "./pages/SmartCity";
 import OurBrand from "./pages/OurBrand";
 import WasteManagement from "./pages/WasteManagement";
+import DownloadCenter from "./pages/DownloadCenter";
+import DeveloperZone  from "./pages/DeveloperZone";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -100,6 +102,14 @@ const router = createBrowserRouter([
       {
         path: "/company/our-brand",
         element: <OurBrand />,
+      },
+      {
+        path: "/resources/download-center",
+        element: <DownloadCenter />,
+      },
+      {
+        path: "/resources/developer-zone ",
+        element: <DeveloperZone />,
       },
      
     ],
