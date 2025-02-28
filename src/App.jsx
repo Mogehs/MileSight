@@ -13,7 +13,15 @@ import SmartRestroom from "./pages/SmartRestroom";
 import SmartBuilding from "./pages/SmartBuilding";
 import EnergyEffeciency from "./pages/EnergyEffeciency";
 import IndoorAirQuality from "./pages/IndoorAirQuality";
-import WasteManagement from "./pages/WasteManagement";
+import { MenuProvider } from "./components/menueContext";
+import SmartSpace from "./pages/SmartSpace";
+import SmartHVAC from "./pages/SmartHVAC";
+import AiMiniDome from "./pages/product-details/AiMiniDome";
+import MotorCamera from "./pages/product-details/MotorCamera";
+import Company from "./pages/Company";
+import Contact from "./pages/Contact";
+import SmartCity from "./pages/SmartCity";
+import OurBrand from "./pages/OurBrand";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -37,6 +45,14 @@ const router = createBrowserRouter([
       { path: "/products/software-platform", element: <SoftwarePlatform /> },
       { path: "/products/co-created", element: <CoCreatedProgram /> },
       {
+        path: "/products/ai-motorized-mini-dome",
+        element: <AiMiniDome />,
+      },
+      {
+        path: "/products/ai-vandal-proof-motorized-mini-bullet-camera",
+        element: <MotorCamera />,
+      },
+      {
         path: "/solutions/intelligent-traffic-solution",
         element: <IntelligentTrafficSoluiton />,
       },
@@ -53,18 +69,42 @@ const router = createBrowserRouter([
         element: <EnergyEffeciency />,
       },
       {
-        path: "/solutions/smart-city",
+        path: "/solutions/smart-restroom",
         element: <SmartRestroom />,
       },
       {
-        path: "/solutions/waste-management",
-        element: <WasteManagement />,
+        path: "/solutions/smart-space",
+        element: <SmartSpace />,
+      },
+      {
+        path: "/solutions/smart-city",
+        element: <SmartCity />,
+      },
+      {
+        path: "/solutions/smart-hvac",
+        element: <SmartHVAC />,
+      },
+      {
+        path: "/company/about-us",
+        element: <Company />,
+      },
+      {
+        path: "/contact-us",
+        element: <Contact />,
+      },
+      {
+        path: "/company/our-brand",
+        element: <OurBrand />,
       },
     ],
   },
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <MenuProvider>
+      <RouterProvider router={router} />;
+    </MenuProvider>
+  );
 }
 export default App;

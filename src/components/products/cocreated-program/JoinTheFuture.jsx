@@ -23,10 +23,10 @@ const JoinTheFuture = () => {
     <div className="w-full">
       {/* Header Section */}
       <div className="text-center w-[85%] mx-auto my-20 bg-gradient-to-b to-sky-100 from-white rounded-b-2xl pb-20 border-b border-b-sky-400">
-        <h1 className="text-4xl font-semibold text-[#262626]">
+        <h1 className="text-xl sm:text-4xl font-semibold text-[#262626]">
           Join the Future of IoT
         </h1>
-        <h1 className="text-4xl font-semibold text-[#262626]">
+        <h1 className="text-2xl sm:text-4xl font-semibold text-[#262626]">
           Milesight Co-Created Innovation Program
         </h1>
         <p className="mt-4 text-[0.9rem] max-w-lg mx-auto">

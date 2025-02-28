@@ -3,7 +3,7 @@ import React from "react";
 const CoCreatedProducts = () => {
   return (
     <div className="w-full my-20 px-4">
-      <h1 className="text-[2.5rem] text-[#262626] font-semibold text-center">
+      <h1 className="text-xl sm:text-4xl text-[#262626] font-semibold text-center">
         Co-Created Products
       </h1>
 
@@ -57,7 +57,7 @@ const CoCreatedProducts = () => {
           </div>
         </div>
       </div>
-      <h1 className="text-center text-[#262626] text-4xl w-[60%] mx-auto mt-20 font-semibold">
+      <h1 className="text-center text-[#262626] text-2xl sm:text-4xl sm:w-[60%] mx-auto mt-20 font-semibold">
         Join in Milesight's Co-Creation Program and Get Sample Discount NOW!
       </h1>
     </div>

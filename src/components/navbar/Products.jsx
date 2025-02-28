@@ -1,5 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useMenu } from "../menueContext";
+
+const series = [
+  "Mini Series",
+  "Pro Series",
+  "Open Vision Series",
+  "Accessories",
+];
 
 const productLinks = [
   { name: "IoT Sensing", path: "/products/iot-sensing" },
@@ -16,6 +24,7 @@ const productLinks = [
 ];
 
 const Products = () => {
+  const { closeMenu } = useMenu();
   return (
     <div className="flex flex-col md:flex-row bg-white h-fit z-50 w-full">
       <div className="w-full md:w-[18rem] bg-gray-50 shadow-lg p-6">
@@ -24,6 +33,7 @@ const Products = () => {
             <li
               key={index}
               className="text-gray-700 hover:text-blue-500 transition-colors duration-300"
+              onClick={closeMenu}
             >
               {item.external ? (
                 <a href={item.path} className="block py-1">
@@ -41,9 +51,15 @@ const Products = () => {
 
       {/* Content Area */}
       <div className="w-full md:flex-1 p-6">
-        <h1 className="text-xl md:text-2xl font-semibold mb-4">
-          Welcome to Products
-        </h1>
+        <div className="flex gap-2">
+          {series.map((item, idx) => (
+            <>
+              <div className="bg-gray-200 w-fit h-fit p-1 rounded-md">
+                {item}
+              </div>
+            </>
+          ))}
+        </div>
         <p className="text-gray-600">
           Explore our product categories by clicking on the menu items.
         </p>
