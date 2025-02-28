@@ -60,7 +60,7 @@ export default function MultiPotential() {
 
   return (
     <div className="relative my-20">
-      <h1 className="text-center font-semibold text-lg sm:text-3xl sm:w-[40%] mx-auto">
+      <h1 className="text-center font-semibold text-lg sm:text-3xl sm:  w-[40%] mx-auto">
         See what's possible with Milesight's multi-potential sensing products
       </h1>
 

@@ -15,14 +15,14 @@ import EnergyEffeciency from "./pages/EnergyEffeciency";
 import IndoorAirQuality from "./pages/IndoorAirQuality";
 import { MenuProvider } from "./components/menueContext";
 import SmartSpace from "./pages/SmartSpace";
+import SmartHVAC from "./pages/SmartHVAC";
 import AiMiniDome from "./pages/product-details/AiMiniDome";
 import MotorCamera from "./pages/product-details/MotorCamera";
 import Company from "./pages/Company";
 import Contact from "./pages/Contact";
 import SmartCity from "./pages/SmartCity";
 import OurBrand from "./pages/OurBrand";
-import PeopleCounting from "./pages/PeopleCounting";
-import SpaceOccupancy from "./pages/SpaceOccupancy";
+import WasteManagement from "./pages/WasteManagement";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -90,6 +90,14 @@ const router = createBrowserRouter([
         element: <SmartCity />,
       },
       {
+        path: "/solutions/smart-hvac",
+        element: <SmartHVAC />,
+      },
+      {
+        path: "/solutions/waste-management",
+        element: <WasteManagement />,
+      },
+      {
         path: "/company/about-us",
         element: <Company />,
       },
@@ -101,6 +109,7 @@ const router = createBrowserRouter([
         path: "/company/our-brand",
         element: <OurBrand />,
       },
+     
     ],
   },
 ]);
