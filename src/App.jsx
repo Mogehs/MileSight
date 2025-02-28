@@ -64,6 +64,14 @@ const router = createBrowserRouter([
         element: <IndoorAirQuality />,
       },
       {
+        path: "/solutions/people-counting",
+        element: <PeopleCounting />,
+      },
+      {
+        path: "solutions/smart-space-occupancy",
+        element: <SpaceOccupancy />,
+      },
+      {
         path: "/solutions/smart-building",
         element: <SmartBuilding />,
       },
