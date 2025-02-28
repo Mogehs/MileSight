@@ -3,7 +3,6 @@ import React from "react";
 const Start = () => {
   return (
     <div
-      id="hero-section"
       className="relative h-screen flex items-center justify-start bg-cover bg-center"
       style={{ backgroundImage: "url('/SmartCity/star.jpg')" }}
     >

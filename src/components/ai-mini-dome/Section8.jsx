@@ -1,10 +1,10 @@
 import React from "react";
 
-function Section8() {
+function Section8({ modelData }) {
   return (
     <div
       className="h-[80vh] bg-no-repeat bg-cover bg-center flex flex-col justify-center md:px-8 px-2 gap-6 mb-8"
-      style={{ backgroundImage: "url('/mini-dome/section8-img.jpg')" }}
+      style={{ backgroundImage: `url(${modelData.modelImg3})` }}
     >
       <h2 className="md:text-[2.5rem] text-[20px] text-[#333]">
         Integrated Junction Box

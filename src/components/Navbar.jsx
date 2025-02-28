@@ -3,7 +3,6 @@ import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { useMenu } from "./menueContext";
 import Products from "./navbar/Products";
 import Solutions from "./navbar/Solutions";
-import Innovation from "./navbar/Innovation";
 import Company from "./navbar/Company";
 import Partners from "./navbar/Partners";
 import Resources from "./navbar/Resources";
@@ -12,7 +11,6 @@ import { useState } from "react";
 const navLinks = [
   { name: "Products", path: "/products/iot-sensing", component: <Products /> },
   { name: "Solutions", path: "/solutions", component: <Solutions /> },
-  { name: "Innovation", path: "/innovation", component: <Innovation /> },
   { name: "Company", path: "/company", component: <Company /> },
   { name: "Partners", path: "/partners", component: <Partners /> },
   { name: "Resources", path: "/resources", component: <Resources /> },
@@ -34,7 +32,7 @@ const actionLinks = [
 ];
 
 export default function Navbar() {
-  const { menuOpen, toggleMenu, closeMenu } = useMenu(); // Use the menu context
+  const { menuOpen, toggleMenu, closeMenu } = useMenu();
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileDropdown, setMobileDropdown] = useState(null);
 

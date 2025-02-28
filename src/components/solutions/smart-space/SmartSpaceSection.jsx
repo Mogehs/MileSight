@@ -2,7 +2,7 @@ import React from "react";
 
 function SmartSpaceSection() {
   return (
-    <div className="my-8">
+    <div className="my-8" id="smart-space">
       <div>
         <h1 className="md:text-[2.5rem] text-[20px] text-center">
           Transform Your Space with Smart Office Senors and Solutions

@@ -20,9 +20,10 @@ import MotorCamera from "./pages/product-details/MotorCamera";
 import Company from "./pages/Company";
 import Contact from "./pages/Contact";
 import SmartCity from "./pages/SmartCity";
+import OurBrand from "./pages/OurBrand";
 
 const MainLayout = () => (
-  <div className="lg:mx-auto lg:max-w-7xl overflow-x-hidden">
+  <div className="lg:mx-auto lg:max-w-7xl">
     <Navbar />
     <Outlet />
     <Footer />
@@ -85,6 +86,10 @@ const router = createBrowserRouter([
       {
         path: "/contact-us",
         element: <Contact />,
+      },
+      {
+        path: "/company/our-brand",
+        element: <OurBrand />,
       },
     ],
   },
