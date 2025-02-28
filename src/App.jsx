@@ -21,6 +21,8 @@ import Company from "./pages/Company";
 import Contact from "./pages/Contact";
 import SmartCity from "./pages/SmartCity";
 import OurBrand from "./pages/OurBrand";
+import PeopleCounting from "./pages/PeopleCounting";
+import SpaceOccupancy from "./pages/SpaceOccupancy";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -58,6 +60,14 @@ const router = createBrowserRouter([
       {
         path: "/solutions/indoor-air-quality-monitoring",
         element: <IndoorAirQuality />,
+      },
+      {
+        path: "/solutions/people-counting",
+        element: <PeopleCounting />,
+      },
+      {
+        path: "solutions/smart-space-occupancy",
+        element: <SpaceOccupancy />,
       },
       {
         path: "/solutions/smart-building",

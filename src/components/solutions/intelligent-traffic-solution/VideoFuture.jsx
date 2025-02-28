@@ -42,7 +42,7 @@ export default function VideoFuture() {
             </h1>
 
             {/* Scroll Buttons (Top-Right) */}
-            <div className="absolute right-4 top-0 flex gap-2 z-10">
+            <div className="absolute  hidden right-4 top-0 md:flex gap-2 z-10">
                 <button
                     className="bg-gray-400 p-2 rounded-full text-white shadow-md hover:bg-gray-900"
                     onClick={() => scroll("left")}
