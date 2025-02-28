@@ -2,6 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useMenu } from "../menueContext";
 
+const series = [
+  "Mini Series",
+  "Pro Series",
+  "Open Vision Series",
+  "Accessories",
+];
+
 const productLinks = [
   { name: "IoT Sensing", path: "/products/iot-sensing" },
   { name: "Video Surveillance", path: "/products/video-surveillance" },
@@ -44,9 +51,15 @@ const Products = () => {
 
       {/* Content Area */}
       <div className="w-full md:flex-1 p-6">
-        <h1 className="text-xl md:text-2xl font-semibold mb-4">
-          Welcome to Products
-        </h1>
+        <div className="flex gap-2">
+          {series.map((item, idx) => (
+            <>
+              <div className="bg-gray-200 w-fit h-fit p-1 rounded-md">
+                {item}
+              </div>
+            </>
+          ))}
+        </div>
         <p className="text-gray-600">
           Explore our product categories by clicking on the menu items.
         </p>
