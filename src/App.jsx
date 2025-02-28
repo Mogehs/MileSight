@@ -22,6 +22,7 @@ import Company from "./pages/Company";
 import Contact from "./pages/Contact";
 import SmartCity from "./pages/SmartCity";
 import OurBrand from "./pages/OurBrand";
+import WasteManagement from "./pages/WasteManagement";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -85,6 +86,10 @@ const router = createBrowserRouter([
         element: <SmartHVAC />,
       },
       {
+        path: "/solutions/waste-management",
+        element: <WasteManagement />,
+      },
+      {
         path: "/company/about-us",
         element: <Company />,
       },
@@ -96,6 +101,7 @@ const router = createBrowserRouter([
         path: "/company/our-brand",
         element: <OurBrand />,
       },
+     
     ],
   },
 ]);
