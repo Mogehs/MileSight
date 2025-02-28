@@ -13,7 +13,7 @@ import Section11 from "./Section11";
 import Section12 from "./Section12";
 import FloatingIcons from "../../components/products/5g-cellular/FloatingIcons";
 
-function FeatureSection() {
+function FeatureSection({ modelData }) {
   return (
     <div id="dome-features">
       <FloatingIcons />
@@ -22,10 +22,10 @@ function FeatureSection() {
       <Section3 />
       <Section4 />
       <Section5 />
-      <Section6 />
-      <Section7 />
-      <Section8 />
-      <Section9 />
+      <Section6 modelData={modelData} />
+      <Section7 modelData={modelData} />
+      <Section8 modelData={modelData} />
+      <Section9 modelData={modelData} />
       <Section10 />
       <Section11 />
       <Section12 />
