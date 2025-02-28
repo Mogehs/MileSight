@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useMenu } from "../menueContext";
 
@@ -14,7 +13,7 @@ const solutionsData = [
     },
     {
       label: "Smart Space",
-      link: "",
+      link: "/solutions/smart-space",
     },
     {
       label: "Smart Agriculture",
@@ -28,7 +27,7 @@ const solutionsData = [
     },
     {
       label: "Indoor Air Quality",
-      link: "",
+      link: "/solutions/indoor-air-quality-monitoring",
     },
     {
       label: "People Counting",
@@ -50,7 +49,7 @@ const solutionsData = [
     },
     {
       label: "Smart City",
-      link: "",
+      link: "/solutions/smart-city",
     },
     {
       label: "Waste Management",

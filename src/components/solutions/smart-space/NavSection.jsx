@@ -39,41 +39,45 @@ function NavSection() {
   }, []);
 
   return (
-    <div className="sticky hidden md:flex top-0 bg-white z-10">
-      <div className="btns text-[#666] w-full flex flex-row justify-between px-8 items-center shadow-2xs border-b-[#f5f5f5] py-4">
-        <div className="flex flex-row items-center gap-8">
-          {[
-            { id: "smart-space", label: "Smart Space" },
-            { id: "smart-carbon", label: "Corporate Carbon Footprint" },
-            { id: "smart-d2d", label: "Milesight D2D" },
-            { id: "smart-products", label: "Products" },
-          ].map(({ id, label }) => (
-            <button
-              key={id}
-              onClick={() => scrollToSection(id)}
-              className={`cursor-pointer px-4 py-2 transition-colors duration-300 border-l border-l-[#dddddd] ${
-                activeSection === id
-                  ? "bg-[#0299f4] text-white font-semibold"
-                  : "hover:text-[#0299f4] text-[#666]"
-              }`}
-            >
-              {label}
+    <nav className="sticky top-0 z-50">
+      <div className="hidden md:flex bg-white">
+        <div className="btns text-[#666] w-full flex flex-row justify-between px-8 items-center shadow-2xs border-b-[#f5f5f5] py-4">
+          <div className="flex flex-row items-center gap-8">
+            {[
+              { id: "smart-space", label: "Smart Space" },
+              { id: "smart-carbon", label: "Corporate Carbon Footprint" },
+              { id: "smart-d2d", label: "Milesight D2D" },
+              { id: "smart-products", label: "Products" },
+            ].map(({ id, label }) => (
+              <button
+                key={id}
+                onClick={() => scrollToSection(id)}
+                className={`cursor-pointer px-4 py-2 transition-colors duration-300 border-l border-l-[#dddddd] ${
+                  activeSection === id
+                    ? "bg-[#0299f4] text-white font-semibold"
+                    : "hover:text-[#0299f4] text-[#666]"
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+          <div className="flex items-center gap-2">
+            <button className="hover:text-[#0299f4] cursor-pointer">
+              Home
             </button>
-          ))}
-        </div>
-        <div className="flex items-center gap-2">
-          <button className="hover:text-[#0299f4] cursor-pointer">Home</button>
-          <p className="text-[10px]">
-            <FaGreaterThan />
-          </p>
-          <p>Solution</p>
-          <p className="text-[10px]">
-            <FaGreaterThan />
-          </p>
-          <p>Smart Space</p>
+            <p className="text-[10px]">
+              <FaGreaterThan />
+            </p>
+            <p>Solution</p>
+            <p className="text-[10px]">
+              <FaGreaterThan />
+            </p>
+            <p>Smart Space</p>
+          </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 

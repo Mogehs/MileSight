@@ -12,7 +12,7 @@ export default function AdvancedIndoor() {
                         Air Quality Monitoring Solution <br />
                         for Healthier Spaces
                     </h1>
-                    <h4>See the Unseen to Optimize Energy Efficiency <br />
+                    <h4 className=' mt-3 text-xl'>See the Unseen to Optimize Energy Efficiency <br />
                         and Healthy
                     </h4>
                     <img src={sensor} alt="" className='' />

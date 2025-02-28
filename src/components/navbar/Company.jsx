@@ -14,7 +14,11 @@ const companyData = [
   },
   {
     title: "Library",
-    links: ["Blog", "News", "Newsletter"],
+    links: [
+      { label: "Blog", path: "/" },
+      { label: "News", path: "/" },
+      { label: "Newsletter", path: "/" },
+    ],
   },
 ];
 
