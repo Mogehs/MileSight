@@ -24,7 +24,7 @@ import SmartCity from "./pages/SmartCity";
 import OurBrand from "./pages/OurBrand";
 import WasteManagement from "./pages/WasteManagement";
 import DownloadCenter from "./pages/DownloadCenter";
-import DeveloperZone  from "./pages/DeveloperZone";
+import DeveloperZone from "./pages/DeveloperZone";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -63,14 +63,14 @@ const router = createBrowserRouter([
         path: "/solutions/indoor-air-quality-monitoring",
         element: <IndoorAirQuality />,
       },
-      {
-        path: "/solutions/people-counting",
-        element: <PeopleCounting />,
-      },
-      {
-        path: "solutions/smart-space-occupancy",
-        element: <SpaceOccupancy />,
-      },
+      // {
+      //   path: "/solutions/people-counting",
+      //   element: <PeopleCounting />,
+      // },
+      // {
+      //   path: "solutions/smart-space-occupancy",
+      //   element: <SpaceOccupancy />,
+      // },
       {
         path: "/solutions/smart-building",
         element: <SmartBuilding />,
@@ -119,7 +119,6 @@ const router = createBrowserRouter([
         path: "/resources/developer-zone ",
         element: <DeveloperZone />,
       },
-     
     ],
   },
 ]);

@@ -132,7 +132,7 @@ export default function Navbar() {
                 key={index}
                 to={item.path}
                 className={`${item.className} text-center w-full`}
-                onClick={closeMenu} // Close menu when clicking on a link
+                onClick={closeMenu}
               >
                 {item.name}
               </Link>
