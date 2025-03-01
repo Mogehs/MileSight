@@ -3,8 +3,8 @@ import sensimg from "/aboutimg/sensimg.avif"
 
 const Sensing = () => {
   return (
-    <div className="w-full h-auto  lg:h-[80vh] text-white p-[50px] flex  flex-col justify-evenly  bg-cover bg-center   " style={{backgroundImage:`url(${sensimg})`}}>
-      <div className="content sm:flex sm:flex-col ">
+    <div className="w-full h-auto  lg:h-[80vh] text-white text-sm p-2  flex  flex-col justify-evenly  bg-cover bg-center   " style={{backgroundImage:`url(${sensimg})`}}>
+      <div className="content sm:flex sm:flex-col p-3 ">
         <h1 className=" font-semibold text-3xl">Make Sensing Matter</h1>
         <p className="">
           From sensing to connecting, from data to the power that transforms the
