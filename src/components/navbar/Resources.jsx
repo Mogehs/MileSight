@@ -5,9 +5,9 @@ const resourcesData = [
   {
     title: "Support",
     links: [
-      { title: "Submit a Ticket", link: "/resources/support/submit-ticket" },
-      { title: "Help Center", link: "/resources/support/help-center" },
-      { title: "Online Demo", link: "/resources/support/online-demo" },
+      { title: "Submit a Ticket", link: "/resources/submit-ticket" },
+      { title: "Help Center", link: "/resources/help-center" },
+      { title: "Online Demo", link: "/resources/online-demo" },
     ],
   },
   {
@@ -29,19 +29,19 @@ const resourcesData = [
     links: [
       {
         title: "Datasheet & User Guide",
-        link: "/resources/download-center/datasheets",
+        link: "/resources/download-center",
       },
       {
         title: "Software & Firmware",
-        link: "/resources/download-center/software-firmware",
+        link: "/resources/download-center",
       },
       {
         title: "Release Note",
-        link: "/resources/download-center/release-notes",
+        link: "/resources/download-center",
       },
       {
         title: "Developer Zone",
-        link: "/resources/download-center/developer-zone",
+        link: "/resources/developer-zone",
       },
     ],
   },
@@ -52,18 +52,18 @@ const Resources = () => {
 
   return (
     <div className="flex justify-center items-center h-fit bg-gray-50 p-6 absolute w-full z-50">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-16">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-5">
         {resourcesData.map((section, index) => (
           <div key={index}>
-            <h2 className="text-lg sm:text-xl font-semibold mb-2">
+            <h2 className="text-sm sm:text-md font-semibold mb-2">
               {section.title}
             </h2>
-            <ul className="space-y-4">
+            <ul className="space-y-2 text-sm">
               {section.links.map((item, linkIndex) => (
                 <li key={linkIndex} onClick={closeMenu}>
                   <Link
                     to={item.link}
-                    className="text-gray-700 text-[15px] sm:text-[16px] hover:text-[#0299f4] transition-colors duration-300"
+                    className="text-gray-700 text-[12px] sm:text-[14px] hover:text-[#0299f4] transition-colors duration-300"
                   >
                     {item.title}
                   </Link>

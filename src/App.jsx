@@ -30,6 +30,7 @@ import SolutionTraining from "./pages/SolutionTraining";
 import PeopleCounting from "./pages/PeopleCounting";
 import SpaceOccupancy from "./pages/SpaceOccupancy";
 import Events from "./components/company/events/Events";
+import NDAAProducts from "./pages/NDAAProducts";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -135,6 +136,10 @@ const router = createBrowserRouter([
       {
         path: "/company/events",
         element: <Events />,
+      },
+      {
+        path: "/products/NDAA-Compilant",
+        element: <NDAAProducts />,
       },
     ],
   },

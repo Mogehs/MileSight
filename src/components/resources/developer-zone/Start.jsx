@@ -1,10 +1,10 @@
 import React from "react";
-import { FaUsers} from "react-icons/fa"; // Import icons
+import { FaUsers } from "react-icons/fa"; // Import icons
 
 const Start = () => {
-  return (      
+  return (
     <div
-      className="relative h-screen flex items-center justify-start bg-cover bg-no-repeat bg-center"
+      className="relative h-[25rem] sm:h-[30rem] flex items-center justify-start bg-cover bg-no-repeat bg-center"
       style={{ backgroundImage: "url('/DeveloperZone/start.png')" }}
     >
       {/* Overlay */}
@@ -14,7 +14,8 @@ const Start = () => {
       <div className="relative text-white px-8 flex flex-col justify-center gap-6 md:items-start items-center max-w-3xl">
         <h1 className="text-4xl md:text-6xl font-semibold">Developer Zone</h1>
         <p className="text-lg md:text-xl font-light text-white w-full md:w-[500px] text-center md:text-left">
-          Explore platforms, resources, and tools to build, integrate, and innovate with Milesight.
+          Explore platforms, resources, and tools to build, integrate, and
+          innovate with Milesight.
         </p>
 
         {/* Buttons */}
@@ -24,7 +25,6 @@ const Start = () => {
             Join Our Community
           </button>
           <button className="flex items-center gap-3 bg-[#0299f4] text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-300 transition">
-          
             Resource Hub
           </button>
         </div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useMenu } from "../menueContext";
 
 // Import all series components
-import MiniSeries from "../products/video-servillance//MiniSeries";
+import MiniSeries from "../products/video-servillance/MiniSeries";
 import ProSeries from "../products/video-servillance/ProSeries";
 
 // Map series names to components
@@ -13,6 +13,11 @@ const seriesComponents = {
   "Open Vision Series": MiniSeries,
   Accessories: ProSeries,
 };
+const videoSeriesComponents = {
+  NVR: MiniSeries,
+  "PoE NVR": ProSeries,
+  "Enterprise NVR": MiniSeries,
+};
 
 const seriesList = [
   "Mini Series",
@@ -21,16 +26,24 @@ const seriesList = [
   "Accessories",
 ];
 
+const videoSeriesList = ["NVR", "PoE NVR", "Enterprise NVR"];
+const iotList = ["Smart Building", "Smart City"];
+
 const Products = () => {
   const { closeMenu } = useMenu();
   const [showVideoOptions, setShowVideoOptions] = useState(false);
+  const [showIoT, setShowIoT] = useState(true);
   const [activeOption, setActiveOption] = useState("Network Camera");
   const [showSeries, setShowSeries] = useState(false);
+  const [showVideoSeries, setShowVideoSeries] = useState(false);
   const [selectedSeries, setSelectedSeries] = useState(null);
+  const [selectedVideoSeries, setSelectedVideoSeries] = useState(null);
 
-  // Get the selected component
+  // Get the selected component (series or video series)
   const SelectedComponent = selectedSeries
     ? seriesComponents[selectedSeries]
+    : selectedVideoSeries
+    ? videoSeriesComponents[selectedVideoSeries]
     : null;
 
   return (
@@ -58,10 +71,11 @@ const Products = () => {
           ].map((item, index) => (
             <li
               key={index}
-              className="text-gray-700 hover:text-blue-500 transition-colors duration-300 relative"
-              onMouseEnter={() =>
-                setShowVideoOptions(item.name === "Video Surveillance")
-              }
+              className="text-gray-700 hover:text-blue-500 text-nowrap transition-colors duration-300 relative"
+              onMouseEnter={() => {
+                setShowVideoOptions(item.name === "Video Surveillance");
+                setShowIoT(item.name === "IoT Sensing");
+              }}
               onClick={closeMenu}
             >
               <Link to={item.link} className="block py-1">
@@ -75,33 +89,77 @@ const Products = () => {
       {/* Video Surveillance Options */}
       {showVideoOptions && (
         <div className="pt-5 flex flex-col gap-4">
-          <p
-            className={`cursor-pointer ${
-              activeOption === "Network Camera"
-                ? "text-blue-500 font-semibold"
-                : "text-gray-700"
-            }`}
-            onMouseEnter={() => {
-              setActiveOption("Network Camera");
-              setShowSeries(true);
-            }}
-          >
-            Network Camera
-          </p>
-          <p
-            className={`cursor-pointer ${
-              activeOption === "Network Video Recorder"
-                ? "text-blue-500 font-semibold"
-                : "text-gray-700"
-            }`}
-            onMouseEnter={() => {
-              setActiveOption("Network Video Recorder");
-              setShowSeries(false);
-              setSelectedSeries(null);
-            }}
-          >
-            Network Video Recorder
-          </p>
+          <a href="/products/video-surveillance">
+            <p
+              className={`cursor-pointer ${
+                activeOption === "Network Camera"
+                  ? "text-blue-500 font-semibold"
+                  : "text-gray-700"
+              }`}
+              onMouseEnter={() => {
+                setActiveOption("Network Camera");
+                setShowSeries(true);
+                setShowVideoSeries(false);
+                setSelectedVideoSeries(null);
+              }}
+            >
+              Network Camera
+            </p>
+          </a>
+          <a href="/products/video-surveillance">
+            <p
+              className={`cursor-pointer ${
+                activeOption === "Network Video Recorder"
+                  ? "text-blue-500 font-semibold"
+                  : "text-gray-700"
+              }`}
+              onMouseEnter={() => {
+                setActiveOption("Network Video Recorder");
+                setShowSeries(false);
+                setShowVideoSeries(true);
+                setSelectedSeries(null);
+              }}
+            >
+              Network Video Recorder
+            </p>
+          </a>
+          <a href="/products/NDAA-Compilant">
+            <p
+              className="cursor-pointer border border-sky-500 rounded-md p-2 text-sky-500"
+              onMouseEnter={() => {
+                setActiveOption("NDAA Compliant Products");
+                setShowSeries(false);
+                setShowVideoSeries(false);
+                setSelectedSeries(null);
+                setSelectedVideoSeries(null);
+              }}
+            >
+              NDAA Compliant Products
+            </p>
+          </a>
+        </div>
+      )}
+
+      {/* IoT Sensing Options */}
+      {showIoT && (
+        <div className="pt-5 flex flex-col gap-4">
+          {iotList.map((iot, index) => (
+            <a
+              key={index}
+              href={`/solutions/${iot.toLowerCase().replace(" ", "-")}`}
+            >
+              <p
+                className="cursor-pointer text-gray-700 hover:text-blue-500"
+                onMouseEnter={() => {
+                  setActiveOption(iot);
+                  setSelectedVideoSeries(null);
+                  setSelectedSeries(null);
+                }}
+              >
+                {iot}
+              </p>
+            </a>
+          ))}
         </div>
       )}
 
@@ -113,8 +171,28 @@ const Products = () => {
               <div
                 key={idx}
                 className="bg-gray-200 w-fit h-fit p-2 rounded-md hover:bg-blue-300 transition"
-                onMouseEnter={() => setSelectedSeries(series)}
-                onMouseLeave={() => setSelectedSeries(null)}
+                onMouseEnter={() => {
+                  setSelectedSeries(series);
+                  setSelectedVideoSeries(null);
+                }}
+              >
+                {series}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Video Series Section */}
+        {showVideoSeries && (
+          <div className="flex gap-2 cursor-pointer">
+            {videoSeriesList.map((series, idx) => (
+              <div
+                key={idx}
+                className="bg-gray-200 w-fit h-fit p-2 rounded-md hover:bg-blue-300 transition"
+                onMouseEnter={() => {
+                  setSelectedVideoSeries(series);
+                  setSelectedSeries(null);
+                }}
               >
                 {series}
               </div>
@@ -123,9 +201,9 @@ const Products = () => {
         )}
 
         {/* Display Selected Series Component */}
-        {selectedSeries && (
+        {(selectedSeries || selectedVideoSeries) && (
           <div className="mt-4" onClick={closeMenu}>
-            <strong>{selectedSeries}</strong>
+            <strong>{selectedSeries || selectedVideoSeries}</strong>
             {SelectedComponent && <SelectedComponent />}
           </div>
         )}

@@ -59,7 +59,7 @@ export default function MiniSeries({ filter }) {
           {filteredCameras.length > 0 ? (
             filteredCameras.map((item, index) => (
               <>
-                <Link to="/products/ai-motorized-mini-dome" onClick={closeMenu}>
+                <a href="/products/ai-motorized-mini-dome" onClick={closeMenu}>
                   <div
                     className="p-3 transition-all ease-in-out delay-100 hover:shadow-md hover:shadow-blue-200 cursor-pointer h-auto flex flex-col items-center justify-center border sm:border-0 rounded-lg shadow-sm bg-white"
                     key={index}
@@ -73,7 +73,7 @@ export default function MiniSeries({ filter }) {
                       {item.name}
                     </span>
                   </div>
-                </Link>
+                </a>
               </>
             ))
           ) : (
