@@ -1,32 +1,59 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useMenu } from "../menueContext";
 
 const resourcesData = [
   {
     title: "Support",
-    links: ["Submit a Ticket", "Help Center", "Online Demo"],
+    links: [
+      { title: "Submit a Ticket", link: "/resources/support/submit-ticket" },
+      { title: "Help Center", link: "/resources/support/help-center" },
+      { title: "Online Demo", link: "/resources/support/online-demo" },
+    ],
   },
   {
     title: "Academy",
     links: [
-      "Product Training",
-      "Solution Training",
-      "Technical Training",
-      "Roadmap",
+      {
+        title: "Product Training",
+        link: "/resources/academy/product-training",
+      },
+      {
+        title: "Solution Training",
+        link: "/resources/academy/solution-training",
+      },
     ],
   },
   {
     title: "Video Center",
-    links: ["Products", "Solutions", "Technology Innovations", "Tutorials"],
+    links: [
+      { title: "Products", link: "/resources/video-center/products" },
+      { title: "Solutions", link: "/resources/video-center/solutions" },
+      {
+        title: "Technology Innovations",
+        link: "/resources/video-center/technology-innovations",
+      },
+      { title: "Tutorials", link: "/resources/video-center/tutorials" },
+    ],
   },
   {
     title: "Download Center",
     links: [
-      "Datasheet & User Guide",
-      "Software & Firmware",
-      "Release Note",
-      "Developer Zone",
+      {
+        title: "Datasheet & User Guide",
+        link: "/resources/download-center/datasheets",
+      },
+      {
+        title: "Software & Firmware",
+        link: "/resources/download-center/software-firmware",
+      },
+      {
+        title: "Release Note",
+        link: "/resources/download-center/release-notes",
+      },
+      {
+        title: "Developer Zone",
+        link: "/resources/download-center/developer-zone",
+      },
     ],
   },
 ];
@@ -46,10 +73,10 @@ const Resources = () => {
               {section.links.map((item, linkIndex) => (
                 <li key={linkIndex} onClick={closeMenu}>
                   <Link
-                    to=""
+                    to={item.link}
                     className="text-gray-700 text-[15px] sm:text-[16px] hover:text-[#0299f4] transition-colors duration-300"
                   >
-                    {item}
+                    {item.title}
                   </Link>
                 </li>
               ))}

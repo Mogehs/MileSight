@@ -39,13 +39,22 @@ const Products = () => {
       <div className="w-full md:w-[13rem] bg-gray-50 shadow-lg p-6">
         <ul className="space-y-2">
           {[
-            { name: "IoT Sensing" },
-            { name: "Video Surveillance" },
-            { name: "Intelligent Traffic" },
-            { name: "IoT LoRaWAN® Series" },
-            { name: "5G & Cellular Products" },
-            { name: "Software & Platform" },
-            { name: "Co-Created Program" },
+            { name: "IoT Sensing", link: "/products/iot-sensing" },
+            {
+              name: "Video Surveillance",
+              link: "/products/video-surveillance",
+            },
+            {
+              name: "Intelligent Traffic",
+              link: "/products/intelligent-traffic",
+            },
+            { name: "IoT LoRaWAN® Series", link: "/products/5g-cellular" },
+            { name: "5G & Cellular Products", link: "/products/5g-cellular" },
+            {
+              name: "Software & Platform",
+              link: "/products/software-platform",
+            },
+            { name: "Co-Created Program", link: "/products/co-created" },
           ].map((item, index) => (
             <li
               key={index}
@@ -55,10 +64,7 @@ const Products = () => {
               }
               onClick={closeMenu}
             >
-              <Link
-                to={`/products/${item.name.toLowerCase().replace(/\s+/g, "-")}`}
-                className="block py-1"
-              >
+              <Link to={item.link} className="block py-1">
                 {item.name}
               </Link>
             </li>

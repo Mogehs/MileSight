@@ -12,28 +12,20 @@ const companyData = [
       { label: "Impact Awards", path: "/company/impact-awards" },
     ],
   },
-  {
-    title: "Library",
-    links: [
-      { label: "Blog", path: "/" },
-      { label: "News", path: "/" },
-      { label: "Newsletter", path: "/" },
-    ],
-  },
 ];
 
 const Company = () => {
   const { closeMenu } = useMenu();
 
   return (
-    <div className="flex justify-center items-center h-fit bg-gray-50 p-6 absolute w-full z-50">
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-16">
+    <div className="flex items-center h-fit bg-gray-50 p-6 absolute w-full z-50">
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-10 md:gap-16">
         {companyData.map((section, index) => (
           <div key={index}>
             <h2 className="text-lg sm:text-xl font-semibold mb-4">
               {section.title}
             </h2>
-            <ul className="space-y-4">
+            <ul className="space-y-4 md:flex  md:gap-10">
               {section.links.map((item, linkIndex) => (
                 <li key={linkIndex} onClick={closeMenu}>
                   <Link

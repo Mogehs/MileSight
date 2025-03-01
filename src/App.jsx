@@ -27,6 +27,8 @@ import DownloadCenter from "./pages/DownloadCenter";
 import DeveloperZone from "./pages/DeveloperZone";
 import ProductTraining from "./pages/ProductTraining";
 import SolutionTraining from "./pages/SolutionTraining";
+import PeopleCounting from "./pages/PeopleCounting";
+import SpaceOccupancy from "./pages/SpaceOccupancy";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -65,14 +67,14 @@ const router = createBrowserRouter([
         path: "/solutions/indoor-air-quality-monitoring",
         element: <IndoorAirQuality />,
       },
-      // {
-      //   path: "/solutions/people-counting",
-      //   element: <PeopleCounting />,
-      // },
-      // {
-      //   path: "solutions/smart-space-occupancy",
-      //   element: <SpaceOccupancy />,
-      // },
+      {
+        path: "/solutions/people-counting",
+        element: <PeopleCounting />,
+      },
+      {
+        path: "solutions/smart-space-occupancy",
+        element: <SpaceOccupancy />,
+      },
       {
         path: "/solutions/smart-building",
         element: <SmartBuilding />,
@@ -106,7 +108,7 @@ const router = createBrowserRouter([
         element: <Company />,
       },
       {
-        path: "/contact-us",
+        path: "/contact",
         element: <Contact />,
       },
       {

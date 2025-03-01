@@ -15,10 +15,6 @@ const solutionsData = [
       label: "Smart Space",
       link: "/solutions/smart-space",
     },
-    {
-      label: "Smart Agriculture",
-      link: "",
-    },
   ],
   [
     {
@@ -31,11 +27,11 @@ const solutionsData = [
     },
     {
       label: "People Counting",
-      link: "",
+      link: "/solutions/people-counting",
     },
     {
       label: "Space Occupancy",
-      link: "",
+      link: "solutions/smart-space-occupancy",
     },
   ],
   [
