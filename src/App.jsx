@@ -29,6 +29,7 @@ import ProductTraining from "./pages/ProductTraining";
 import SolutionTraining from "./pages/SolutionTraining";
 import PeopleCounting from "./pages/PeopleCounting";
 import SpaceOccupancy from "./pages/SpaceOccupancy";
+import Events from "./components/company/events/Events";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -120,7 +121,7 @@ const router = createBrowserRouter([
         element: <DownloadCenter />,
       },
       {
-        path: "/resources/developer-zone ",
+        path: "/resources/developer-zone",
         element: <DeveloperZone />,
       },
       {
@@ -130,6 +131,10 @@ const router = createBrowserRouter([
       {
         path: "/resources/academy/solution-training",
         element: <SolutionTraining />,
+      },
+      {
+        path: "/company/events",
+        element: <Events />,
       },
     ],
   },

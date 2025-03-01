@@ -15,6 +15,10 @@ const solutionsData = [
       label: "Smart Space",
       link: "/solutions/smart-space",
     },
+    {
+      label: "Smart HVAC Management",
+      link: "/solutions/smart-hvac",
+    },
   ],
   [
     {
@@ -31,7 +35,7 @@ const solutionsData = [
     },
     {
       label: "Space Occupancy",
-      link: "solutions/smart-space-occupancy",
+      link: "/solutions/smart-space-occupancy",
     },
   ],
   [

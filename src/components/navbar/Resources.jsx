@@ -23,18 +23,7 @@ const resourcesData = [
       },
     ],
   },
-  {
-    title: "Video Center",
-    links: [
-      { title: "Products", link: "/resources/video-center/products" },
-      { title: "Solutions", link: "/resources/video-center/solutions" },
-      {
-        title: "Technology Innovations",
-        link: "/resources/video-center/technology-innovations",
-      },
-      { title: "Tutorials", link: "/resources/video-center/tutorials" },
-    ],
-  },
+
   {
     title: "Download Center",
     links: [
@@ -66,7 +55,7 @@ const Resources = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-16">
         {resourcesData.map((section, index) => (
           <div key={index}>
-            <h2 className="text-lg sm:text-xl font-semibold mb-4">
+            <h2 className="text-lg sm:text-xl font-semibold mb-2">
               {section.title}
             </h2>
             <ul className="space-y-4">

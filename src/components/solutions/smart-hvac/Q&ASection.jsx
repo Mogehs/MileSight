@@ -48,7 +48,7 @@ function QASection() {
 
   return (
     <div id="hvac-q&a" className="bg-[#f5f5f5] p-6 my-10">
-      <h2 className="text-3xl font-bold text-center text-[#333] mb-6">FAQ</h2>
+      <h2 className="text-3xl font-bold text-center text-sky-600 mb-6">FAQ</h2>
 
       <div className="space-y-4">
         {faqs.map((faq, index) => (
@@ -58,7 +58,7 @@ function QASection() {
           >
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full text-left p-4 bg-gray-100 dark:bg-gray-800 flex justify-between items-center"
+              className="w-full text-left p-4 bg-gray-100 flex justify-between items-center"
             >
               <span className="font-semibold text-[#333]">
                 Q.{faq.question}
