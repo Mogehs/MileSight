@@ -1,68 +1,134 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMenu } from "../menueContext";
 
-const series = [
+// Import all series components
+import MiniSeries from "../products/video-servillance//MiniSeries";
+import ProSeries from "../products/video-servillance/ProSeries";
+
+// Map series names to components
+const seriesComponents = {
+  "Mini Series": MiniSeries,
+  "Pro Series": ProSeries,
+  "Open Vision Series": MiniSeries,
+  Accessories: ProSeries,
+};
+
+const seriesList = [
   "Mini Series",
   "Pro Series",
   "Open Vision Series",
   "Accessories",
 ];
 
-const productLinks = [
-  { name: "IoT Sensing", path: "/products/iot-sensing" },
-  { name: "Video Surveillance", path: "/products/video-surveillance" },
-  { name: "Intelligent Traffic", path: "/products/intelligent-traffic" },
-  {
-    name: "IoT LoRaWAN® Series",
-    path: "/products/iot-sensing#lorawan",
-    external: true,
-  },
-  { name: "5G & Cellular Products", path: "/products/5g-cellular" },
-  { name: "Software & Platform", path: "/products/software-platform" },
-  { name: "Co-Created Program", path: "/products/co-created" },
-];
-
 const Products = () => {
   const { closeMenu } = useMenu();
+  const [showVideoOptions, setShowVideoOptions] = useState(false);
+  const [activeOption, setActiveOption] = useState("Network Camera");
+  const [showSeries, setShowSeries] = useState(false);
+  const [selectedSeries, setSelectedSeries] = useState(null);
+
+  // Get the selected component
+  const SelectedComponent = selectedSeries
+    ? seriesComponents[selectedSeries]
+    : null;
+
   return (
     <div className="flex flex-col md:flex-row bg-white h-fit z-50 w-full">
-      <div className="w-full md:w-[18rem] bg-gray-50 shadow-lg p-6">
-        <ul className="space-y-3">
-          {productLinks.map((item, index) => (
+      {/* Sidebar */}
+      <div className="w-full md:w-[13rem] bg-gray-50 shadow-lg p-6">
+        <ul className="space-y-2">
+          {[
+            { name: "IoT Sensing", link: "/products/iot-sensing" },
+            {
+              name: "Video Surveillance",
+              link: "/products/video-surveillance",
+            },
+            {
+              name: "Intelligent Traffic",
+              link: "/products/intelligent-traffic",
+            },
+            { name: "IoT LoRaWAN® Series", link: "/products/5g-cellular" },
+            { name: "5G & Cellular Products", link: "/products/5g-cellular" },
+            {
+              name: "Software & Platform",
+              link: "/products/software-platform",
+            },
+            { name: "Co-Created Program", link: "/products/co-created" },
+          ].map((item, index) => (
             <li
               key={index}
-              className="text-gray-700 hover:text-blue-500 transition-colors duration-300"
+              className="text-gray-700 hover:text-blue-500 transition-colors duration-300 relative"
+              onMouseEnter={() =>
+                setShowVideoOptions(item.name === "Video Surveillance")
+              }
               onClick={closeMenu}
             >
-              {item.external ? (
-                <a href={item.path} className="block py-1">
-                  {item.name}
-                </a>
-              ) : (
-                <Link to={item.path} className="block py-1">
-                  {item.name}
-                </Link>
-              )}
+              <Link to={item.link} className="block py-1">
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>
       </div>
 
-      {/* Content Area */}
-      <div className="w-full md:flex-1 p-6">
-        <div className="flex gap-2">
-          {series.map((item, idx) => (
-            <>
-              <div className="bg-gray-200 w-fit h-fit p-1 rounded-md">
-                {item}
-              </div>
-            </>
-          ))}
+      {/* Video Surveillance Options */}
+      {showVideoOptions && (
+        <div className="pt-5 flex flex-col gap-4">
+          <p
+            className={`cursor-pointer ${
+              activeOption === "Network Camera"
+                ? "text-blue-500 font-semibold"
+                : "text-gray-700"
+            }`}
+            onMouseEnter={() => {
+              setActiveOption("Network Camera");
+              setShowSeries(true);
+            }}
+          >
+            Network Camera
+          </p>
+          <p
+            className={`cursor-pointer ${
+              activeOption === "Network Video Recorder"
+                ? "text-blue-500 font-semibold"
+                : "text-gray-700"
+            }`}
+            onMouseEnter={() => {
+              setActiveOption("Network Video Recorder");
+              setShowSeries(false);
+              setSelectedSeries(null);
+            }}
+          >
+            Network Video Recorder
+          </p>
         </div>
-        <p className="text-gray-600">
-          Explore our product categories by clicking on the menu items.
-        </p>
+      )}
+
+      {/* Series Section */}
+      <div className="w-full md:flex-1 p-6">
+        {showSeries && (
+          <div className="flex gap-2 cursor-pointer">
+            {seriesList.map((series, idx) => (
+              <div
+                key={idx}
+                className="bg-gray-200 w-fit h-fit p-2 rounded-md hover:bg-blue-300 transition"
+                onMouseEnter={() => setSelectedSeries(series)}
+                onMouseLeave={() => setSelectedSeries(null)}
+              >
+                {series}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Display Selected Series Component */}
+        {selectedSeries && (
+          <div className="mt-4" onClick={closeMenu}>
+            <strong>{selectedSeries}</strong>
+            {SelectedComponent && <SelectedComponent />}
+          </div>
+        )}
       </div>
     </div>
   );

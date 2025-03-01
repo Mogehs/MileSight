@@ -45,7 +45,7 @@ const data = [
     },
 ];
 
-export default function Comprehensive() {
+export default function Comprehensive({title}) {
     return (
         <div
             className="w-full p-4 mt-10 bg-cover bg-center"
@@ -53,9 +53,8 @@ export default function Comprehensive() {
         >
             <div className="w-full sm:w-11/12 mx-auto sm:mt-8 mt-4">
                 <div className="text-center">
-                    <h1 className="md:text-3xl text-xl mb-4 font-semibold text-white">
-                        Comprehensive People Counters
-                    </h1>
+                    {title && <h1 className="md:text-3xl text-xl mb-4 font-semibold text-white"> {title}
+                    </h1>}
                 </div>
 
                 {/* Grid Layout */}

@@ -23,8 +23,8 @@ export default function StickyPeople() {
     };
 
     return (
-        <>  
-            <Smart title={'Smart People Counting Solution for Different Applications'} image={`${people}`} description={'The Reliable People Counter Makes Decisions Smart'} btn={'Contact Us'}/>
+        <>
+            <Smart title={'Smart People Counting Solution for Different Applications'} image={`${people}`} description={'The Reliable People Counter Makes Decisions Smart'} btn={'Contact Us'} />
             <div className="flex flex-wrap justify-between items-center gap-2 w-full mx-auto lg:w-11/12">
                 <div className="flex flex-wrap gap-2 w-full p-2 md:w-8/12">
                     {data.map((item, index) => (
@@ -62,9 +62,9 @@ export default function StickyPeople() {
             <section id="typical-app"><TypicalApp /></section>
             <section id="highlight-people"><HighlightPeople /></section>
             <section id="explore-advanceds"><ExploreAdvanceds /></section>
-            <section id="comprehensive"><Comprehensive /></section>
+            <section id="comprehensive"><Comprehensive title={'Comprehensive People Counters'}/></section>
             <section id="success-stories"><SuccessStories /></section>
-            <section id="discover-fea"><DiscoverFea /></section>
+            <section id="discover-fea"><DiscoverFea title={'Discover the Future of Smart Sensing: Milesight People Sensing Series'} bgimage={'/PeopleCounting/child.jpg'} mouse={'/PeopleCounting/mouse.png'} btn={'Learn More'}/></section>
             <section id="want-to-know"><WantToknow /></section>
             <section id="form-submit"><FormSubmit /></section>
         </>
