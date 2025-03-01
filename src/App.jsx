@@ -23,8 +23,10 @@ import Contact from "./pages/Contact";
 import SmartCity from "./pages/SmartCity";
 import OurBrand from "./pages/OurBrand";
 import WasteManagement from "./pages/WasteManagement";
-import PeopleCounting from "./pages/PeopleCounting";
-import SpaceOccupancy from "./pages/SpaceOccupancy";
+import DownloadCenter from "./pages/DownloadCenter";
+import DeveloperZone from "./pages/DeveloperZone";
+import ProductTraining from "./pages/ProductTraining";
+import SolutionTraining from "./pages/SolutionTraining";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
@@ -63,14 +65,14 @@ const router = createBrowserRouter([
         path: "/solutions/indoor-air-quality-monitoring",
         element: <IndoorAirQuality />,
       },
-      {
-        path: "/solutions/people-counting",
-        element: <PeopleCounting />,
-      },
-      {
-        path: "solutions/smart-space-occupancy",
-        element: <SpaceOccupancy />,
-      },
+      // {
+      //   path: "/solutions/people-counting",
+      //   element: <PeopleCounting />,
+      // },
+      // {
+      //   path: "solutions/smart-space-occupancy",
+      //   element: <SpaceOccupancy />,
+      // },
       {
         path: "/solutions/smart-building",
         element: <SmartBuilding />,
@@ -111,7 +113,22 @@ const router = createBrowserRouter([
         path: "/company/our-brand",
         element: <OurBrand />,
       },
-     
+      {
+        path: "/resources/download-center",
+        element: <DownloadCenter />,
+      },
+      {
+        path: "/resources/developer-zone ",
+        element: <DeveloperZone />,
+      },
+      {
+        path: "/resources/academy/product-training",
+        element: <ProductTraining />,
+      },
+      {
+        path: "/resources/academy/solution-training",
+        element: <SolutionTraining />,
+      },
     ],
   },
 ]);
