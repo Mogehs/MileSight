@@ -1,9 +1,7 @@
 import { useRef } from "react";
 import traffic from "/VideoSurivilence/traffic.jpg";
-import off from "/VideoSurivilence/off.jpg";
 import cameraseries from "/VideoSurivilence/cameraseries.jpg";
 import one from "/VideoSurivilence/one.jpg";
-import threed from "/VideoSurivilence/threed.png";
 import { Card } from "./Card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -59,7 +57,7 @@ export default function MultiPotential() {
   ];
 
   return (
-    <div className="relative my-20">
+    <div className="relative ">
       <h1 className="text-center font-semibold text-lg sm:text-3xl sm:  w-[40%] mx-auto">
         See what's possible with Milesight's multi-potential sensing products
       </h1>

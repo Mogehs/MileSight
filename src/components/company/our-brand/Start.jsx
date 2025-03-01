@@ -2,14 +2,10 @@ import React from "react";
 
 const Start = () => {
   return (
-    <div className="relative bg-black h-[28rem] flex items-center justify-center">
-      <img
-        src=""
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-50"
-      />
+    <div className="relative bg-black h-[28rem] flex items-center justify-center" style={{background: "url('/Ourbrand/background.png')", backgroundSize: "cover", backgroundPosition: "50%"}}>
+      
 
-      <div className="relative text-white w-full max-w-4xl px-6 md:px-12 flex flex-col gap-5 text-center md:text-left">
+      <div className="relative text-white w-full max-w-22xl px-6 md:px-12 flex flex-col gap-5 text-center md:text-left">
         <h1 className="text-3xl md:text-5xl font-medium leading-tight">
           We Are Milesight,
           <br className="hidden md:block" />

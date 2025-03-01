@@ -23,6 +23,8 @@ import Contact from "./pages/Contact";
 import SmartCity from "./pages/SmartCity";
 import OurBrand from "./pages/OurBrand";
 import WasteManagement from "./pages/WasteManagement";
+import PeopleCounting from "./pages/PeopleCounting";
+import SpaceOccupancy from "./pages/SpaceOccupancy";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl">
