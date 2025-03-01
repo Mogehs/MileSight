@@ -15,6 +15,7 @@ import EnergyEffeciency from "./pages/EnergyEffeciency";
 import IndoorAirQuality from "./pages/IndoorAirQuality";
 import { MenuProvider } from "./components/menueContext";
 import SmartSpace from "./pages/SmartSpace";
+import SmartHVAC from "./pages/SmartHVAC";
 import AiMiniDome from "./pages/product-details/AiMiniDome";
 import MotorCamera from "./pages/product-details/MotorCamera";
 import Company from "./pages/Company";
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
       {
         path: "/solutions/smart-city",
         element: <SmartCity />,
+      },
+      {
+        path: "/solutions/smart-hvac",
+        element: <SmartHVAC />,
       },
       {
         path: "/company/about-us",

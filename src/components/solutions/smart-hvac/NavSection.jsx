@@ -16,12 +16,7 @@ function NavSection() {
   // Detect active section on scroll
   useEffect(() => {
     const handleScroll = () => {
-      const sections = [
-        "smart-space",
-        "smart-carbon",
-        "smart-d2d",
-        "smart-products",
-      ];
+      const sections = ["hvac-why", "hvac-what", "hvac-how", "hvac-q&a"];
 
       sections.forEach((id) => {
         const section = document.getElementById(id);
@@ -44,10 +39,10 @@ function NavSection() {
         <div className="btns text-[#666] w-full flex flex-row justify-between px-8 items-center shadow-2xs border-b-[#f5f5f5] py-4">
           <div className="flex flex-row items-center gap-8">
             {[
-              { id: "smart-space", label: "Smart Space" },
-              { id: "smart-carbon", label: "Corporate Carbon Footprint" },
-              { id: "smart-d2d", label: "Milesight D2D" },
-              { id: "smart-products", label: "Products" },
+              { id: "hvac-why", label: "Why" },
+              { id: "hvac-what", label: "What" },
+              { id: "hvac-how", label: "How" },
+              { id: "hvac-q&a", label: "Q&A" },
             ].map(({ id, label }) => (
               <button
                 key={id}
@@ -73,7 +68,7 @@ function NavSection() {
             <p className="text-[10px]">
               <FaGreaterThan />
             </p>
-            <p>Smart Space</p>
+            <p>Smart HVAC Management</p>
           </div>
         </div>
       </div>
