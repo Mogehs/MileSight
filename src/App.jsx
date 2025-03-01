@@ -63,14 +63,14 @@ const router = createBrowserRouter([
         path: "/solutions/indoor-air-quality-monitoring",
         element: <IndoorAirQuality />,
       },
-      {
-        path: "/solutions/people-counting",
-        element: <PeopleCounting />,
-      },
-      {
-        path: "solutions/smart-space-occupancy",
-        element: <SpaceOccupancy />,
-      },
+      // {
+      //   path: "/solutions/people-counting",
+      //   element: <PeopleCounting />,
+      // },
+      // {
+      //   path: "solutions/smart-space-occupancy",
+      //   element: <SpaceOccupancy />,
+      // },
       {
         path: "/solutions/smart-building",
         element: <SmartBuilding />,
@@ -116,7 +116,7 @@ const router = createBrowserRouter([
         element: <DownloadCenter />,
       },
       {
-        path: "/resources/developer-zone ",
+        path: "/resources/developer-zone",
         element: <DeveloperZone />,
       },
      
