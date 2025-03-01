@@ -21,13 +21,13 @@ const actionLinks = [
     name: "Contact",
     path: "/contact",
     className:
-      "bg-[#0299f4] px-3 py-1 text-white rounded-3xl hover:bg-blue-700",
+      "bg-[#00667C] px-3 py-1 text-white rounded-3xl hover:bg-[#7CCA9A] text-[0.7rem] ml-10",
   },
   {
     name: "Online Demo",
     path: "/demo",
     className:
-      "px-2 py-1 rounded-3xl border flex items-center justify-center gap-1",
+      "px-2 py-1 rounded-3xl border flex items-center justify-center gap-1 text-nowrap text-[0.7rem]",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="flex relative items-center justify-between bg-white text-black pr-1 sm:px-4 py-3 shadow-lg"
+        className="flex sticky w-full z-[300] items-center justify-between bg-white text-black pr-1 sm:px-4 py-3 shadow-lg top-0"
         onMouseLeave={() => setActiveDropdown(null)}
       >
         <Link to="/" onClick={closeMenu}>
@@ -60,9 +60,7 @@ export default function Navbar() {
                 item.component ? setActiveDropdown(item.name) : null
               }
             >
-              <Link to={item.path} className="hover:text-gray-600">
-                {item.name}
-              </Link>
+              <div className="hover:text-gray-600">{item.name}</div>
 
               {/* Dropdown Component (Visible on Hover) */}
               {activeDropdown === item.name && item.component && (

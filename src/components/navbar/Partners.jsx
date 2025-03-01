@@ -63,7 +63,7 @@ const Partners = () => {
                 <li key={linkIndex} onClick={closeMenu}>
                   <Link
                     to={item.path}
-                    className="text-gray-700 text-[12px] sm:text-[14px] hover:text-[#0299f4] transition-colors duration-300"
+                    className="text-gray-700 text-[12px] sm:text-[14px] hover:text-[#7CCA9A] transition-colors duration-300"
                   >
                     {item.title}
                   </Link>

@@ -30,7 +30,7 @@ const Company = () => {
                 <li key={linkIndex} onClick={closeMenu}>
                   <Link
                     to={item.path}
-                    className="text-gray-700 text-[15px] sm:text-[16px] hover:text-[#0299f4] transition-colors duration-300"
+                    className="text-gray-700 text-[15px] sm:text-[16px] hover:text-[#7CCA9A] transition-colors duration-300"
                   >
                     {item.label}
                   </Link>

@@ -71,7 +71,7 @@ const Products = () => {
           ].map((item, index) => (
             <li
               key={index}
-              className="text-gray-700 hover:text-blue-500 text-nowrap transition-colors duration-300 relative"
+              className="text-gray-700 hover:text-[#7CCA9A] text-nowrap transition-colors duration-300 relative"
               onMouseEnter={() => {
                 setShowVideoOptions(item.name === "Video Surveillance");
                 setShowIoT(item.name === "IoT Sensing");
@@ -93,7 +93,7 @@ const Products = () => {
             <p
               className={`cursor-pointer ${
                 activeOption === "Network Camera"
-                  ? "text-blue-500 font-semibold"
+                  ? "text-[#7CCA9A] font-semibold"
                   : "text-gray-700"
               }`}
               onMouseEnter={() => {
@@ -110,7 +110,7 @@ const Products = () => {
             <p
               className={`cursor-pointer ${
                 activeOption === "Network Video Recorder"
-                  ? "text-blue-500 font-semibold"
+                  ? "text-[#7CCA9A] font-semibold"
                   : "text-gray-700"
               }`}
               onMouseEnter={() => {
@@ -125,7 +125,7 @@ const Products = () => {
           </a>
           <a href="/products/NDAA-Compilant">
             <p
-              className="cursor-pointer border border-sky-500 rounded-md p-2 text-sky-500"
+              className="cursor-pointer border border-[#7CCA9A]rounded-md p-2 text-[#7CCA9A]"
               onMouseEnter={() => {
                 setActiveOption("NDAA Compliant Products");
                 setShowSeries(false);
@@ -149,7 +149,7 @@ const Products = () => {
               href={`/solutions/${iot.toLowerCase().replace(" ", "-")}`}
             >
               <p
-                className="cursor-pointer text-gray-700 hover:text-blue-500"
+                className="cursor-pointer text-gray-700 hover:text-[#7CCA9A]"
                 onMouseEnter={() => {
                   setActiveOption(iot);
                   setSelectedVideoSeries(null);
@@ -170,7 +170,7 @@ const Products = () => {
             {seriesList.map((series, idx) => (
               <div
                 key={idx}
-                className="bg-gray-200 w-fit h-fit p-2 rounded-md hover:bg-blue-300 transition"
+                className="bg-gray-200 w-fit h-fit p-2 rounded-md hover:text-[#7CCA9A] transition"
                 onMouseEnter={() => {
                   setSelectedSeries(series);
                   setSelectedVideoSeries(null);
@@ -188,7 +188,7 @@ const Products = () => {
             {videoSeriesList.map((series, idx) => (
               <div
                 key={idx}
-                className="bg-gray-200 w-fit h-fit p-2 rounded-md hover:bg-blue-300 transition"
+                className="bg-gray-200 w-fit h-fit p-2 rounded-md hover:text-[#7CCA9A] transition"
                 onMouseEnter={() => {
                   setSelectedVideoSeries(series);
                   setSelectedSeries(null);
