@@ -9,7 +9,6 @@ const companyData = [
       { label: "About Us", path: "/company/about-us" },
       { label: "Our Brand", path: "/company/our-brand" },
       { label: "Events", path: "/company/events" },
-      { label: "Impact Awards", path: "/company/impact-awards" },
     ],
   },
 ];

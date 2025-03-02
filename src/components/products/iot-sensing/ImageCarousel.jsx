@@ -57,7 +57,7 @@ const ImageCarousel = ({ data, imagesPerSlide = 4 }) => {
                 src={item.img}
                 alt="not found"
               />
-              <p className="mt-2 hover:cursor-pointer hover:text-[#0299f4] text-[#333]">
+              <p className="mt-2 hover:cursor-pointer hover:text-[#7CCA9A] text-[#333]">
                 {item.para1} <br /> {item.para2}
               </p>
             </div>
@@ -68,7 +68,11 @@ const ImageCarousel = ({ data, imagesPerSlide = 4 }) => {
       {/* Previous Button */}
       <button
         className={`absolute top-1/2 left-0 transform -translate-y-1/2 text-black p-2 rounded-full 
-          ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "hover:cursor-pointer"}`}
+          ${
+            currentIndex === 0
+              ? "opacity-50 cursor-not-allowed"
+              : "hover:cursor-pointer"
+          }`}
         onClick={prevSlide}
         disabled={currentIndex === 0}
       >
@@ -78,7 +82,11 @@ const ImageCarousel = ({ data, imagesPerSlide = 4 }) => {
       {/* Next Button */}
       <button
         className={`absolute top-1/2 right-0 transform -translate-y-1/2 text-black p-2 rounded-full 
-          ${currentIndex >= maxIndex ? "opacity-50 cursor-not-allowed" : "hover:cursor-pointer"}`}
+          ${
+            currentIndex >= maxIndex
+              ? "opacity-50 cursor-not-allowed"
+              : "hover:cursor-pointer"
+          }`}
         onClick={nextSlide}
         disabled={currentIndex >= maxIndex}
       >

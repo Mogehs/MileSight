@@ -33,7 +33,7 @@ import Events from "./components/company/events/Events";
 import NDAAProducts from "./pages/NDAAProducts";
 
 const MainLayout = () => (
-  <div className="lg:mx-auto lg:max-w-7xl">
+  <div className="lg:mx-auto max-w-screen-xl">
     <Navbar />
     <Outlet />
     <Footer />

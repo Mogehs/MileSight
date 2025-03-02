@@ -67,10 +67,10 @@ const NDAA = () => {
               applications where compliance is essential
             </p>
             <div className="my-2 md:my-5 lg:mt-10 flex gap-2 sm:gap-5 flex-col sm:flex-row">
-              <button className="bg-sky-500 w-fit h-fit text-nowrap text-[0.6rem] md:text-lg p-[5px] rounded-md">
+              <button className="bg-[#7CCA9A] w-fit h-fit text-nowrap text-[0.6rem] md:text-lg p-[5px] rounded-md">
                 Download Brochure
               </button>
-              <button className="bg-sky-500 text-[0.6rem] sm:text-lg p-[5px] rounded-md  w-fit h-fit text-nowrap">
+              <button className="bg-[#7CCA9A] text-[0.6rem] sm:text-lg p-[5px] rounded-md  w-fit h-fit text-nowrap">
                 Download NDAA Compilant Product List
               </button>
             </div>
@@ -95,7 +95,7 @@ const NDAA = () => {
                     <h1 className=" text-xs sm:text-xl font-semibold mt-2">
                       {item.title}
                     </h1>
-                    <ul className=" mt-2 text-sm text-gray-500 list-disc marker:text-blue-500 ">
+                    <ul className=" mt-2 text-sm text-gray-500 list-disc marker:text-[#00667C] ">
                       <li className="text-xs">{item.li}</li>
                       <li className="text-xs">{item.li1}</li>
                       <li className="text-xs">{item.li3}</li>
@@ -110,7 +110,7 @@ const NDAA = () => {
               ))}
             </div>
             <div className="flex justify-center my-10 text-white ">
-              <button className="bg-sky-500 text-[0.6rem] sm:text-sm p-[5px] rounded-md  w-fit h-fit text-nowrap">
+              <button className="bg-[#00667C] text-[0.6rem] sm:text-sm p-[5px] rounded-md  w-fit h-fit text-nowrap">
                 Download NDAA Compilant Product List
               </button>
             </div>

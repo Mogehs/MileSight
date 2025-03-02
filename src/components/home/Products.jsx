@@ -5,35 +5,35 @@ import Card from "./Card";
 const cards = [
   {
     name: "Video Surveillance",
-    image: "/home/traffic.jpg",
+    video: "/home/security.mp4",
   },
   {
     name: "Intelligent Traffic",
-    image: "/home/traffic.jpg",
+    video: "/home/traffic.mp4",
   },
   {
     name: "LoRaWAN Sensor",
-    image: "/home/traffic.jpg",
+    video: "/home/lorawan-sensor.mp4",
   },
   {
     name: "LoRaWAN Gateway",
-    image: "/home/traffic.jpg",
+    video: "/home/lorawan-gateway.mp4",
   },
   {
     name: "People Sensing Series",
-    image: "/home/traffic.jpg",
+    image: "/home/people-sensing-series (1).jpg",
   },
   {
     name: "IoT Controller",
-    image: "/home/traffic.jpg",
+    video: "/home/iot-controller.mp4",
   },
   {
     name: "Industrial 5G/4G Routers",
-    image: "/home/traffic.jpg",
+    video: "/home/router.mp4",
   },
   {
     name: "5G Suite",
-    image: "/home/traffic.jpg",
+    video: "/home/5g.mp4",
   },
 ];
 
@@ -58,15 +58,23 @@ const Products = () => {
         Internet of Things to prompt broader possibilities behind significant
         insights.
       </p>
+
+      {/* Desktop Grid View */}
       <div className="hidden md:flex flex-wrap justify-center gap-4 md:w-full lg:w-[80%] mx-auto mt-10">
         {cards.map((card, index) => (
-          <Card key={index} name={card.name} image={card.image} />
+          <Card
+            key={index}
+            name={card.name}
+            image={card.image}
+            video={card.video}
+          />
         ))}
       </div>
 
+      {/* Mobile Slider */}
       <div className="rounded-2xl w-full mt-10 p-4 md:hidden">
         <div className="flex flex-col items-center">
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence mode="wait">
             <motion.div
               key={selectedCard}
               initial={{ opacity: 0, x: 100 }}
@@ -78,6 +86,7 @@ const Products = () => {
               <Card
                 name={cards[selectedCard].name}
                 image={cards[selectedCard].image}
+                video={cards[selectedCard].video} // ✅ Pass video here
               />
             </motion.div>
           </AnimatePresence>
