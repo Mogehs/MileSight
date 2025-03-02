@@ -21,13 +21,13 @@ const actionLinks = [
     name: "Contact",
     path: "/contact",
     className:
-      "bg-[#00667C] px-3 py-1 text-white rounded-3xl hover:bg-[#7CCA9A] text-[0.7rem] ml-10",
+      "bg-[#00667C] px-3 sm:py-1 text-white rounded-3xl hover:bg-[#7CCA9A] text-[0.7rem] py-3 sm:ml-10",
   },
   {
     name: "Online Demo",
     path: "/demo",
     className:
-      "px-2 py-1 rounded-3xl border flex items-center justify-center gap-1 text-nowrap text-[0.7rem]",
+      "px-2 py-3 sm:py-1 rounded-3xl border flex items-center justify-center gap-1 text-nowrap text-[0.7rem]",
   },
 ];
 
@@ -124,7 +124,7 @@ export default function Navbar() {
           ))}
 
           {/* Action Buttons - Mobile */}
-          <div className="flex flex-col space-y-2 w-full">
+          <div className="flex flex-col space-y-2 items-center w-full">
             {actionLinks.map((item, index) => (
               <Link
                 key={index}
