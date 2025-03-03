@@ -43,18 +43,18 @@ const solutionsData = [
       label: "Smart Building",
       link: "/solutions/smart-building",
     },
-    {
-      label: "Energy Efficiency",
-      link: "/solutions/energy-efficiency",
-    },
+    // {
+    //   label: "Energy Efficiency",
+    //   link: "/solutions/energy-efficiency",
+    // },
     {
       label: "Smart City",
       link: "/solutions/smart-city",
     },
-    {
-      label: "Waste Management",
-      link: "",
-    },
+    // {
+    //   label: "Waste Management",
+    //   link: "",
+    // },
   ],
 ];
 

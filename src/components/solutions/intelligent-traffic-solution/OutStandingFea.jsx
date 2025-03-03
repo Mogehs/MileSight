@@ -19,7 +19,7 @@ export default function OutStandingFea() {
   ];
 
   return (
-    <div className="w-full h-screen sm:h-[90vh] lg:h-[60vh] xl:h-[70vh]  relative flex flex-col items-center justify-center mt-10">
+    <div className="w-full h-[65vh] sm:h-[90vh] lg:h-[60vh] xl:h-[70vh]  relative flex flex-col items-center justify-center mt-10">
       {/* Navigation Section */}
 
       <div className="sm:w-9/10 mx-auto w-full shadow-lg rounded-lg absolute bottom-0 ">
