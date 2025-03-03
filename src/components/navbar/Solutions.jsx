@@ -51,10 +51,10 @@ const solutionsData = [
       label: "Smart City",
       link: "/solutions/smart-city",
     },
-    // {
-    //   label: "Waste Management",
-    //   link: "",
-    // },
+    {
+      label: "Waste Management",
+      link: "/solutions/waste-management",
+    },
   ],
 ];
 
