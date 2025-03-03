@@ -18,7 +18,7 @@ function NavSection({ modelData }) {
   return (
     <div>
       {/* Navbar */}
-      <div className="sticky flex top-0 bg-white z-10">
+      <div className="sticky flex top-16 bg-white z-10">
         <div className="btns text-[#666] w-full flex flex-row justify-between px-8 items-center shadow-2xs border-b-[#f5f5f5] py-4">
           <div className="flex flex-row flex-wrap items-center gap-8 w-full text-sm md:text-[15px]">
             {[
@@ -32,8 +32,8 @@ function NavSection({ modelData }) {
                 onClick={() => setActiveComponent(id)}
                 className={`cursor-pointer px-4 py-2 transition-colors duration-300 border-l border-l-[#dddddd] ${
                   activeComponent === id
-                    ? "bg-[#0299f4] text-white font-semibold"
-                    : "hover:text-[#0299f4] text-[#666]"
+                    ? "bg-[#00667C] text-white font-semibold"
+                    : "hover:text-[#7CCA9A] text-[#666]"
                 }`}
               >
                 {label}

@@ -15,10 +15,10 @@ export default function Gobeyond() {
 
             <div className="absolute inset-0 bg-opacity-50 flex items-center justify-center text-center px-4">
                 <div className="md:w-7/12 w-full  p-6 rounded-lg">
-                    <h1 className="text-2xl md:text-4xl font-bold text-white">
+                    <h1 className="text-2xl md:text-4xl font-bold text-[#7CCA9A]">
                         Milesight Intelligent Traffic Solution
                     </h1>
-                    <p className="text-sm sm:text-lg mt-3 text-white">
+                    <p className="text-sm sm:text-lg mt-3 text-[#7CCA9A] ">
                         Go Beyond Security, Go for Smarter Traffic.
                     </p>
                 </div>

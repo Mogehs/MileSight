@@ -3,8 +3,11 @@ import cam from "/VideoSurivilence/cam.png";
 import vandal from "/VideoSurivilence/vandal.png";
 import statics from "/VideoSurivilence/static.png";
 import { Link } from "react-router-dom";
+import { useMenu } from "../../menueContext";
 
 export default function MiniSeries({ filter }) {
+  const { closeMenu } = useMenu();
+
   const camerAray = [
     {
       name: "AI Motorized Dome Camera",
@@ -48,15 +51,15 @@ export default function MiniSeries({ filter }) {
   return (
     <div className="w-full px-4 sm:mt-5">
       <div className="sm:w-[90%] mx-auto w-full">
-        <span className="text-gray-500 block text-center mb-3 mt-3 text-sm sm:text-base">
+        {/* <span className="text-gray-500 block text-center mb-3 mt-3 text-sm sm:text-base">
           Entry-level · Compact · Stylish
-        </span>
+        </span> */}
 
         <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-3">
           {filteredCameras.length > 0 ? (
             filteredCameras.map((item, index) => (
               <>
-                <Link to="/products/ai-motorized-mini-dome">
+                <a href="/products/ai-motorized-mini-dome" onClick={closeMenu}>
                   <div
                     className="p-3 transition-all ease-in-out delay-100 hover:shadow-md hover:shadow-blue-200 cursor-pointer h-auto flex flex-col items-center justify-center border sm:border-0 rounded-lg shadow-sm bg-white"
                     key={index}
@@ -70,7 +73,7 @@ export default function MiniSeries({ filter }) {
                       {item.name}
                     </span>
                   </div>
-                </Link>
+                </a>
               </>
             ))
           ) : (
@@ -80,9 +83,12 @@ export default function MiniSeries({ filter }) {
           )}
         </div>
 
-        <p className="underline text-center mt-4 cursor-pointer text-sm sm:text-base hover:text-blue-500">
-          View All Products
-        </p>
+        <a
+          href="/products/NDAA-Compilant"
+          className="underline text-center mt-4 cursor-pointer text-sm sm:text-base hover:text-[#7CCA9A]"
+        >
+          <p> View All Products</p>
+        </a>
       </div>
     </div>
   );

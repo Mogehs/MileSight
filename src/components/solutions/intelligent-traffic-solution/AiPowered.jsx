@@ -42,10 +42,10 @@ export default function AiPowered() {
 
     return (
         <div className="w-full h-fit sm:mt-10 mt-4">
-            <h1 className="text-center font-semibold md:text-2xl">AI-powered LPR Algorithm</h1>
+            <h1 className="text-center text-xl font-semibold md:text-3xl text-[#00667C]">AI-powered LPR Algorithm</h1>
             <div className='mx-auto sm:w-11/12 p-2 w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-6'>
                 {data.map((item, index) => (
-                    <div key={index} className="relative flex flex-col items-center justify-center bg-cover bg-center p-6 rounded-lg text-white shadow-lg py-10" style={{ backgroundImage: `url(${item.img})`, minHeight: '300px' }}>
+                    <div key={index} className="relative flex flex-col items-center justify-center bg-cover bg-center p-6 rounded-lg text-[#7CCA9A] shadow-lg py-10" style={{ backgroundImage: `url(${item.img})`, minHeight: '300px' }}>
                         <h2 className="absolute underline top-4 text-lg font-bold bg-opacity-50 px-2 py-1 rounded">{item.title}</h2>
                         
                         {item.highlights ? (

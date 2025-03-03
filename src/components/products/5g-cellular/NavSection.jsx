@@ -39,7 +39,7 @@ function NavSection() {
   }, []);
 
   return (
-    <div className="sticky hidden md:flex top-0 bg-white z-10">
+    <div className="sticky top-18 hidden md:flex  bg-white z-10">
       <div className="btns text-[#666] w-full flex flex-row justify-between px-8 items-center shadow-2xs border-b-[#f5f5f5] py-4">
         <div className="flex flex-row items-center gap-8">
           {[
@@ -53,8 +53,8 @@ function NavSection() {
               onClick={() => scrollToSection(id)}
               className={`cursor-pointer px-4 py-2 transition-colors duration-300 border-l border-l-[#dddddd] ${
                 activeSection === id
-                  ? "bg-[#0299f4] text-white font-semibold"
-                  : "hover:text-[#0299f4] text-[#666]"
+                  ? "bg-[#00667C] text-white font-semibold"
+                  : "hover:text-[#7CCA9A] text-[#666]"
               }`}
             >
               {label}

@@ -50,7 +50,7 @@ export default function WhatIAQ() {
                         {sections.slice(0, 5).map(({ id, label }) => (
                             <h1
                                 key={id}
-                                className={`text-xs  lg:text-lg px-2 py-1 rounded-lg cursor-pointer transition duration-200 ${activeSection === id ? "bg-blue-500 text-white" : "bg-transparent text-gray-700"
+                                className={`text-xs text-[#7CCA9A]  lg:text-lg px-2 py-1 rounded-lg cursor-pointer transition duration-200 ${activeSection === id ? "bg-[#00667C] text-[#7CCA9A]" : "bg-transparent text-[#00667C]"
                                     }`}
                             >
                                 {label}
@@ -60,7 +60,7 @@ export default function WhatIAQ() {
                     <div className="flex flex-wrap gap-2 md:w-[20%]">
                         {sections.slice(5).map(({ id, label }) => (
                             <h1 key={id}
-                                className={`text-xs md:text-lg px-2 py-1 rounded-lg cursor-pointer transition ${activeSection === id ? "bg-sky-200 text-gray-900" : "text-gray-700"
+                                className={`text-xs md:text-lg px-2 py-1 text-[#7CCA9A]rounded-lg cursor-pointer transition ${activeSection === id ? "bg-sky-200 text-gray-900" : "text-[#00667C]"
                                     }`}>
                                 {label}
                             </h1>

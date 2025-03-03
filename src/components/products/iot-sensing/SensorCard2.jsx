@@ -17,7 +17,7 @@ function SensorCard2() {
   return (
     <div className="">
       {/* Section 2 */}
-      <div className="bg-[#daecff] rounded-4xl p-4 mt-4">
+      <div className="bg-[#7CCA9A] rounded-4xl p-4 mt-4 text-white">
         <div className="flex md:flex-row flex-col items-center justify-between">
           {/* Radio Buttons */}
           <div className="flex flex-col gap-2">
@@ -45,7 +45,7 @@ function SensorCard2() {
 
                 {/* Animated Names Section */}
                 <div
-                  className={`mt-2 bg-[#fff] flex flex-col flex-wrap gap-2 overflow-hidden transition-all duration-500 ease-in-out transform md:max-w-1/2 ${
+                  className={`mt-2 bg-[#00667C] flex flex-col flex-wrap gap-2 overflow-hidden transition-all duration-500 ease-in-out transform md:max-w-1/2 text-white rounded-lg ${
                     selectedSeries === series
                       ? "max-h-96 opacity-100 translate-y-0"
                       : "max-h-0 opacity-0 -translate-y-5"
@@ -54,10 +54,8 @@ function SensorCard2() {
                   {card2[series].names.map((name, index) => (
                     <span
                       key={index}
-                      className={`px-4 py-1 hover:cursor-pointer transition-colors duration-300 ${
-                        selectedName === name
-                          ? "text-[#0299f4]"
-                          : "text-black"
+                      className={`px-4 py-1 hover:cursor-pointer transition-colors duration-300  ${
+                        selectedName === name ? "text-[#7CCA9A]" : "text-white"
                       }`}
                       onClick={() => {
                         setSelectedSeries(series);

@@ -76,7 +76,7 @@ function DisplaySection() {
           <div className="mt-[-5rem]">
             <img src="/iot-sensing/2-pic1.png" alt="not found" />
           </div>
-          <p className="hover:cursor-pointer text-center hover:text-[#0299f4] text-[#333]">
+          <p className="hover:cursor-pointer text-center hover:text-[#7CCA9A] text-[#333]">
             DS3604
             <br />
             IoT E-ink Display

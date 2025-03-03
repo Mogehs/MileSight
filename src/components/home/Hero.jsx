@@ -143,7 +143,7 @@ export default function Hero() {
                         {["Enter IoT RoadMap", "Enter CCTV RoadMap"].map(
                           (item) => (
                             <>
-                              <button className="bg-blue-600 p-1 rounded-sm">
+                              <button className="bg-[#00667C] p-2 rounded-sm">
                                 {item}
                               </button>
                             </>

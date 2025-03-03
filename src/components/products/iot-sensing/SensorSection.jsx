@@ -17,7 +17,7 @@ function SensorSection() {
           <button
             className={`hover:cursor-pointer py-1 px-4 text-nowrap ${
               selectedButton === "By Product"
-                ? "bg-[#0299f4] rounded-full text-white cursor-pointer transition-all"
+                ? "bg-[#00667C] rounded-full text-white cursor-pointer transition-all"
                 : "text-black"
             }`}
             onClick={() => setSelectedButton("By Product")}
@@ -27,7 +27,7 @@ function SensorSection() {
           <button
             className={`hover:cursor-pointer py-1 px-4 text-nowrap ${
               selectedButton === "Environmental Sensing"
-                ? "bg-[#0299f4] rounded-full text-white cursor-pointer transition-all"
+                ? "bg-[#00667C] rounded-full text-white cursor-pointer transition-all"
                 : "text-black"
             }`}
             onClick={() => setSelectedButton("Environmental Sensing")}

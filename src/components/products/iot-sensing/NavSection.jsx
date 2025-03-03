@@ -40,7 +40,7 @@ function NavSection() {
   }, []);
 
   return (
-    <div className="sticky hidden md:flex top-0 bg-white z-10">
+    <div className="sticky hidden md:flex top-13 bg-white z-10">
       <div className="btns text-[#666] flex justify-between items-center shadow-2xs py-8">
         <div className="flex flex-row items-center gap-8">
           {[
@@ -55,8 +55,8 @@ function NavSection() {
               onClick={() => scrollToSection(id)}
               className={`cursor-pointer px-4 py-2 transition-colors duration-300 ${
                 activeSection === id
-                  ? "bg-[#0299f4] text-white font-semibold"
-                  : "hover:text-[#0299f4] text-[#666]"
+                  ? "bg-[#00667C] text-white font-semibold"
+                  : "hover:text-[#7CCA9A] text-[#666]"
               }`}
             >
               {label}
@@ -64,7 +64,7 @@ function NavSection() {
           ))}
         </div>
         <div className="flex items-center gap-2">
-          <button className="hover:text-[#0299f4] cursor-pointer">Home</button>
+          <button className="hover:text-[#00667C] cursor-pointer">Home</button>
           <p className="text-[10px]">
             <FaGreaterThan />
           </p>

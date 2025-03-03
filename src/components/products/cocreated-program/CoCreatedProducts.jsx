@@ -7,7 +7,7 @@ const CoCreatedProducts = () => {
         Co-Created Products
       </h1>
 
-      <div className="flex flex-col lg:flex-row items-center bg-gradient-to-r from-[#0C142A] to-[#28679E] w-[90%] mx-auto rounded-lg mt-10 p-5 lg:p-8">
+      <div className="flex flex-col lg:flex-row items-center bg-gradient-to-l from-[#00667C] to-[#7CCA9A] w-[90%] mx-auto rounded-lg mt-10 p-5 lg:p-8">
         {/* Image Section */}
         <div className="w-full lg:w-[40%] flex justify-center">
           <img
@@ -48,10 +48,10 @@ const CoCreatedProducts = () => {
 
           {/* Buttons Section */}
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
-            <button className="bg-sky-500 rounded-lg py-2 px-4 w-full sm:w-auto">
+            <button className="bg-[#7CCA9A] rounded-lg py-2 px-4 w-full sm:w-auto">
               Register Now
             </button>
-            <button className="p-2 rounded-lg bg-white text-sky-500 w-full sm:w-auto">
+            <button className="p-2 rounded-lg bg-white text-[#00667C] w-full sm:w-auto">
               Learn More
             </button>
           </div>

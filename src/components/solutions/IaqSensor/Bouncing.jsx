@@ -24,7 +24,7 @@ export default function Bouncing() {
     return (
         <div className="h-full w-full bg-cover md:px-0 py-10 mt-10 px-10" style={{ background: `url(${bg})` }}>
             <div className="w-full sm:w-11/12 mx-auto">
-                <div className="text-center text-white flex flex-col gap-3">
+                <div className="text-center text-[#7CCA9A] flex flex-col gap-3">
                     <h1 className="text-xl md:text-2xl font-semibold">
                         Bouncing Back to Secured Study through CO<sub>2</sub> Detection
                     </h1>
@@ -42,14 +42,14 @@ export default function Bouncing() {
                                 className="w-full h-full object-cover rounded-md shadow shadow-gray-400"
                             />
                             <div className="md:w-[80%] lg:w-[50%] mx-6 absolute top-0 left-0">
-                                <h1 className="text-xs md:text-md lg:text-lg font-semibold mt-2 text-black">
+                                <h1 className="text-xs md:text-md lg:text-lg font-semibold mt-2 text-[#7CCA9A]">
                                     {item.title2}
                                 </h1>
-                                <p className="lg:text-lg text-xs text-blue-500">{item.blue}</p>
+                                <p className="lg:text-lg text-xs text-[#00667C]">{item.blue}</p>
                                 <p className="text-xs md:text-md text-gray-500 mt-2">
                                     {isSmallScreen ? item.since.slice(0, 100) + "..." : item.since}
                                 </p>
-                                <button className="text-xs lg:text-lg rounded-2xl bg-blue-500 text-white px-4 py-2 mt-2 scale-[0.9] transform transition-all ease-in delay-100 hover:scale-[1] cursor-pointer">
+                                <button className="text-xs lg:text-lg rounded-2xl bg-[#00667C] text-white hover:bg-[#7CCA9A] hover:text-[#00667C] px-4 py-2 mt-2 scale-[0.9] transform transition-all ease-in delay-100 hover:scale-[1] cursor-pointer">
                                     {item.watch}
                                 </button>
                             </div>

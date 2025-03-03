@@ -2,7 +2,7 @@ import React from "react";
 
 function TraditionalSection() {
   return (
-    <div className="bg-[#f5f5f5] md:px-8 p-8  grid md:grid-cols-3 grid-cols-1 gap-4 md:gap-0 items-center mt-8">
+    <div className="bg-[#7CCA9A] md:px-8 p-8  grid md:grid-cols-3 grid-cols-1 gap-4 md:gap-0 items-center mt-8">
       <div>
         <h1 className="md:text-[3rem] text-[25px] text-[#333] text-nowrap">
           NO! Turn Traditional <br /> Restrooms Down{" "}

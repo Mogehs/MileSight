@@ -10,8 +10,8 @@ export default function PromotingEne() {
         <div className=" w-full ">
             <div className=" w-full sm:w-11/12 mx-auto sm:mt-8 mt-4 px-2">
                 <div className=" text-center ">
-                    <h1 className=" text-xl font-semibold md:text-2xl">Promoting Energy Efficiency in Buildings Everywhere</h1>
-                    <p className=" text-xs md:text-lg mt-2 ">IAQ Solution Success Stories</p>
+                    <h1 className=" text-xl font-semibold md:text-2xl text-[#00667C]">Promoting Energy Efficiency in Buildings Everywhere</h1>
+                    <p className=" text-xs md:text-lg mt-2  text-[#00667C]">IAQ Solution Success Stories</p>
 
                 </div>
 
@@ -21,15 +21,15 @@ export default function PromotingEne() {
                             return (
                                 <div key={index} className=" flex flex-col md:flex-row justify-between items-center bg-white shadow-lg rounded-lg ">
                                     <div className=" flex flex-col justify-start items-start px-4 py-2 w-full md:w-[40%]">
-                                        <h1 className=" text-lg font-semibold ">{item.title}</h1>
+                                        <h1 className=" text-lg font-semibold text-[#00667C] ">{item.title}</h1>
                                         <p className=" text-xs text-gray-500 mt-2 ">{item.descrip}</p>
 
                                         <div className=" flex items-center gap-2 mt-2">
-                                            <span>{item.icon}</span>
-                                            <span>{item.city}</span>
+                                            <span className=" text-[#00667C]">{item.icon}</span>
+                                            <span className=" text-[#00667C]">{item.city}</span>
                                         </div>
 
-                                        <button className=" bg-blue-500 mt-3 text-white px-4 py-1 rounded-lg flex items-center scale-[0.9] transform transition-all ease-in delay-100 hover:scale-[1] cursor-pointer">{item.btn}</button>
+                                        <button className=" bg-[#00667C] text-white hover:bg-[#7CCA9A] hover:text-[#00667C] mt-2 px-4 py-1 rounded-lg flex items-center scale-[0.9] transform transition-all ease-in delay-100 hover:scale-[1] cursor-pointer">{item.btn}</button>
                                     </div>
                                     <div className="  w-full md:w-[50%] p-5">
                                         <img src={item.img} alt="" className=" w-full h-60 object-cover rounded-t-lg " />

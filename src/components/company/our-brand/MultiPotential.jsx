@@ -1,9 +1,7 @@
 import { useRef } from "react";
 import traffic from "/VideoSurivilence/traffic.jpg";
-import off from "/VideoSurivilence/off.jpg";
 import cameraseries from "/VideoSurivilence/cameraseries.jpg";
 import one from "/VideoSurivilence/one.jpg";
-import threed from "/VideoSurivilence/threed.png";
 import { Card } from "./Card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -59,7 +57,7 @@ export default function MultiPotential() {
   ];
 
   return (
-    <div className="relative my-20">
+    <div className="relative ">
       <h1 className="text-center font-semibold text-lg sm:text-3xl sm:  w-[40%] mx-auto">
         See what's possible with Milesight's multi-potential sensing products
       </h1>
@@ -80,13 +78,13 @@ export default function MultiPotential() {
       <div className="absolute bottom-20 left-1/2  -translate-x-1/2 flex gap-4 px-4  rounded">
         <button
           onClick={() => scroll("left")}
-          className="bg-gray-300 p-2 rounded-full shadow-lg hover:bg-blue-400"
+          className="bg-[#00667C] p-2 rounded-full shadow-lg hover:bg-[#7CCA9A] hover:cursor-pointer"
         >
           <ChevronLeft size={24} />
         </button>
         <button
           onClick={() => scroll("right")}
-          className="bg-gray-300 p-2 rounded-full shadow-lg hover:bg-blue-400"
+          className="bg-[#00667C] p-2 rounded-full shadow-lg hover:bg-[#7CCA9A] hover:cursor-pointer"
         >
           <ChevronRight size={24} />
         </button>

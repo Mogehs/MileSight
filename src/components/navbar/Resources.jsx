@@ -1,32 +1,48 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useMenu } from "../menueContext";
 
 const resourcesData = [
   {
     title: "Support",
-    links: ["Submit a Ticket", "Help Center", "Online Demo"],
+    links: [
+      { title: "Submit a Ticket", link: "/resources/submit-ticket" },
+      { title: "Help Center", link: "/resources/help-center" },
+      { title: "Online Demo", link: "/resources/online-demo" },
+    ],
   },
   {
     title: "Academy",
     links: [
-      "Product Training",
-      "Solution Training",
-      "Technical Training",
-      "Roadmap",
+      {
+        title: "Product Training",
+        link: "/resources/academy/product-training",
+      },
+      {
+        title: "Solution Training",
+        link: "/resources/academy/solution-training",
+      },
     ],
   },
-  {
-    title: "Video Center",
-    links: ["Products", "Solutions", "Technology Innovations", "Tutorials"],
-  },
+
   {
     title: "Download Center",
     links: [
-      "Datasheet & User Guide",
-      "Software & Firmware",
-      "Release Note",
-      "Developer Zone",
+      {
+        title: "Datasheet & User Guide",
+        link: "/resources/download-center",
+      },
+      {
+        title: "Software & Firmware",
+        link: "/resources/download-center",
+      },
+      {
+        title: "Release Note",
+        link: "/resources/download-center",
+      },
+      {
+        title: "Developer Zone",
+        link: "/resources/developer-zone",
+      },
     ],
   },
 ];
@@ -36,21 +52,21 @@ const Resources = () => {
 
   return (
     <div className="flex justify-center items-center h-fit bg-gray-50 p-6 absolute w-full z-50">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-16">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-5">
         {resourcesData.map((section, index) => (
           <div key={index}>
-            <h2 className="text-lg sm:text-xl font-semibold mb-4">
+            <h2 className="text-sm sm:text-md font-semibold mb-2">
               {section.title}
             </h2>
-            <ul className="space-y-4">
+            <ul className="space-y-2 text-sm">
               {section.links.map((item, linkIndex) => (
                 <li key={linkIndex} onClick={closeMenu}>
-                  <Link
-                    to=""
-                    className="text-gray-700 text-[15px] sm:text-[16px] hover:text-[#0299f4] transition-colors duration-300"
+                  <a
+                    href={item.link}
+                    className="text-gray-700 text-[12px] sm:text-[14px] hover:text-[#7CCA9A] transition-colors duration-300"
                   >
-                    {item}
-                  </Link>
+                    {item.title}
+                  </a>
                 </li>
               ))}
             </ul>

@@ -22,12 +22,12 @@ const NdaaSection = ({ title, subtitle, list }) => {
         </div>
       </div>
       <div className="flex md:flex-row flex-col md:items-center mx-8  md:gap-16 my-8">
-        <ul className="list-disc marker:text-[#0299f4] text-[#666]">
+        <ul className="list-disc marker:text-[#00667C] text-[#666]">
           {listArray.map((li, id) => (
             <>{id <= 3 && <li>{li}</li>}</>
           ))}
         </ul>
-        <ul className="list-disc marker:text-[#0299f4] text-[#666]">
+        <ul className="list-disc marker:text-[#00667C] text-[#666]">
           {listArray.map((li, id) => (
             <>{id > 3 && <li>{li}</li>}</>
           ))}
