@@ -4,6 +4,7 @@ import SectionTwo from "../components/resources/developer-zone/SectionTwo";
 import SectionThree from "../components/resources/developer-zone/SectionThree";
 import SectionFour from "../components/resources/developer-zone/SectionFour";
 import SectionFive from "../components/resources/developer-zone/SectionFive";
+import SectionSix from "../components/resources/developer-zone/SectionSix";
 
 
 const DeveloperZone = () => {
@@ -15,6 +16,7 @@ const DeveloperZone = () => {
        <SectionThree />
        <SectionFour />
        <SectionFive />
+       <SectionSix />
           </div>
   );
 };
