@@ -5,6 +5,7 @@ import { useMenu } from "../menueContext";
 // Import all series components
 import MiniSeries from "../products/video-servillance/MiniSeries";
 import ProSeries from "../products/video-servillance/ProSeries";
+import Traffic from "./traffic-management/Traffic";
 
 // Map series names to components
 const seriesComponents = {
@@ -19,6 +20,12 @@ const videoSeriesComponents = {
   "Enterprise NVR": MiniSeries,
 };
 
+const trafficComponents = {
+  "Traffic X Series": Traffic,
+  "Road Traffic Management": "asd",
+  "Parking Management": "asda",
+};
+
 const seriesList = [
   "Mini Series",
   "Pro Series",
@@ -28,22 +35,31 @@ const seriesList = [
 
 const videoSeriesList = ["NVR", "PoE NVR", "Enterprise NVR"];
 const iotList = ["Smart Building", "Smart City"];
+const intellList = [
+  "Traffic X Series",
+  "Road Traffic Management",
+  "Parking Management",
+];
 
 const Products = () => {
   const { closeMenu } = useMenu();
   const [showVideoOptions, setShowVideoOptions] = useState(false);
   const [showIoT, setShowIoT] = useState(true);
+  const [showIntelligent, setShowIntelligent] = useState(false);
   const [activeOption, setActiveOption] = useState("Network Camera");
   const [showSeries, setShowSeries] = useState(false);
   const [showVideoSeries, setShowVideoSeries] = useState(false);
   const [selectedSeries, setSelectedSeries] = useState(null);
   const [selectedVideoSeries, setSelectedVideoSeries] = useState(null);
+  const [selectedTrafficSeries, setSelectedTrafficSeries] = useState(null);
 
   // Get the selected component (series or video series)
   const SelectedComponent = selectedSeries
     ? seriesComponents[selectedSeries]
     : selectedVideoSeries
     ? videoSeriesComponents[selectedVideoSeries]
+    : selectedTrafficSeries
+    ? trafficComponents[selectedTrafficSeries]
     : null;
 
   return (
@@ -75,6 +91,7 @@ const Products = () => {
               onMouseEnter={() => {
                 setShowVideoOptions(item.name === "Video Surveillance");
                 setShowIoT(item.name === "IoT Sensing");
+                setShowIntelligent(item.name === "Intelligent Traffic");
               }}
               onClick={closeMenu}
             >
@@ -132,6 +149,7 @@ const Products = () => {
                 setShowVideoSeries(false);
                 setSelectedSeries(null);
                 setSelectedVideoSeries(null);
+                setSelectedTrafficSeries(null);
               }}
             >
               NDAA Compliant Products
@@ -151,12 +169,36 @@ const Products = () => {
               <p
                 className="cursor-pointer text-gray-700 hover:text-[#7CCA9A]"
                 onMouseEnter={() => {
+                  setShowSeries(false);
+                  setShowVideoSeries(false);
                   setActiveOption(iot);
                   setSelectedVideoSeries(null);
+                  setSelectedTrafficSeries(null);
                   setSelectedSeries(null);
                 }}
               >
                 {iot}
+              </p>
+            </a>
+          ))}
+        </div>
+      )}
+      {showIntelligent && (
+        <div className="pt-5 flex flex-col gap-4 px-2">
+          {intellList.map((intell, index) => (
+            <a key={index} href={`/solutions/intelligent-traffic-solution`}>
+              <p
+                className="cursor-pointer text-gray-700 hover:text-[#7CCA9A]"
+                onMouseEnter={() => {
+                  setShowSeries(false);
+                  setShowVideoSeries(false);
+                  setActiveOption(intell);
+                  setSelectedTrafficSeries(intell);
+                  setSelectedVideoSeries(null);
+                  setSelectedSeries(null);
+                }}
+              >
+                {intell}
               </p>
             </a>
           ))}
@@ -201,9 +243,11 @@ const Products = () => {
         )}
 
         {/* Display Selected Series Component */}
-        {(selectedSeries || selectedVideoSeries) && (
+        {(selectedSeries || selectedVideoSeries || selectedTrafficSeries) && (
           <div className="mt-4" onClick={closeMenu}>
-            <strong>{selectedSeries || selectedVideoSeries}</strong>
+            <strong>
+              {selectedSeries || selectedVideoSeries || selectedTrafficSeries}
+            </strong>
             {SelectedComponent && <SelectedComponent />}
           </div>
         )}

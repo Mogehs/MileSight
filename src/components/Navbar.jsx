@@ -26,7 +26,7 @@ const actionLinks = [
   },
   {
     name: "Online Demo",
-    path: "/demo",
+    path: "/",
     className:
       "px-2 py-3 sm:py-1 rounded-3xl border flex items-center justify-center gap-1 text-nowrap text-[0.7rem]",
   },

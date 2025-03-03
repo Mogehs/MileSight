@@ -18,7 +18,7 @@ export default function RoadEntPar() {
   ];
 
   return (
-    <div className="mt-4 w-full h-[110vh] sm:h-[90vh] lg:h-[60vh] xl:h-[70vh]   relative flex flex-col items-center justify-center">
+    <div className="mt-4 w-full h-[65vh] sm:h-[90vh] lg:h-[60vh] xl:h-[70vh]   relative flex flex-col items-center justify-center">
       {/* Navigation Section */}
       <div className="sm:w-11/12 mx-auto w-full left-[3%] shadow-lg rounded-lg absolute bottom-0">
         <div className="flex w-full justify-around items-center">
