@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { useMenu } from "../menueContext";
 
@@ -7,24 +6,13 @@ const partnersData = [
     title: "Milesight Partner Ecosystem",
     links: [
       {
-        title: "Find a Technology Partner",
+        title: "Find a Channel Partner",
         path: "/solutions/find-technology-partner",
       },
-      {
-        title: "Technology Partner Program",
-        path: "/solutions/technology-partner-program",
-      },
-      {
-        title: "Find a Channel Partner",
-        path: "/solutions/find-channel-partner",
-      },
+
       {
         title: "Channel Partner Program",
-        path: "/solutions/channel-partner-program",
-      },
-      {
-        title: "Project Registration",
-        path: "/solutions/project-registration",
+        path: "/solutions/find-channel-partner",
       },
     ],
   },
@@ -61,12 +49,12 @@ const Partners = () => {
             <ul className="space-y-3 text-sm">
               {section.links.map((item, linkIndex) => (
                 <li key={linkIndex} onClick={closeMenu}>
-                  <Link
-                    to={item.path}
+                  <a
+                    href={item.path}
                     className="text-gray-700 text-[12px] sm:text-[14px] hover:text-[#7CCA9A] transition-colors duration-300"
                   >
                     {item.title}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

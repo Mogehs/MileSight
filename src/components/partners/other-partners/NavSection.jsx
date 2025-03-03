@@ -1,24 +1,22 @@
 import React, { useState } from "react";
-import All from "./All";
+import Logos from "./Logos";
 
 function NavSection() {
-  const [activeComponent, setActiveComponent] = useState("all");
+  const [activeComponent, setActiveComponent] = useState("video");
 
   const components = {
-    all: <All />,
+    video: <Logos />,
   };
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden mt-15">
       {/* Navbar */}
       <div className="sticky top-0 bg-white z-10 w-full mx-auto">
         <div className="btns text-[#666] w-full flex flex-row justify-between items-center shadow-md border-b border-[#f5f5f5] py-2 px-4 sm:px-6 md:px-8">
           <div className="flex flex-row flex-wrap items-center gap-4 sm:gap-6 md:gap-8 w-full text-sm md:text-[15px] overflow-x-auto scrollbar-hide">
             {[
-              { id: "all", label: "All" },
+              { id: "video", label: "Video Surveillance" },
               { id: "models", label: "IoT" },
-              { id: "accessories", label: "CCTV" },
-              { id: "download", label: "Events Review" },
             ].map(({ id, label }) => (
               <button
                 key={id}

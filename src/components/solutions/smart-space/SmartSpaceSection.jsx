@@ -27,7 +27,7 @@ function SmartSpaceSection() {
           </div>
         </div>
       </div>
-      <div className="mt-6 mb-2 bg-[#f9f9f9] p-4 flex md:flex-row flex-col gap-6 justify-center items-center w-full">
+      <div className="mt-6 mb-2 bg-[#7CCA9A] p-4 flex md:flex-row flex-col gap-6 justify-center items-center w-full">
         <div className="md:w-[45%] flex flex-col gap-6">
         <h2 className="md:text-[2rem] text-[25px]">
           Revolutionize Your <br /> Workplace with Smart <br /> Space Solution

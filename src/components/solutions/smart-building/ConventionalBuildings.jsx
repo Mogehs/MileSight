@@ -45,7 +45,7 @@ const ConventionalBuildings = () => {
                 {cards.map((card, index) => (
                     <div
                         key={index}
-                        className="bg-white rounded-xl overflow-hidden shadow-2xl hover:shadow-xl hover:border hover:border-blue-700 transform hover:scale-105 transition duration-300 flex flex-col"
+                        className="bg-[#7CCA9A] rounded-xl overflow-hidden shadow-2xl hover:shadow-xl hover:border hover:border-blue-700 transform hover:scale-105 transition duration-300 flex flex-col"
                     >
                         <div className="flex items-center justify-center mt-3">
                             <div className=" w-[190px]">

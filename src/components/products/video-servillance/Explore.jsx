@@ -73,7 +73,9 @@ export default function Explore() {
                 Explore Success Cases
               </h1>
               <div className="flex justify-center flex-col items-center w-full lg:w-[70%] rounded-lg py-2 cursor-pointer mt-2 border border-gray-400 transition-all duration-300 bg-[#00667C] hover:bg-[#7CCA9A] text-white">
-                <span>View All Stories</span>
+                <a href="/resources/academy/product-training">
+                  <span>View All Stories</span>
+                </a>
               </div>
             </div>
           </div>

@@ -7,6 +7,7 @@ import Company from "./navbar/Company";
 import Partners from "./navbar/Partners";
 import Resources from "./navbar/Resources";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { name: "Products", path: "/products/iot-sensing", component: <Products /> },
@@ -55,23 +56,27 @@ export default function Navbar() {
           {navLinks.map((item, index) => (
             <div
               key={index}
-              className=""
               onMouseEnter={() =>
                 item.component ? setActiveDropdown(item.name) : null
               }
+              onMouseLeave={() => setActiveDropdown(null)}
             >
               <div className="hover:text-gray-600">{item.name}</div>
 
-              {/* Dropdown Component (Visible on Hover) */}
-              {activeDropdown === item.name && item.component && (
-                <div
-                  className="absolute left-0 top-full z-50 w-full"
-                  onMouseEnter={() => setActiveDropdown(item.name)}
-                  onMouseLeave={() => setActiveDropdown(null)}
-                >
-                  {item.component}
-                </div>
-              )}
+              {/* Dropdown Component with Animation */}
+              <AnimatePresence>
+                {activeDropdown === item.name && item.component && (
+                  <motion.div
+                    initial={{ y: -10 }}
+                    animate={{ y: 0 }}
+                    exit={{ y: -10 }}
+                    transition={{ duration: 0.1 }}
+                    className="absolute left-0 top-full z-50 w-full bg-white shadow-lg rounded-md"
+                  >
+                    {item.component}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>
@@ -115,11 +120,19 @@ export default function Navbar() {
               </button>
 
               {/* Mobile Dropdown Menu */}
-              {mobileDropdown === item.name && item.component && (
-                <div className="bg-gray-100 rounded-md absolute w-full left-0">
-                  {item.component}
-                </div>
-              )}
+              <AnimatePresence>
+                {mobileDropdown === item.name && item.component && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3 }}
+                    className="bg-gray-100 rounded-md absolute w-full left-0"
+                  >
+                    {item.component}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
 
@@ -138,7 +151,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      {/* <Products /> */}
     </>
   );
 }

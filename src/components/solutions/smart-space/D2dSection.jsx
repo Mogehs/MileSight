@@ -51,17 +51,17 @@ function D2dSection() {
           </li>
         </ul>
       </div>
-      <div className="bg-[#f5f5f5] rounded-2xl py-16 px-8 flex md:flex-row flex-col justify-center items-center gap-6">
+      <div className="bg-[#00667C] rounded-2xl py-16 px-8 flex md:flex-row flex-col justify-center items-center gap-6">
         <div className="flex flex-col items-center gap-2 md:w-[15%]">
           <img
             className=""
             src="/Solution/smart-space/d2d-img1.png"
             alt="not found"
           />
-          <p className="text-[#272829]">Controller</p>
+          <p className="text-[#fff]">Controller</p>
         </div>
         <div className="flex flex-col items-center gap-2 md:w-[15%]">
-          <p className="text-[#272829]">Milesight D2D</p>
+          <p className="text-[#fff]">Milesight D2D</p>
           <div className="flex items-center">
             <img
               className="md:w-[25%]"
@@ -86,7 +86,7 @@ function D2dSection() {
             src="/Solution/smart-space/d2d-img3.png"
             alt="not found"
           />
-          <p className="text-[#272829]">Agent</p>
+          <p className="text-[#fff]">Agent</p>
         </div>
         <div className=" relative md:w-[15%] md:block hidden">
           <div className="flex flex-col gap-2 w-[15%]">
@@ -102,11 +102,11 @@ function D2dSection() {
               src="/Solution/smart-space/d2d-img4.png"
               alt="not found"
             />
-            <p className="text-[#272829]">Node Device</p>
+            <p className="text-[#fff]">Node Device</p>
           </div>
           <div className="flex flex-col gap-2 w-[15%]">
             <img
-              className="w-[15%] absolute md:top-[2px] md:left-[43px] lg:top-1 lg:left-15 xl:top-1 xl:left-19 animate-spin "
+              className="w-[15%] absolute md:top-[2px] md:left-[43px] lg:top-1 lg:left-15 xl:top-1 xl:left-20 animate-spin "
               src="/Solution/smart-space/d2d-img5.png"
               alt="not found"
             />
@@ -114,7 +114,7 @@ function D2dSection() {
         </div>
       </div>
       <div className="flex justify-center mt-4">
-        <button className="bg-[#0299f4] text-white py-1 px-6 rounded cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1">
+        <button className="bg-[#00667C] hover:bg-[#7CCA9A] text-white py-1 px-6 rounded cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1">
           Learn More
         </button>
       </div>
