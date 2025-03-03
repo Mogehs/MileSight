@@ -76,7 +76,7 @@ const Academy = () => {
           </div>
         </div>
       </div>
-      <a href="">
+      <a href="/resources/academy/product-training">
         <div className="block sm:hidden bg-[#7CCA9A] w-[80%] mx-auto  rounded-lg mt-10">
           <p className="text-white m-auto flex justify-center items-center p-10 text-center">
             Explore a comprihensive set of videos and resources to find more

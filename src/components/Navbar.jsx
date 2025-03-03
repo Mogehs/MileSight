@@ -43,13 +43,13 @@ export default function Navbar() {
         className="flex sticky w-full z-[300] items-center justify-between bg-white text-black pr-1 sm:px-4 py-3 shadow-lg top-0"
         onMouseLeave={() => setActiveDropdown(null)}
       >
-        <Link to="/" onClick={closeMenu}>
+        <a href="/" onClick={closeMenu}>
           <img
             src="/Nexyws.png"
             alt="Logo"
             className="w-35 sm:w-40 h-12 object-cover"
           />
-        </Link>
+        </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
