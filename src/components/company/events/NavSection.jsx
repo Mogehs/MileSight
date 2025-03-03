@@ -25,8 +25,8 @@ function NavSection() {
                 onClick={() => setActiveComponent(id)}
                 className={`cursor-pointer px-3 sm:px-4 py-2 transition-colors duration-300 border-l border-l-[#dddddd] whitespace-nowrap ${
                   activeComponent === id
-                    ? "bg-[#0299f4] text-white font-semibold"
-                    : "hover:text-[#0299f4] text-[#666]"
+                    ? "bg-[#00667C] text-white font-semibold"
+                    : "hover:text-[#7CCA9A] text-[#666]"
                 }`}
               >
                 {label}

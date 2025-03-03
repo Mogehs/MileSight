@@ -5,7 +5,7 @@ export default function MakeSensing() {
             style={{ backgroundImage: "url('/Ourbrand/matter.png')" }}
         >
             <div className="w-full sm:w-6/12  p-4 sm:mt-8 mt-4 rounded-lg">
-                <p className="text-blue-500">Stay Open, Stay Collaborative</p>
+                <p className="text-[#00667C]">Stay Open, Stay Collaborative</p>
                 <h1 className="text-xl md:text-3xl font-semibold mb-2">
                     Make Sensing Matter, <br /> Together
                 </h1>
@@ -19,7 +19,7 @@ export default function MakeSensing() {
                     Together, we complement each other's strengths to make sensing truly matter for customers.
                 </p>
 
-                <button className="text-xs lg:text-lg rounded-2xl bg-blue-500 text-white px-4 py-2 mt-2 scale-[0.9] transform transition-all ease-in delay-100 hover:scale-[1] cursor-pointer">
+                <button className="text-xs lg:text-lg rounded-2xl bg-[#00667C] hover:bg-[#7CCA9A] text-white px-4 py-2 mt-2 scale-[0.9] transform transition-all ease-in delay-100 hover:scale-[1] cursor-pointer">
                     Learn More
                 </button>
             </div>

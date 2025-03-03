@@ -2,7 +2,7 @@ import React from "react";
 
 function HowConnectSection() {
   return (
-    <div className="bg-[#f5f6f8] px-4 py-12">
+    <div className="bg-[#7CCA9A] px-4 py-12">
       <div className="flex flex-col items-center gap-6">
         <h1 className="md:text-[1.5rem] lg:text-[2rem] text-[18px] text-[#333]">
           Connected and Control, Plan A Smart Strategy for Sustainability

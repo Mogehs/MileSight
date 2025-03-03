@@ -59,7 +59,7 @@ function NavSection() {
                 key={id}
                 onClick={() => scrollToSection(id)}
                 className={`cursor-pointer px-4 py-2 transition-colors duration-300 border rounded border-[#dddddd] ${
-                  activeSection === id ? "" : "hover:text-[#0299f4] text-[#666]"
+                  activeSection === id ? "" : "hover:text-[#7CCA9A] text-[#666]"
                 }`}
               >
                 {label}

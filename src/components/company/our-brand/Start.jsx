@@ -16,7 +16,7 @@ const Start = () => {
           that transforms the world.
         </p>
         <div className="flex justify-center md:justify-start">
-          <button className="bg-sky-500 rounded-md px-4 py-2 text-white text-sm md:text-base w-[8rem]">
+          <button className="bg-[#00667C] hover:cursor-pointer hover:bg-[#7CCA9A] rounded-md px-4 py-2 text-white text-sm md:text-base w-[8rem]">
             Watch Video
           </button>
         </div>
