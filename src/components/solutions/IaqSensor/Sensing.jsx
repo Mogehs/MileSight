@@ -83,7 +83,7 @@ export default function Sensing() {
     return (
         <div className="w-full py-10 bg-cover bg-center" style={{ backgroundImage: `url(${sensor})` }}>
             <div className="w-full sm:w-11/12 mx-auto">
-                <div className="text-center text-white mb-6 px-4">
+                <div className="text-center text-[#7CCA9A] mb-6 px-4">
                     <h1 className="text-xl md:text-3xl font-semibold">Sensing and Seeing the Air with IAQ Sensors</h1>
                     <p className="text-xs md:text-lg mt-2 w-full md:w-[60%] mx-auto">
                         Real-time and remote energy management is actionable by monitoring indoor air quality, such as temperature and humidity.
@@ -92,7 +92,7 @@ export default function Sensing() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
                     {cards.map((card, index) => (
-                        <div key={index} className="h-auto md:h-[36rem] bg-[rgba(2,30,66,0.8)] border border-[#2b6db8] rounded-lg p-4 shadow-lg transition-transform   relative">
+                        <div key={index} className="h-auto md:h-[36rem] bg-[#00657c97] border border-[#2b6db8] rounded-lg p-4 shadow-lg transition-transform   relative">
                             <div className="flex items-center gap-3">
                                 <img src={card.img} alt="" className="w-24 h-24 object-contain rounded-md" />
                                 <div>
@@ -103,44 +103,44 @@ export default function Sensing() {
 
                             <ul className="mt-4 space-y-2 text-xs lg:text-md">
                                 {card.features.map((feature, i) => (
-                                    <li key={i} className="list-disc list-inside text-gray-300">{feature}</li>
+                                    <li key={i} className="list-disc list-inside text-[#7CCA9A]">{feature}</li>
                                 ))}
                             </ul>
 
                             <div className="flex flex-wrap gap-4 mt-4">
                                 {card.cloud && (
                                     <div className="border border-white rounded-md px-2 py-1 flex items-center justify-center">
-                                        <span className="text-3xl md:text-4xl text-white">{card.cloud}</span>
+                                        <span className="text-3xl md:text-4xl text-[#7CCA9A]">{card.cloud}</span>
                                     </div>
                                 )}
                                 {card.humidity && (
                                     <div className="border border-white rounded-md px-2 py-1 flex items-center justify-center">
-                                        <span className="text-3xl md:text-4xl text-white">{card.humidity}</span>
+                                        <span className="text-3xl md:text-4xl text-[#7CCA9A]">{card.humidity}</span>
                                     </div>
                                 )}
                                 {card.temp && (
                                     <div className="border border-white rounded-md px-2 py-1 flex items-center justify-center">
-                                        <span className="text-3xl md:text-4xl text-white">{card.temp}</span>
+                                        <span className="text-3xl md:text-4xl text-[#7CCA9A]">{card.temp}</span>
                                     </div>
                                 )}
                                 {card.run && (
                                     <div className="border border-white rounded-md px-2 py-1 flex items-center justify-center">
-                                        <span className="text-3xl md:text-4xl text-white">{card.run}</span>
+                                        <span className="text-3xl md:text-4xl text-[#7CCA9A]">{card.run}</span>
                                     </div>
                                 )}
                                 {card.sun && (
                                     <div className="border border-white rounded-md px-2 py-1 flex items-center justify-center">
-                                        <span className="text-3xl md:text-4xl text-white">{card.sun}</span>
+                                        <span className="text-3xl md:text-4xl text-[#7CCA9A]">{card.sun}</span>
                                     </div>
                                 )}
                                 {card.speed && (
                                     <div className="border border-white rounded-md px-2 py-1 flex items-center justify-center">
-                                        <span className="text-3xl md:text-4xl text-white">{card.speed}</span>
+                                        <span className="text-3xl md:text-4xl text-[#7CCA9A]">{card.speed}</span>
                                     </div>
                                 )}
                                 {card.co && (
                                     <div className="border border-white rounded-md px-2 py-1 flex items-center justify-center">
-                                        <span className="text-3xl md:text-4xl text-white">{card.co}</span>
+                                        <span className="text-3xl md:text-4xl text-[#7CCA9A]">{card.co}</span>
                                     </div>
                                 )}
                             </div>
@@ -149,8 +149,8 @@ export default function Sensing() {
                             <div className="absolute top-2 right-2 md:hidden w-[20%] p-2 rounded-md flex justify-center items-center bg-blue-600 transition-all ease-in-out transform hover:scale-105 cursor-pointer">
                                 <span className="text-white">{card.rightarow}</span>
                             </div>
-                            <div className="hidden md:flex absolute bottom-2 right-4 w-[20%] p-2 rounded-md justify-center items-center bg-blue-600 transition-all ease-in-out transform hover:scale-105 cursor-pointer">
-                                <span className="text-white">{card.rightarow}</span>
+                            <div className="hidden md:flex absolute bottom-2 right-4 w-[20%] p-2 rounded-md justify-center items-center group bg-[#00667C] hover:bg-[#7CCA9A] hover:text-[#00667C] transition-all ease-in-out transform hover:scale-105 cursor-pointer">
+                                <span className="text-white group-hover:text-[#00667C]">{card.rightarow}</span>
                             </div>
                         </div>
                     ))}

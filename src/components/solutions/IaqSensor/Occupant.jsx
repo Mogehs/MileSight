@@ -11,7 +11,7 @@ export default function Occupant() {
         <div className="w-full p-4">
             <div className="w-full sm:w-11/12 mx-auto sm:mt-8 mt-4">
                 <div className="text-center">
-                    <h1 className="md:text-3xl text-xl mb-2 font-semibold">
+                    <h1 className="md:text-3xl text-xl mb-2 font-semibold text-[#00667C]">
                         Ensuring Occupant Health with IAQ Sensors
                     </h1>
                 </div>

@@ -28,28 +28,28 @@ export default function SpacePeople() {
                 <div className="flex flex-wrap gap-2 w-full p-2 md:w-8/12">
                     {data.map((item, index) => (
                         <div key={index} className="flex gap-10 items-center flex-wrap justify-around">
-                            <h1 className="text-center cursor-pointer hover:text-blue-600" onClick={() => handleScroll(item.id)}>
+                            <h1 className="text-center cursor-pointer text-[#00667C] hover:text-[#7CCA9A]" onClick={() => handleScroll(item.id)}>
                                 {item.title}
                             </h1>
-                            <p className="text-center cursor-pointer hover:text-blue-600" onClick={() => handleScroll(item.childId)}>
+                            <p className="text-center cursor-pointer text-[#00667C] hover:text-[#7CCA9A]" onClick={() => handleScroll(item.childId)}>
                                 {item.child}
                             </p>
-                            <p className="text-center cursor-pointer hover:text-blue-600" onClick={() => handleScroll(item.highId)}>
+                            <p className="text-center cursor-pointer text-[#00667C] hover:text-[#7CCA9A]" onClick={() => handleScroll(item.highId)}>
                                 {item.high}
                             </p>
-                            <p className="text-center cursor-pointer hover:text-blue-600" onClick={() => handleScroll(item.advanId)}>
+                            <p className="text-center cursor-pointer text-[#00667C] hover:text-[#7CCA9A]" onClick={() => handleScroll(item.advanId)}>
                                 {item.advan}
                             </p>
-                            <p className="text-center cursor-pointer hover:text-blue-600" onClick={() => handleScroll(item.prId)}>
+                            <p className="text-center cursor-pointer text-[#00667C] hover:text-[#7CCA9A]" onClick={() => handleScroll(item.prId)}>
                                 {item.pr}
                             </p>
                         </div>
                     ))}
                 </div>
                 <div className="flex gap-3 flex-wrap">
-                    <span>Home</span>
-                    <span>Solution</span>
-                    <span>Space Occupancy</span>
+                    <span className=" text-[#00667C] hover:text-[#7CCA9A] cursor-pointer">Home</span>
+                    <span className=" text-[#00667C] hover:text-[#7CCA9A] cursor-pointer">Solution</span>
+                    <span className=" text-[#00667C] hover:text-[#7CCA9A] cursor-pointer">Space Occupancy</span>
                 </div>
             </div>
 

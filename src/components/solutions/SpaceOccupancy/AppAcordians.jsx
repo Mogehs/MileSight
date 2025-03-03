@@ -30,12 +30,12 @@ export default function AppAccordian() {
 
     return (
         <div className="w-full p-2 mx-auto ">
-            <h1 className=" md:text-4xl text-2xl font-semibold text-start text-white mb-4">Typical Applications            </h1>
+            <h1 className=" md:text-4xl text-2xl font-semibold text-start text-[#7CCA9A] mb-4">Typical Applications</h1>
             {data.map((item, index) => (
                 <div key={index} className="mb-2 border rounded-md">
                     <button
                         onClick={() => toggleAccordion(index)}
-                        className="w-full p-3 flex justify-between items-center text-white transition"
+                        className="w-full p-3 flex justify-between border rounded-md items-center text-[#7CCA9A] cursor-pointer transition"
                     >
                         <span className="text-xs md:text-lg font-medium">{item.title}</span>
                         <span className="text-xl">{openIndex === index ? "−" : "+"}</span>

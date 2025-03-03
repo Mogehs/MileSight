@@ -26,10 +26,10 @@ export default function RoadEntPar() {
                             }`}
                             onMouseOver={() => setActive(item.key)}
                         >
-                            <div className="p-2 lg:p-4 rounded-full bg-blue-400 flex items-center justify-center text-white text-xl group-hover:text-black transition-all ease-in delay-75 group-hover:bg-gray-300">
+                            <div className="p-2 lg:p-4 rounded-full bg-[#00667C] flex items-center justify-center text-white text-xl group-hover:text-black transition-all ease-in delay-75 group-hover:bg-gray-300">
                                 {item.icon}
                             </div>
-                            <h1 className="text-xs text-center lg:text-xl group-hover:text-blue-500 transition-all ease-in delay-75 text-wrap">
+                            <h1 className="text-xs text-center lg:text-xl group-hover:text-[#7CCA9A] transition-all ease-in delay-75 text-wrap">
                                 {item.title}
                             </h1>
                         </div>

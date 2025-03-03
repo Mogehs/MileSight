@@ -32,10 +32,10 @@ export default function OutStandingFea() {
                             }`}
                             onMouseOver={() => setActive(item.key)}
                         >
-                            <div className="p-2 lg:p-2 rounded-full flex items-center justify-center text-white text-xl border border-blue-500 group-hover:text-black transition-all ease-in delay-75 group-hover:bg-gray-300">
+                            <div className="p-2 lg:p-2 rounded-full flex items-center justify-center text-[#00667C] text-xl border border-[#00667C] group transition-all ease-in delay-75 group-hover:bg-[#00667C]">
                                 <img src={item.icon} alt="" className=' h-7 md:h-10'/>
                             </div>
-                            <h1 className="text-xs text-center text-blue-500 transition-all ease-in delay-75 text-wrap">
+                            <h1 className="text-xs text-center text-[#00667C] transition-all ease-in delay-75 text-wrap group-hover:text-[#7CCA9A] ">
                                 {item.title}
                             </h1>
                         </div>

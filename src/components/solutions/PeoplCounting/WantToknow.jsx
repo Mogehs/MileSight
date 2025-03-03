@@ -29,19 +29,19 @@ export default function WantToknow() {
 
     return (
         <div className="w-full md:w-8/12 p-2 mx-auto mt-10">
-            <h1 className=" md:text-4xl text-2xl font-semibold text-center mb-4">You May Want to Know
+            <h1 className=" md:text-4xl text-2xl font-semibold text-center mb-4 text-[#00667C]">You May Want to Know
             </h1>
             {data.map((item, index) => (
                 <div key={index} className="mb-2 border border-gray-300 rounded-md">
                     <button
                         onClick={() => toggleAccordion(index)}
-                        className="w-full p-3 flex justify-between items-center bg-white hover:bg-gray-300 transition"
+                        className="w-full p-3 flex justify-between items-center cursor-pointer bg-[#00657c5a] hover:bg-gray-300 transition"
                     >
-                        <span className="text-xs md:text-lg font-semibold">{item.title}</span>
+                        <span className="text-xs md:text-lg  font-semibold">{item.title}</span>
                         <span className="text-xl">{openIndex === index ? "−" : "+"}</span>
                     </button>
                     {openIndex === index && (
-                        <div className="p-3 text-xs bg-white text-gray-700">{item.content}</div>
+                        <div className="p-3 text-xs bg-[#00667C]  text-[#7CCA9A]">{item.content}</div>
                     )}
                 </div>
             ))}

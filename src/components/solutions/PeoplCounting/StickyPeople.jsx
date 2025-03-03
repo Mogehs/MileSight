@@ -28,32 +28,32 @@ export default function StickyPeople() {
             <div className="flex flex-wrap justify-between items-center gap-2 w-full mx-auto lg:w-11/12">
                 <div className="flex flex-wrap gap-2 w-full p-2 md:w-8/12">
                     {data.map((item, index) => (
-                        <div key={index} className="flex gap-10 items-center flex-wrap justify-around">
-                            <h1 className="text-center cursor-pointer hover:text-blue-600" onClick={() => handleScroll("why-people")}>
+                        <div key={index} className="flex gap-10 text-[#00667C] items-center flex-wrap justify-around">
+                            <h1 className="text-center cursor-pointer hover:text-[#7CCA9A]" onClick={() => handleScroll("why-people")}>
                                 {item.title}
                             </h1>
-                            <p className="text-center cursor-pointer hover:text-blue-600" onClick={() => handleScroll("typical-app")}>
+                            <p className="text-center cursor-pointer hover:text-[#7CCA9A]" onClick={() => handleScroll("typical-app")}>
                                 {item.child}
                             </p>
-                            <p className="text-center cursor-pointer hover:text-blue-600" onClick={() => handleScroll("highlight-people")}>
+                            <p className="text-center cursor-pointer hover:text-[#7CCA9A]" onClick={() => handleScroll("highlight-people")}>
                                 {item.high}
                             </p>
-                            <p className="text-center cursor-pointer hover:text-blue-600" onClick={() => handleScroll("explore-advanceds")}>
+                            <p className="text-center cursor-pointer hover:text-[#7CCA9A]" onClick={() => handleScroll("explore-advanceds")}>
                                 {item.advan}
                             </p>
-                            <p className="text-center cursor-pointer hover:text-blue-600" onClick={() => handleScroll("success-stories")}>
+                            <p className="text-center cursor-pointer hover:text-[#7CCA9A]" onClick={() => handleScroll("success-stories")}>
                                 {item.pr}
                             </p>
-                            <p className="text-center cursor-pointer hover:text-blue-600" onClick={() => handleScroll("form-submit")}>
+                            <p className="text-center cursor-pointer hover:text-[#7CCA9A]" onClick={() => handleScroll("form-submit")}>
                                 {item.qa}
                             </p>
                         </div>
                     ))}
                 </div>
                 <div className="flex gap-3 flex-wrap">
-                    <span>Home</span>
-                    <span>Solution</span>
-                    <span>People Counting</span>
+                    <span className=" text-[#00667C] hover:text-[#7CCA9A] cursor-pointer">Home</span>
+                    <span className=" text-[#00667C] hover:text-[#7CCA9A] cursor-pointer">Solution</span>
+                    <span className=" text-[#00667C] hover:text-[#7CCA9A] cursor-pointer">People Counting</span>
                 </div>
             </div>
 

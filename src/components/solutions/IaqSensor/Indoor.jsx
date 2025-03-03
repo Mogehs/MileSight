@@ -9,7 +9,7 @@ export default function Indoor() {
     return (
         <div className=" w-full">
             <div className="w-full sm:w-11/12 mx-auto sm:mt-8 mt-4">
-                <h1 className=" text-x md:text-3xl font-semibold text-center">Why Indoor Air Quality Monitoring Matters?<br />
+                <h1 className=" text-x md:text-3xl font-semibold text-center text-[#00667C]">Why Indoor Air Quality Monitoring Matters?<br />
                     The Air Is More Helpful than You Think.
                 </h1>
 
@@ -24,9 +24,9 @@ export default function Indoor() {
                                     />
                                 </div>
                                 <div className=" w-full grid-cols-8">
-                                    <h1 className=" text-lg font-semibold mt-2">{item.title}</h1>
+                                    <h1 className=" text-lg font-semibold mt-2 text-[#00667C]">{item.title}</h1>
                                     <p className=" text-xs md:text-md text-gray-500 mt-2">{item.description}</p>
-                                    <button className=" text-xs md:text-lg rounded-2xl bg-blue-500 text-white px-4 py-2 mt-2 scale-[0.9] transform transition-all ease-in delay-100  hover:scale-[1] cursor-pointer">{item.btn}</button>
+                                    <button className=" text-xs md:text-lg rounded-2xl bg-[#00667C] text-white hover:bg-[#7CCA9A] hover:text-[#00667C] px-4 py-2 mt-2 scale-[0.9] transform transition-all ease-in delay-100  hover:scale-[1] cursor-pointer">{item.btn}</button>
                                 </div>
                             </div>
                         ))
