@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useMenu } from "../menueContext";
 
@@ -14,11 +13,11 @@ const solutionsData = [
     },
     {
       label: "Smart Space",
-      link: "",
+      link: "/solutions/smart-space",
     },
     {
-      label: "Smart Agriculture",
-      link: "",
+      label: "Smart HVAC Management",
+      link: "/solutions/smart-hvac",
     },
   ],
   [
@@ -28,15 +27,15 @@ const solutionsData = [
     },
     {
       label: "Indoor Air Quality",
-      link: "",
+      link: "/solutions/indoor-air-quality-monitoring",
     },
     {
       label: "People Counting",
-      link: "",
+      link: "/solutions/people-counting",
     },
     {
       label: "Space Occupancy",
-      link: "",
+      link: "/solutions/smart-space-occupancy",
     },
   ],
   [
@@ -44,18 +43,18 @@ const solutionsData = [
       label: "Smart Building",
       link: "/solutions/smart-building",
     },
-    {
-      label: "Energy Efficiency",
-      link: "/solutions/energy-efficiency",
-    },
+    // {
+    //   label: "Energy Efficiency",
+    //   link: "/solutions/energy-efficiency",
+    // },
     {
       label: "Smart City",
-      link: "",
+      link: "/solutions/smart-city",
     },
-    {
-      label: "Waste Management",
-      link: "",
-    },
+    // {
+    //   label: "Waste Management",
+    //   link: "",
+    // },
   ],
 ];
 
@@ -67,15 +66,15 @@ const Solutions = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-16">
         {solutionsData.map((column, colIndex) => (
           <div key={colIndex}>
-            <ul className="space-y-4">
+            <ul className="space-y-2">
               {column.map((item, index) => (
                 <li key={index} onClick={closeMenu}>
-                  <Link
-                    to={item.link}
-                    className="text-gray-700 text-[15px] sm:text-[16px] hover:text-[#0299f4] transition-colors duration-300"
+                  <a
+                    href={item.link}
+                    className="text-gray-700 text-[12px] sm:text-[14px] hover:text-[#7CCA9A] transition-colors duration-300"
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

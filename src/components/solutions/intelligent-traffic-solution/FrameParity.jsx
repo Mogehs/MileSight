@@ -13,8 +13,8 @@ export default function FrameParity() {
                 {/* Right: Text Content */}
                 <div className="w-full md:w-1/2 flex flex-col gap-3">
                     <p className="text-sm md:text-base">
-                        <span className="font-bold">Frame Parity Flashing technology</span> means the cameras take several images of the vehicle with different illumination levels, and the system will then automatically
-                        <span className="text-blue-400"> select the best image for ANPR processing</span>.
+                        <span className="font-bold text-[#00667C]">Frame Parity Flashing technology</span> means the cameras take several images of the vehicle with different illumination levels, and the system will then automatically
+                        <span className="text-[#7CCA9A]"> select the best image for ANPR processing</span>.
                         It ensures clear capture of the vehicle body and license plate (reflective &amp; non-reflective plates).
                         Two different intensities of the built-in illumination may be defined for the even/odd frames.
                     </p>

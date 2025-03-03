@@ -1,55 +1,256 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMenu } from "../menueContext";
 
-const productLinks = [
-  { name: "IoT Sensing", path: "/products/iot-sensing" },
-  { name: "Video Surveillance", path: "/products/video-surveillance" },
-  { name: "Intelligent Traffic", path: "/products/intelligent-traffic" },
-  {
-    name: "IoT LoRaWAN® Series",
-    path: "/products/iot-sensing#lorawan",
-    external: true,
-  },
-  { name: "5G & Cellular Products", path: "/products/5g-cellular" },
-  { name: "Software & Platform", path: "/products/software-platform" },
-  { name: "Co-Created Program", path: "/products/co-created" },
+// Import all series components
+import MiniSeries from "../products/video-servillance/MiniSeries";
+import ProSeries from "../products/video-servillance/ProSeries";
+import Traffic from "./traffic-management/Traffic";
+
+// Map series names to components
+const seriesComponents = {
+  "Mini Series": MiniSeries,
+  "Pro Series": ProSeries,
+  "Open Vision Series": MiniSeries,
+  Accessories: ProSeries,
+};
+const videoSeriesComponents = {
+  NVR: MiniSeries,
+  "PoE NVR": ProSeries,
+  "Enterprise NVR": MiniSeries,
+};
+
+const trafficComponents = {
+  "Traffic X Series": Traffic,
+  "Road Traffic Management": "asd",
+  "Parking Management": "asda",
+};
+
+const seriesList = [
+  "Mini Series",
+  "Pro Series",
+  "Open Vision Series",
+  "Accessories",
+];
+
+const videoSeriesList = ["NVR", "PoE NVR", "Enterprise NVR"];
+const iotList = ["Smart Building", "Smart City"];
+const intellList = [
+  "Traffic X Series",
+  "Road Traffic Management",
+  "Parking Management",
 ];
 
 const Products = () => {
   const { closeMenu } = useMenu();
+  const [showVideoOptions, setShowVideoOptions] = useState(false);
+  const [showIoT, setShowIoT] = useState(true);
+  const [showIntelligent, setShowIntelligent] = useState(false);
+  const [activeOption, setActiveOption] = useState("Network Camera");
+  const [showSeries, setShowSeries] = useState(false);
+  const [showVideoSeries, setShowVideoSeries] = useState(false);
+  const [selectedSeries, setSelectedSeries] = useState(null);
+  const [selectedVideoSeries, setSelectedVideoSeries] = useState(null);
+  const [selectedTrafficSeries, setSelectedTrafficSeries] = useState(null);
+
+  // Get the selected component (series or video series)
+  const SelectedComponent = selectedSeries
+    ? seriesComponents[selectedSeries]
+    : selectedVideoSeries
+    ? videoSeriesComponents[selectedVideoSeries]
+    : selectedTrafficSeries
+    ? trafficComponents[selectedTrafficSeries]
+    : null;
+
   return (
     <div className="flex flex-col md:flex-row bg-white h-fit z-50 w-full">
-      <div className="w-full md:w-[18rem] bg-gray-50 shadow-lg p-6">
-        <ul className="space-y-3">
-          {productLinks.map((item, index) => (
+      {/* Sidebar */}
+      <div className="w-full md:w-[13rem] bg-gray-50 shadow-lg p-6">
+        <ul className="space-y-2">
+          {[
+            { name: "IoT Sensing", link: "/products/iot-sensing" },
+            {
+              name: "Video Surveillance",
+              link: "/products/video-surveillance",
+            },
+            {
+              name: "Intelligent Traffic",
+              link: "/products/intelligent-traffic",
+            },
+            { name: "IoT LoRaWAN® Series", link: "/products/5g-cellular" },
+            { name: "5G & Cellular Products", link: "/products/5g-cellular" },
+            {
+              name: "Software & Platform",
+              link: "/products/software-platform",
+            },
+            { name: "Co-Created Program", link: "/products/co-created" },
+          ].map((item, index) => (
             <li
               key={index}
-              className="text-gray-700 hover:text-blue-500 transition-colors duration-300"
+              className="text-gray-700 hover:text-[#7CCA9A] text-nowrap transition-colors duration-300 relative"
+              onMouseEnter={() => {
+                setShowVideoOptions(item.name === "Video Surveillance");
+                setShowIoT(item.name === "IoT Sensing");
+                setShowIntelligent(item.name === "Intelligent Traffic");
+              }}
               onClick={closeMenu}
             >
-              {item.external ? (
-                <a href={item.path} className="block py-1">
-                  {item.name}
-                </a>
-              ) : (
-                <Link to={item.path} className="block py-1">
-                  {item.name}
-                </Link>
-              )}
+              <a href={item.link} className="block py-1">
+                {item.name}
+              </a>
             </li>
           ))}
         </ul>
       </div>
 
-      {/* Content Area */}
+      {/* Video Surveillance Options */}
+      {showVideoOptions && (
+        <div className="pt-5 flex flex-col gap-4 px-2">
+          <a href="/products/video-surveillance">
+            <p
+              className={`cursor-pointer ${
+                activeOption === "Network Camera"
+                  ? "text-[#7CCA9A] font-semibold"
+                  : "text-gray-700"
+              }`}
+              onMouseEnter={() => {
+                setActiveOption("Network Camera");
+                setShowSeries(true);
+                setShowVideoSeries(false);
+                setSelectedVideoSeries(null);
+              }}
+            >
+              Network Camera
+            </p>
+          </a>
+          <a href="/products/video-surveillance">
+            <p
+              className={`cursor-pointer ${
+                activeOption === "Network Video Recorder"
+                  ? "text-[#7CCA9A] font-semibold"
+                  : "text-gray-700"
+              }`}
+              onMouseEnter={() => {
+                setActiveOption("Network Video Recorder");
+                setShowSeries(false);
+                setShowVideoSeries(true);
+                setSelectedSeries(null);
+              }}
+            >
+              Network Video Recorder
+            </p>
+          </a>
+          <a href="/products/NDAA-Compilant">
+            <p
+              className="cursor-pointer border border-[#7CCA9A]rounded-md p-2 text-[#7CCA9A]"
+              onMouseEnter={() => {
+                setActiveOption("NDAA Compliant Products");
+                setShowSeries(false);
+                setShowVideoSeries(false);
+                setSelectedSeries(null);
+                setSelectedVideoSeries(null);
+                setSelectedTrafficSeries(null);
+              }}
+            >
+              NDAA Compliant Products
+            </p>
+          </a>
+        </div>
+      )}
+
+      {/* IoT Sensing Options */}
+      {showIoT && (
+        <div className="pt-5 flex flex-col gap-4 px-2">
+          {iotList.map((iot, index) => (
+            <a
+              key={index}
+              href={`/solutions/${iot.toLowerCase().replace(" ", "-")}`}
+            >
+              <p
+                className="cursor-pointer text-gray-700 hover:text-[#7CCA9A]"
+                onMouseEnter={() => {
+                  setShowSeries(false);
+                  setShowVideoSeries(false);
+                  setActiveOption(iot);
+                  setSelectedVideoSeries(null);
+                  setSelectedTrafficSeries(null);
+                  setSelectedSeries(null);
+                }}
+              >
+                {iot}
+              </p>
+            </a>
+          ))}
+        </div>
+      )}
+      {showIntelligent && (
+        <div className="pt-5 flex flex-col gap-4 px-2">
+          {intellList.map((intell, index) => (
+            <a key={index} href={`/solutions/intelligent-traffic-solution`}>
+              <p
+                className="cursor-pointer text-gray-700 hover:text-[#7CCA9A]"
+                onMouseEnter={() => {
+                  setShowSeries(false);
+                  setShowVideoSeries(false);
+                  setActiveOption(intell);
+                  setSelectedTrafficSeries(intell);
+                  setSelectedVideoSeries(null);
+                  setSelectedSeries(null);
+                }}
+              >
+                {intell}
+              </p>
+            </a>
+          ))}
+        </div>
+      )}
+
+      {/* Series Section */}
       <div className="w-full md:flex-1 p-6">
-        <h1 className="text-xl md:text-2xl font-semibold mb-4">
-          Welcome to Products
-        </h1>
-        <p className="text-gray-600">
-          Explore our product categories by clicking on the menu items.
-        </p>
+        {showSeries && (
+          <div className="flex gap-2 cursor-pointer">
+            {seriesList.map((series, idx) => (
+              <div
+                key={idx}
+                className="bg-gray-200 w-fit h-fit p-2 rounded-md hover:text-[#7CCA9A] transition"
+                onMouseEnter={() => {
+                  setSelectedSeries(series);
+                  setSelectedVideoSeries(null);
+                }}
+              >
+                {series}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Video Series Section */}
+        {showVideoSeries && (
+          <div className="flex gap-2 cursor-pointer">
+            {videoSeriesList.map((series, idx) => (
+              <div
+                key={idx}
+                className="bg-gray-200 w-fit h-fit p-2 rounded-md hover:text-[#7CCA9A] transition"
+                onMouseEnter={() => {
+                  setSelectedVideoSeries(series);
+                  setSelectedSeries(null);
+                }}
+              >
+                {series}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Display Selected Series Component */}
+        {(selectedSeries || selectedVideoSeries || selectedTrafficSeries) && (
+          <div className="mt-4" onClick={closeMenu}>
+            <strong>
+              {selectedSeries || selectedVideoSeries || selectedTrafficSeries}
+            </strong>
+            {SelectedComponent && <SelectedComponent />}
+          </div>
+        )}
       </div>
     </div>
   );

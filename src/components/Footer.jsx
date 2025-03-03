@@ -54,7 +54,7 @@ const Footer = () => {
                 placeholder="Verify Code"
                 className="bg-transparent outline-none text-gray-500 flex-1"
               />
-              <button className="ml-2 bg-blue-600 px-4 py-2 rounded text-white font-semibold">
+              <button className="ml-2 bg-[#00667C] px-4 py-2 rounded text-white font-semibold">
                 Register
               </button>
             </div>

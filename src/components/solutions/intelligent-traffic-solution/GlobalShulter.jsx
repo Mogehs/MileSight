@@ -13,7 +13,7 @@ export default function GlobalShutter() {
                 {/* Right: Text Content */}
                 <div className="w-full md:w-1/2 flex flex-col gap-3">
                     <p className="text-sm md:text-base">
-                        <span className="font-bold">Global Shutter technology</span> enhances surveillance capabilities by ensuring comprehensive coverage with a high capture rate.
+                        <span className="font-bold text-[#00667C]">Global Shutter technology</span> enhances surveillance capabilities by ensuring comprehensive coverage with a high capture rate.
                         It maintains high-quality images and enables advanced event analysis while reducing the need for manual intervention, improving operational efficiency.
                     </p>
                 </div>

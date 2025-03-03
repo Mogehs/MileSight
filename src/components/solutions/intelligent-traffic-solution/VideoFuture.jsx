@@ -37,12 +37,12 @@ export default function VideoFuture() {
 
     return (
         <div className="relative w-full mx-auto mt-10">
-            <h1 className="text-center text-2xl sm:text-4xl font-semibold mb-6">
+            <h1 className="text-center text-2xl md:text-4xl text-[#00667C] font-semibold mb-6">
                 Future Video Technologies
             </h1>
 
             {/* Scroll Buttons (Top-Right) */}
-            <div className="absolute right-4 top-0 flex gap-2 z-10">
+            <div className="absolute  hidden right-4 top-0 md:flex gap-2 z-10">
                 <button
                     className="bg-gray-400 p-2 rounded-full text-white shadow-md hover:bg-gray-900"
                     onClick={() => scroll("left")}
@@ -76,9 +76,9 @@ export default function VideoFuture() {
                             {/* YouTube Icon - Centered */}
                             <div
                                 onClick={() => setActiveVideo(item.url)}
-                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#38313153] p-3 rounded-full shadow-lg cursor-pointer transition group-hover:bg-red-700"
+                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#38313153] p-3 rounded-full shadow-lg cursor-pointer transition group-hover:bg-[#7CCA9A]  group"
                             >
-                                <Youtube size={22} className="text-white" />
+                                <Youtube size={22} className="text-white group-hover:text-[#00667C]" />
                             </div>
 
                             {/* Title */}
@@ -93,7 +93,7 @@ export default function VideoFuture() {
                 <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-80 z-50">
                     <div className="relative w-[90%] sm:w-[70%] lg:w-[50%]">
                         <button
-                            className="absolute top-[-50px] right-[-15px] md:right-[-50px] bg-red-600 text-white p-2 rounded-full shadow-lg hover:bg-red-800"
+                            className="absolute top-[-40px] right-[-15px] md:right-[-50px] bg-[#00667C] text-white p-2 rounded-full shadow-lg hover:bg-[#7CCA9A]"
                             onClick={() => setActiveVideo(null)}
                         >
                             <X size={24} />

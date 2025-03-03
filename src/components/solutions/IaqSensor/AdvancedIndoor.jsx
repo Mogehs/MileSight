@@ -8,11 +8,11 @@ export default function AdvancedIndoor() {
 
             <div className=' w-full sm:w-9/12 mx-auto'>
                 <div className=''>
-                    <h1 className=' text-xl font-semibold md:text-3xl'>IAQ Sensors: Advanced Indoor <br />
+                    <h1 className=' text-xl font-semibold md:text-3xl text-[#00667C]'>IAQ Sensors: Advanced Indoor <br />
                         Air Quality Monitoring Solution <br />
                         for Healthier Spaces
                     </h1>
-                    <h4>See the Unseen to Optimize Energy Efficiency <br />
+                    <h4 className=' mt-3 text-xl text-[#00667C]'>See the Unseen to Optimize Energy Efficiency <br />
                         and Healthy
                     </h4>
                     <img src={sensor} alt="" className='' />

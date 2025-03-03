@@ -13,13 +13,13 @@ export default function DualOptimize() {
                 {/* Right: Text Content */}
                 <div className="w-full md:w-1/2 flex flex-col gap-3">
                     <p className="text-sm md:text-base">
-                        <span className="font-bold">Optimize license plate identification</span> by utilizing our optional dual IR wavelengths (850nm and 740nm), enabling precise recognition across different contrast levels and lighting conditions.
+                        <span className="font-bold text-[#00667C]">Optimize license plate identification</span> by utilizing our optional dual IR wavelengths (850nm and 740nm), enabling precise recognition across different contrast levels and lighting conditions.
                     </p>
                     <p className="text-sm md:text-base">
-                        <span className="font-bold">850nm IR Wavelength:</span> Ideal for high-contrast/non-reflective license plates.
+                        <span className="font-bold text-[#00667C]">850nm IR Wavelength:</span> Ideal for high-contrast/non-reflective license plates.
                     </p>
                     <p className="text-sm md:text-base">
-                        <span className="font-bold">740nm IR Wavelength:</span> Ideal for low-contrast/reflective license plates.
+                        <span className="font-bold text-[#00667C]">740nm IR Wavelength:</span> Ideal for low-contrast/reflective license plates.
                     </p>
                 </div>
             </div>

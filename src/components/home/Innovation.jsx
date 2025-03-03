@@ -12,7 +12,7 @@ const Innovation = () => {
           and key to lead success for our partners.
         </p>
       </div>
-      <div className="w-[97vw] h-85 rounded-r-2xl relative">
+      <div className="w-[98%] h-85 rounded-r-2xl relative max-w-screen-xl">
         <img
           src="/home/5g.jpg"
           alt=""

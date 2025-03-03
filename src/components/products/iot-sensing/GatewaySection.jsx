@@ -48,7 +48,7 @@ function GatewaySection() {
                 src={item.img}
                 alt="not found"
               />
-              <p className="mt-2 hover:cursor-pointer hover:text-[#0299f4] text-[#333]">
+              <p className="mt-2 hover:cursor-pointer hover:text-[#7CCA9A] text-[#333]">
                 {item.para1} <br /> {item.para2}
               </p>
             </div>

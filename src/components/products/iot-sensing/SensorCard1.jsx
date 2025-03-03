@@ -7,7 +7,7 @@ function SensorCard1() {
   return (
     <div>
       {/* Section 1 */}
-      <div className="bg-[#daecff] rounded-4xl p-4 mt-4">
+      <div className="bg-[#7CCA9A] rounded-4xl p-4 mt-4">
         <div className="flex md:flex-row flex-col md:items-center justify-between">
           {/* Radio Buttons */}
           <div className="flex flex-col gap-3">
@@ -18,12 +18,11 @@ function SensorCard1() {
                 className={`flex items-center gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-300 
                   ${
                     selectedSeries === series
-                      ? "text-[#0299f4] font-semibold"
-                      : "text-black "
+                      ? "text-[#00667C] font-semibold"
+                      : "text-[white] "
                   }`}
                 onClick={() => setSelectedSeries(series)} // Ensure clicking applies styles
               >
-                {/* ✅ This ensures the radio button remains filled when selected */}
                 <input
                   type="radio"
                   id={series}
