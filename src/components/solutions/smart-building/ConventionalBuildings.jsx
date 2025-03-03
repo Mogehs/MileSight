@@ -40,7 +40,6 @@ const ConventionalBuildings = () => {
                     Conventional buildings encounter a range of problems as they rely on traditional construction materials and methods, lacking the incorporation of smart building technologies or advanced features such as automation, artificial intelligence, or <span className="text-blue-600">IoT sensors.</span>
                 </p>
             </div>
-
             <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                 {cards.map((card, index) => (
                     <div
