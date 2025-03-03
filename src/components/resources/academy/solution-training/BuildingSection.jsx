@@ -40,8 +40,8 @@ export default function BuildingSection() {
             </div>
             <div className="flex items-center gap-4 text-nowrap text-sm">
               <FaYoutube size={30} className="text-[#ff0000]" />
-              <p className="text-[#64b6f6]">More Videos</p>
-              <GrFormNextLink size={25} className="text-[#64b6f6]" />
+              <p className="text-[#7CCA9A]">More Videos</p>
+              <GrFormNextLink size={25} className="text-[#7CCA9A]" />
             </div>
           </div>
           <div className="flex md:flex-row flex-col items-center p-4">

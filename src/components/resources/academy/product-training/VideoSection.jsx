@@ -103,8 +103,8 @@ export default function VideoSection() {
                 </div>
                 <div className="flex items-center gap-4 text-nowrap text-sm">
                   <FaYoutube size={30} className="text-[#ff0000]" />
-                  <p className="text-[#64b6f6]">More Videos</p>
-                  <GrFormNextLink size={25} className="text-[#64b6f6]" />
+                  <p className="text-[#00667C]">More Videos</p>
+                  <GrFormNextLink size={25} className="text-[#00667C]" />
                 </div>
               </div>
 

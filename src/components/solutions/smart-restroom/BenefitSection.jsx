@@ -86,8 +86,8 @@ function BenefitSection() {
                 onClick={() => handleClick(index)}
                 className={`cursor-pointer transition-colors duration-300 ${
                   activeIndex === index
-                    ? "text-[#000] font-bold scale-105"
-                    : "text-[#828482]"
+                    ? "text-[#7CCA9A] font-bold scale-105"
+                    : "text-[#00667C]"
                 }`}
               >
                 {text}

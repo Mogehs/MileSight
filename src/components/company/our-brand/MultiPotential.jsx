@@ -78,13 +78,13 @@ export default function MultiPotential() {
       <div className="absolute bottom-20 left-1/2  -translate-x-1/2 flex gap-4 px-4  rounded">
         <button
           onClick={() => scroll("left")}
-          className="bg-gray-300 p-2 rounded-full shadow-lg hover:bg-blue-400"
+          className="bg-[#00667C] p-2 rounded-full shadow-lg hover:bg-[#7CCA9A] hover:cursor-pointer"
         >
           <ChevronLeft size={24} />
         </button>
         <button
           onClick={() => scroll("right")}
-          className="bg-gray-300 p-2 rounded-full shadow-lg hover:bg-blue-400"
+          className="bg-[#00667C] p-2 rounded-full shadow-lg hover:bg-[#7CCA9A] hover:cursor-pointer"
         >
           <ChevronRight size={24} />
         </button>

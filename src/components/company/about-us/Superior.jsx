@@ -23,7 +23,7 @@ const Superior = () => {
     ];
 
     return (
-        <div className="w-full min-h-screen bg-gradient-to-r from-blue-600 to-blue-300 flex flex-col items-center p-10">
+        <div className="w-full min-h-screen bg-gradient-to-r bg-[#00667C] flex flex-col items-center p-10">
             <h1 className=" text-3xl text-center sm:text-4xl  font-bold text-white mb-8 tracking-wide uppercase">Superior Strength</h1>
             <div className="grid grid-cols-1 cursor-pointer shadow-sm sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-20">
                 {Super_Array.map((item) => (

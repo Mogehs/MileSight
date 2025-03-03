@@ -12,7 +12,7 @@ function GroupSelect() {
         <div className="flex flex-col gap-2 items-center">
           <img
             className={`rounded-full border border-[#c3c3c3] p-2 hover:cursor-pointer w-[6rem] h-[6rem] ${
-              active === "iot" ? "bg-[#0299f4] text-white" : ""
+              active === "iot" ? "bg-[#00667C] text-white" : ""
             }`}
             src="/resources/product-training/iot-img.svg"
             alt="not found"
@@ -20,7 +20,7 @@ function GroupSelect() {
           />
           <p
             className={`text-[#6b7274] ${
-              active === "iot" ? "text-[#0299f4]" : ""
+              active === "iot" ? "text-[#00667C]" : ""
             }`}
           >
             IoT Products
@@ -29,7 +29,7 @@ function GroupSelect() {
         <div className="flex flex-col gap-2 items-center">
           <img
             className={`border border-[#c3c3c3] rounded-full p-2 hover:cursor-pointer w-[6rem] h-[6rem] ${
-              active === "video" ? "bg-[#0299f4]" : ""
+              active === "video" ? "bg-[#00667C]" : ""
             }`}
             src="/resources/product-training/video-img.svg"
             alt="not found"
@@ -37,7 +37,7 @@ function GroupSelect() {
           />
           <p
             className={`text-[#6b7274] ${
-              active === "video" ? "text-[#0299f4]" : ""
+              active === "video" ? "text-[#00667C]" : ""
             }`}
           >
             Video Surveillance

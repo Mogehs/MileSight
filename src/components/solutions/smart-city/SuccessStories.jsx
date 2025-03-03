@@ -19,10 +19,10 @@ const SuccessStories = () => {
         {buttonItems.map((button, index) => (
           <button
             key={index}
-            className={`px-4 py-2 rounded-xl text-[10px] transition-all border border-transparent hover:bg-[#0299f4] ${
+            className={`px-4 py-2 rounded-xl text-[10px] transition-all border border-transparent hover:bg-[#7CCA9A] hover:cursor-pointer ${
               activeIndex === index
-                ? "bg-[#0299f4] text-black"
-                : "border-black text-black"
+                ? "bg-[#00667C] text-[#fff]"
+                : "border-black"
             }`}
             onClick={() => {
               setSelectedImage(button.image);

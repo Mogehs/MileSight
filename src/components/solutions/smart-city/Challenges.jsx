@@ -27,7 +27,7 @@ const Challenges = () => {
       </section>
 
 {/* 2 SECTION CARD */}
-<section className="relative bg-[#eff4f8]">
+<section className="relative bg-[#7CCA9A]">
       {/* Container */}
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
         {/* Component */}

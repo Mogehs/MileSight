@@ -5,6 +5,7 @@ import IBox from "../components/solutions/smart-building/IBox";
 import SmartBuild from "../components/solutions/smart-building/SmartBuild";
 import SmartBuildingsSet from "../components/solutions/smart-building/SmartBuildingsSet";
 import SuccessStory from "../components/solutions/smart-building/SuccessStory";
+import FormSection from "../components/solutions/smart-restroom/FormSection";
 
 const SmartBuilding = () => {
   return (
@@ -16,6 +17,7 @@ const SmartBuilding = () => {
       <ExploringSmartBuilding />
       <SuccessStory />
       <IBox />
+      <FormSection />
     </div>
   );
 };
