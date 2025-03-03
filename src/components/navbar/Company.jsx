@@ -27,12 +27,12 @@ const Company = () => {
             <ul className="space-y-4 md:flex  md:gap-10">
               {section.links.map((item, linkIndex) => (
                 <li key={linkIndex} onClick={closeMenu}>
-                  <Link
-                    to={item.path}
+                  <a
+                    href={item.path}
                     className="text-gray-700 text-[15px] sm:text-[16px] hover:text-[#7CCA9A] transition-colors duration-300"
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

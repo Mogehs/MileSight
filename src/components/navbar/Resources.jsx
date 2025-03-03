@@ -61,12 +61,12 @@ const Resources = () => {
             <ul className="space-y-2 text-sm">
               {section.links.map((item, linkIndex) => (
                 <li key={linkIndex} onClick={closeMenu}>
-                  <Link
-                    to={item.link}
+                  <a
+                    href={item.link}
                     className="text-gray-700 text-[12px] sm:text-[14px] hover:text-[#7CCA9A] transition-colors duration-300"
                   >
                     {item.title}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

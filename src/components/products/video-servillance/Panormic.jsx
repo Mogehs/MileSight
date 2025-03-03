@@ -36,9 +36,12 @@ export default function Panoramic() {
           ))}
         </div>
 
-        <p className="underline text-center mt-4 cursor-pointer text-sm sm:text-base hover:text-blue-500">
-          View All Products
-        </p>
+        <a
+          href="/products/NDAA-Compilant"
+          className="underline text-center mt-4 cursor-pointer text-sm sm:text-base hover:text-[#7CCA9A]"
+        >
+          <p> View All Products</p>
+        </a>
       </div>
     </div>
   );

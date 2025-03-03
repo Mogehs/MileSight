@@ -69,12 +69,12 @@ const Solutions = () => {
             <ul className="space-y-2">
               {column.map((item, index) => (
                 <li key={index} onClick={closeMenu}>
-                  <Link
-                    to={item.link}
+                  <a
+                    href={item.link}
                     className="text-gray-700 text-[12px] sm:text-[14px] hover:text-[#7CCA9A] transition-colors duration-300"
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
