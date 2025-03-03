@@ -146,7 +146,7 @@ function FormSection() {
           </div>
           <div className="flex justify-center mt-12">
             <button className="bg-[#00667C] text-white py-1 px-6 rounded cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1">
-              Let's Talk
+              <a href="/contact">Let's Talk</a>
             </button>
           </div>
         </form>

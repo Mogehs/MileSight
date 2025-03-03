@@ -1,12 +1,15 @@
 import Smart from "./Smart";
-import bg from '/SpaceOuccpancy/bg.jpg'
+import bg from "/SpaceOuccpancy/bg.jpg";
 export default function MainPeople() {
   return (
     <div>
-        <Smart title={'Smart Space Occupancy Solution'} image={`${bg}`} description={'Unlock the Potential of Space'} btn={'Watch Video'}/>
-
-        
-       
+      <Smart
+        title={"Smart Space Occupancy Solution"}
+        image={`${bg}`}
+        description={"Unlock the Potential of Space"}
+        btn={"Watch Video"}
+        link={"/resources/academy/product-training"}
+      />
     </div>
-  )
+  );
 }

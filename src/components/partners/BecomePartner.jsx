@@ -5,12 +5,14 @@ export default function BecomePartner() {
       title: "Become a Channel Partner",
       description: "Work with us to drive value and exceed sales targets.",
       btn: "Apply Now",
+      route: "/contact",
     },
     {
       img: "/ChannelPartner/tie.png",
       title: "Milesight Partner Ecosystem",
       description: "Grow your business and develop joint offerings with us.",
       btn: "Learn More",
+      route: "/resources/academy/product-training",
     },
   ];
   return (
@@ -34,7 +36,7 @@ export default function BecomePartner() {
               <h1 className=" text-xl font-medium">{item.title}</h1>
               <p className=" text-sm">{item.description}</p>
               <button className=" rounded-md cursor-pointer bg-[#00667C] text-white px-4 py-1 mt-2">
-                {item.btn}
+                <a href={item.route}>{item.btn}</a>
               </button>
             </div>
           </div>
