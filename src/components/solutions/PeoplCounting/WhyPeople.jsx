@@ -18,7 +18,7 @@ export default function WhyPeople() {
             {why.map((item, index) => (
                 <div key={index} className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                     <div className="w-full md:w-6/12 text-center md:text-left">
-                        <h1 className="text-xl md:text-3xl font-semibold mb-4">{item.title}</h1>
+                        <h1 className="text-xl md:text-3xl font-semibold mb-4 text-[#00667C]">{item.title}</h1>
                         {item.description.map((desc, index) => (
                             <p key={index} className="mb-3 text-gray-500">{desc}</p>
                         ))}

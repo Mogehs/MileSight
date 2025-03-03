@@ -30,12 +30,12 @@ export default function ExploreAdvanceds() {
 
     return (
         <div className="relative md:overflow-visible overflow-hidden mt-10 w-full sm:w-[90%] mx-auto">
-            <h1 className="text-center font-semibold text-2xl sm:text-4xl">Explore the Advanced Features of Milesight People Counting Sensors</h1>
+            <h1 className="text-center font-semibold text-2xl sm:text-4xl text-[#00667C]">Explore the Advanced Features of Milesight People Counting Sensors</h1>
             <Slider {...settings}>
                 {slider.map((item, index) => (
                     <div key={index} className="w-full md:w-[30%] bg-white mt-5 shadow-lg rounded-lg p-4">
                         <img src={item.img} alt={item.title} className="w-full h-48 bg-contain object-cover rounded-lg" />
-                        <h2 className="text-xs lg:text-lg font-semibold mt-2">{item.title}</h2>
+                        <h2 className="text-xs lg:text-lg font-semibold mt-2 text-[#00667C]">{item.title}</h2>
                     </div>
                 ))}
             </Slider>

@@ -23,7 +23,7 @@ const MileIntelligent = () => {
       <Enriched/>
       <VideoFuture/>
       <DownloadPdf/>
-      <h1 className=" mt-5 text-center sm:text-4xl text-2xl font-semibold">Contact Us Today to Discuss Your Needs!</h1>
+      <h1 className=" mt-5 text-center sm:text-4xl text-2xl font-semibold text-[#00667C]">Contact Us Today to Discuss Your Needs!</h1>
       <FormSection/>
   </div>;
 };

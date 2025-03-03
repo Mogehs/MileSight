@@ -29,19 +29,19 @@ export default function HighlightPeople() {
 
     return (
         <div className="w-full sm:w-11/12 mx-auto sm:mt-8 mt-4">
-            <h1 className="text-2xl sm:text-4xl text-center">Highlights of Milesight People Counting Sensors</h1>
+            <h1 className="text-2xl sm:text-4xl text-center text-[#00667C]">Highlights of Milesight People Counting Sensors</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  mt-6 group">
                 {pdfData.map((item, index) => (
                     <div
                         key={index}
-                        className="flex flex-col justify-start bg-white shadow-md rounded-lg p-4 border border-transparent hover:border-blue-400 transition cursor-pointer w-[70%] md:w-full  mx-auto "
+                        className="flex flex-col justify-start bg-[#00657cd0] shadow-md rounded-lg p-4 border border-transparent hover:border-blue-400 transition cursor-pointer w-[70%] md:w-full  mx-auto "
                     >
                         <div className="flex items-start">
                             <img src={item.img} alt={item.title} className="w-16 h-16 object-contain mr-4" />
                             <div className="flex-1">
-                                <h2 className="text-lg font-semibold">{item.title}</h2>
-                                <p className="text-sm text-gray-600">{item.descrip}</p>
+                                <h2 className="text-lg font-semibold text-[#00323d]">{item.title}</h2>
+                                <p className="text-sm text-white">{item.descrip}</p>
                             </div>
                         </div>
                     </div>

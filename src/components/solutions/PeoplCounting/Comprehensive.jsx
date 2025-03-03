@@ -53,7 +53,7 @@ export default function Comprehensive({title}) {
         >
             <div className="w-full sm:w-11/12 mx-auto sm:mt-8 mt-4">
                 <div className="text-center">
-                    {title && <h1 className="md:text-3xl text-xl mb-4 font-semibold text-white"> {title}
+                    {title && <h1 className="md:text-3xl text-xl mb-4 font-semibold text-[#7CCA9A]"> {title}
                     </h1>}
                 </div>
 
@@ -62,7 +62,7 @@ export default function Comprehensive({title}) {
                     {data.map((item, index) => (
                         <div
                             key={index}
-                            className="relative group cursor-pointer overflow-hidden rounded-lg shadow-md transition-all duration-300 border border-transparent hover:border-blue-400 hover:scale-105"
+                            className="relative group cursor-pointer overflow-hidden rounded-lg shadow-md transition-all duration-300 border border-transparent hover:border-[#00667C] hover:scale-105"
                         >
                             {/* Image with Hover Effect */}
                             <img
@@ -72,9 +72,9 @@ export default function Comprehensive({title}) {
                             />
                             
                             {/* Hover Overlay */}
-                            <div className="absolute inset-0 bg-black/80 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
-                                <h2 className="text-lg font-semibold text-white">{item.title}</h2>
-                                <p className="text-sm text-gray-300 mt-2">{item.description}</p>
+                            <div className="absolute inset-0 bg-[#034251] flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                                <h2 className="text-lg font-semibold text-[#7CCA9A]">{item.title}</h2>
+                                <p className="text-sm text-[#7CCA9A] mt-2">{item.description}</p>
                             </div>
                         </div>
                     ))}

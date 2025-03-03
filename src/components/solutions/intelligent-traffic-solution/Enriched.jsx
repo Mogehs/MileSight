@@ -45,7 +45,7 @@ export default function Enriched() {
       style={{ backgroundImage: `url(${enbg})` }}
     >
       <div className="w-full sm:w-11/12 mx-auto sm:mt-8 mt-2 p-2">
-        <h1 className="text-xl text-white md:text-3xl mb-3">
+        <h1 className="text-xl text-[#7CCA9A] md:text-3xl mb-3">
           Enriched Intelligent Traffic Functions & Scenarios
         </h1>
 
@@ -84,8 +84,8 @@ export default function Enriched() {
                 />
                 {/* Content (Text + Icon) */}
                 <div className="flex  justify-between items-center  p-2">
-                  <p className="font-semibold">{item.title}</p>
-                  <span className="text-blue-500 text-lg">{item.icon}</span>
+                  <p className="font-semibold text-[#00667C]">{item.title}</p>
+                  <span className=" text-[#7CCA9A] text-lg">{item.icon}</span>
                 </div>
               </div>
             ))}

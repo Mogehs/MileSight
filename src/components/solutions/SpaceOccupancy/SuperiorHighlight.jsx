@@ -25,7 +25,7 @@ export default function SuperiorHighlight() {
 
     return (
         <div className="w-full p-5 mb-5">
-            <h1 className=' text-xl text-center font-semibold mb-3 md:mb-6 md:text-4xl'>Superior Highlights </h1>
+            <h1 className=' text-xl text-center font-semibold mb-3 md:mb-6 md:text-4xl text-[#00667C]'>Superior Highlights </h1>
             <div className="mx-auto max-w-6xl">
                 {/* Responsive Grid with 5 Columns on Large Screens */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -39,8 +39,8 @@ export default function SuperiorHighlight() {
                                 alt={item.title}
                                 className="w-[60px] md:w-[80px] h-[60px] object-cover mb-3"
                             />
-                            <h1 className="text-md text-start md:text-lg font-bold mb-3">{item.title}</h1>
-                            <p className="text-sm text-start text-gray-600">{item.description}</p>
+                            <h1 className="text-md text-start md:text-lg font-bold mb-3 text-[#00667C]">{item.title}</h1>
+                            <p className="text-sm text-start text-[#00667C] ">{item.description}</p>
                         </div>
                     ))}
                 </div>

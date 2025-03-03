@@ -20,7 +20,7 @@ export default function Diverse() {
 
     return (
         <div className="mx-auto w-full md:w-11/12 sm:mt-8 mt-4">
-            <h1 className="text-center md:text-2xl text-xl font-semibold">
+            <h1 className="text-center md:text-3xl text-xl font-semibold text-[#00667C]">
                 Diverse Range of Models and Lenses
             </h1>
 
@@ -30,8 +30,8 @@ export default function Diverse() {
                     className="w-full md:w-2/5 h-[23rem] bg-cover bg-center flex flex-col justify-end items-start text-white  p-4 rounded-lg shadow-md"
                     style={{ backgroundImage: `url(${diverse})` }}
                 >
-                    <h1 className="text-lg font-bold">Lenses</h1>
-                    <p className="text-sm">4X/5X/12X/36X Optical AF Lens <br /> Motorized 2.7~13.5mm/3.6~10mm@F1.4
+                    <h1 className="text-lg font-bold text-[#7CCA9A]">Lenses</h1>
+                    <p className="text-sm text-[#7CCA9A]">4X/5X/12X/36X Optical AF Lens <br /> Motorized 2.7~13.5mm/3.6~10mm@F1.4
                     </p>
                 </div>
 
@@ -40,10 +40,10 @@ export default function Diverse() {
                     {data.map((item, index) => (
                         <div
                             key={index}
-                            className="bg-white border cursor-pointer border-gray-300 rounded-lg overflow-hidden shadow-md transition-all transform hover:-translate-y-2 hover:border-blue-400"
+                            className="bg-white border cursor-pointer border-gray-300 rounded-lg overflow-hidden shadow-md transition-all transform hover:-translate-y-2 hover:border-[#00667C]"
                         >
                             <img src={item.img} alt={item.title} className="w-full h-32 object-cover" />
-                            <div className="p-3 text-center">
+                            <div className="p-3 text-center text-[#7CCA9A]">
                                 <h2 className="text-sm font-semibold">{item.title}</h2>
                             </div>
                         </div>

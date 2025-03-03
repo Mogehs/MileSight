@@ -95,7 +95,7 @@ export default function TypicalApp() {
             style={{ backgroundImage: `url(${enbg})` }}
         >
             <div className="w-full sm:w-11/12 mx-auto sm:mt-8 mt-2 p-2">
-                <h1 className="text-xl text-white text-center md:text-4xl mb-6 font-bold">
+                <h1 className="text-xl text-[#7CCA9A] text-center md:text-4xl mb-6 font-bold">
                     Typical Applications of People Counters
                 </h1>
 
@@ -104,28 +104,28 @@ export default function TypicalApp() {
                     {data.map((item) => (
                         <div
                             key={item.key}
-                            className="bg-white border flex justify-center border-gray-400 cursor-pointer transition-all hover:shadow-lg rounded-lg w-full md:w-[12%]"
+                            className=" bg-[#00667C] border flex justify-center border-gray-400 cursor-pointer transition-all hover:shadow-lg rounded-lg w-full md:w-[12%]"
                             onClick={() => handleSelection(item.key)}
                         >
-                            <div className="flex gap-2 items-center bg-white rounded-md p-2">
-                                <span className="text-blue-500 text-xs">{item.icon}</span>
-                                <span className="font-semibold text-xs">{item.title}</span>
+                            <div className="flex gap-2 items-center justify-center rounded-md p-2 w-full">
+                                <span className="text-[#7CCA9A] text-xs">{item.icon}</span>
+                                <span className="font-semibold text-[#7CCA9A] text-xs">{item.title}</span>
                             </div>
                         </div>
                     ))}
                 </div>
 
                 {/* Content & Image Section */}
-                <div className="w-full lg:w-[75%] bg-white p-2 md:flex md:flex-col lg:flex-row gap-6 items-center justify-between mx-auto">
+                <div className="w-full lg:w-[75%] bg-[#00667C] p-2 md:flex md:flex-col lg:flex-row gap-6 items-center justify-between mx-auto">
                     {/* Left: Content */}
-                    <div className="lg:w-1/2 w-full p-4 bg-white rounded-lg shadow-md">
-                        <h2 className="text-lg font-bold text-gray-800">{selectedContent.title}</h2>
-                        <p className="text-gray-600 mt-2">{selectedContent.description}</p>
+                    <div className="lg:w-1/2 w-full p-4  rounded-lg shadow-md">
+                        <h2 className="text-lg font-bold text-[#7CCA9A]">{selectedContent.title}</h2>
+                        <p className="text-[#7CCA9A] mt-2">{selectedContent.description}</p>
 
-                        <div className="flex flex-wrap gap-2 mt-4 text-blue-500">
+                        <div className="flex flex-wrap gap-2 mt-4 text-[#7CCA9A]">
                             {selectedContent.feature.map((item, index) => (
                                 <div key={index} className="flex items-center gap-2 text-xs">
-                                    <FiCheckSquare className="text-blue-500" />
+                                    <FiCheckSquare className="text-[#7CCA9A]" />
                                     <span>{item}</span>
                                 </div>
                             ))}

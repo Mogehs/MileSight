@@ -22,7 +22,7 @@ export default function EntExit() {
                     <div key={item.title} className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center w-full">
                         {/* Right: Text Content */}
                         <div className="w-full flex flex-col gap-3 ">
-                            <h1 className="text-xl md:text-2xl font-semibold">{item.title}</h1>
+                            <h1 className="text-xl md:text-2xl font-semibold text-[#00667C]">{item.title}</h1>
                             <p className="text-sm md:text-base">{item.description}</p>
                             <ul className="list-disc list-inside text-sm md:text-base space-y-1">
                                 <li>{item.li}</li>
