@@ -154,7 +154,7 @@ const router = createBrowserRouter([
         element: <PartnersOther />,
       },
       {
-        path: "/resources/security",
+        path: "/resources/submit-ticket",
         element: <Security />,
       },
     ],
