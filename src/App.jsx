@@ -33,6 +33,7 @@ import Events from "./components/company/events/Events";
 import NDAAProducts from "./pages/NDAAProducts";
 import Partners from "./pages/Partners";
 import PartnersOther from "./pages/PartnersOther";
+import Security from "./pages/Security";
 
 const MainLayout = () => (
   <div className="w-full max-w-[1536px] mx-auto">
@@ -149,8 +150,12 @@ const router = createBrowserRouter([
         element: <Partners />,
       },
       {
-        path: "solutions/find-channel-partner",
+        path: "/solutions/find-channel-partner",
         element: <PartnersOther />,
+      },
+      {
+        path: "/resources/security",
+        element: <Security />,
       },
     ],
   },
