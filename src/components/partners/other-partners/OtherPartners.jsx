@@ -2,6 +2,7 @@ import React from "react";
 import DiscoverFea from "../../solutions/PeoplCounting/DiscoverFea";
 import NavSection from "./NavSection";
 import FormSection from "../../ai-mini-dome/FormSection";
+import BecomePartner from "../BecomePartner";
 
 const OtherPartners = () => {
   return (
@@ -13,6 +14,7 @@ const OtherPartners = () => {
           description={"Sell and Grow, Together."}
         />
       </div>
+
       <div className="  w-full flex gap-2 mx-auto md:w-11/12 justify-start md:justify-end text-gray-600 ">
         <span className=" cursor-pointer hover:text-blue-500">Home</span>
         <span className=" cursor-pointer hover:text-blue-500">Partner</span>
@@ -32,6 +34,8 @@ const OtherPartners = () => {
         </p>
       </div>
       <NavSection />
+      <BecomePartner />
+
       <FormSection />
     </div>
   );
