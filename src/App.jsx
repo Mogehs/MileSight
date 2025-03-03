@@ -117,6 +117,7 @@ const router = createBrowserRouter([
         path: "/company/our-brand",
         element: <OurBrand />,
       },
+  
       {
         path: "/resources/download-center",
         element: <DownloadCenter />,
