@@ -26,7 +26,7 @@ const data = [
 function ControllerSection() {
   return (
     <div id="lorawan-controller" className="mt-4 p-4">
-      <div className="p-4 bg-[#f1f7ff] rounded-3xl">
+      <div className="p-4 bg-[#7CCA9A] rounded-3xl">
         {" "}
         <h2 className="md:text-[3rem] text-[25px] text-center text-[#333]">
           LoRaWAN® Controller
@@ -39,7 +39,7 @@ function ControllerSection() {
                 src={item.img}
                 alt="not found"
               />
-              <p className="mt-2 hover:cursor-pointer hover:text-[#0299f4] text-[#333]">
+              <p className="mt-2 hover:cursor-pointer hover:text-[#00667C] text-[#333]">
                 {item.para1} <br /> {item.para2}
               </p>
             </div>

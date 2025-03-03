@@ -179,9 +179,9 @@ const Models = () => {
         {allModels.map((category, index) => (
           <button
             key={index}
-            className={`px-4 py-2 rounded-lg text-sm md:text-base ${
+            className={`px-4 py-2 rounded-lg text-sm md:text-base cursor-pointer ${
               selectedCategory.title === category.title
-                ? "bg-blue-500 text-white"
+                ? "bg-[#00667C] text-white"
                 : "bg-gray-200"
             }`}
             onClick={() => {
@@ -201,7 +201,7 @@ const Models = () => {
             key={index}
             className={`px-3 py-1 rounded-md border text-sm md:text-base ${
               selectedModel === model
-                ? "bg-sky-600 text-white"
+                ? "bg-[#00667C] text-white"
                 : "border-gray-400"
             }`}
             onClick={() => setSelectedModel(model)}

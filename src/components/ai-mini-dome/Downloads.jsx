@@ -20,12 +20,12 @@ const Downloads = () => {
       <ul className="w-full my-6 space-y-4">
         {docs.map((item, idx) => (
           <React.Fragment key={idx}>
-            <li className="flex items-center justify-between gap-4 p-3 rounded-md shadow-md transition-all hover:text-blue-400">
+            <li className="flex items-center justify-between gap-4 p-3 rounded-md shadow-md transition-all hover:text-[#7CCA9A]">
               <a
                 href="/instructions-pdf/milesight-network-camera-quick-start-guide.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 w-full text-black hover:text-blue-400 transition-all"
+                className="flex items-center gap-2 w-full text-black hover:text-[#7CCA9A] transition-all"
               >
                 <IoDocumentTextOutline className="text-xl sm:text-2xl" />
                 <span className="text-sm sm:text-base md:text-sm truncate">
@@ -35,7 +35,7 @@ const Downloads = () => {
               <a
                 href={`/instructions-pdf/${item}.pdf`}
                 download
-                className=" hover:text-blue-400 transition-all"
+                className=" hover:text-[#7CCA9A] transition-all"
               >
                 <CiSaveDown2 className="text-xl hidden sm:inline sm:text-2xl" />
               </a>
