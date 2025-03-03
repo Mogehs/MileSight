@@ -78,9 +78,9 @@ const Products = () => {
               }}
               onClick={closeMenu}
             >
-              <Link to={item.link} className="block py-1">
+              <a href={item.link} className="block py-1">
                 {item.name}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
@@ -88,7 +88,7 @@ const Products = () => {
 
       {/* Video Surveillance Options */}
       {showVideoOptions && (
-        <div className="pt-5 flex flex-col gap-4">
+        <div className="pt-5 flex flex-col gap-4 px-2">
           <a href="/products/video-surveillance">
             <p
               className={`cursor-pointer ${
@@ -142,7 +142,7 @@ const Products = () => {
 
       {/* IoT Sensing Options */}
       {showIoT && (
-        <div className="pt-5 flex flex-col gap-4">
+        <div className="pt-5 flex flex-col gap-4 px-2">
           {iotList.map((iot, index) => (
             <a
               key={index}

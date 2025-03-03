@@ -19,7 +19,7 @@ export const Card = ({ item }) => {
         <p className="text-md w-[63%]">{item.decription}</p>
       </div>
       <div
-        className={` w-full sm:w-[35%] transition-all ease-in delay-100 p-1 px-2  rounded-4xl bg-blue-300  duration-300 ${
+        className={` w-full sm:w-[35%] transition-all ease-in delay-100 p-1 px-2  rounded-4xl bg-[#00667C] text-white duration-300 ${
           isHovered ? "opacity-100 h-[35px]" : "opacity-0 h-0"
         }`}
       >

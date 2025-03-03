@@ -23,7 +23,7 @@ const SectionCrad = () => {
       {/* Left Section */}
       <div>
         <div className="flex items-center gap-2 mb-6">
-          <div className="border-l-8 border-[#0299f4] h-10 "></div>
+          <div className="border-l-8 border-[#00667C] h-10 "></div>
           <h2 className="text-2xl font-bold">IOT</h2>
         </div>
         {dataLeft.map((item, index) => (
@@ -32,7 +32,7 @@ const SectionCrad = () => {
             <div>
               <h3 className="text-[13px] sm:text-xl font-semibold">{item.title}</h3>
               <p className="text-gray-600 text-[13px] sm:text-[14px]">{item.description}</p>
-              <button className="mt-2 px-3 py-2 bg-[#0299f4] text-white text-[12px] rounded-md hover:bg-blue-700">Learn More</button>
+              <button className="mt-2 px-3 py-2 bg-[#00667C] text-white text-[12px] rounded-md hover:bg-[#7CCA9A] hover:cursor-pointer">Learn More</button>
             </div>
           </div>
         ))}
@@ -41,7 +41,7 @@ const SectionCrad = () => {
       {/* Right Section */}
       <div>
         <div className="flex items-center gap-2 mb-6">
-          <div className="border-l-8 border-[#0299f4] h-10"></div>
+          <div className="border-l-8 border-[#00667C] h-10"></div>
           <h2 className="text-2xl font-bold">Security</h2>
         </div>
         {dataRight.map((item, index) => (
@@ -50,7 +50,7 @@ const SectionCrad = () => {
             <div>
               <h3 className="text-[13px] sm:text-xl font-semibold">{item.title}</h3>
               <p className="text-gray-600 text-[13px] sm:text-[14px]">{item.description}</p>
-              <button className="mt-2 px-3 py-2 bg-[#0299f4] text-white text-[10px] sm:text-[12px] rounded-md hover:bg-blue-700">Learn More</button>
+              <button className="mt-2 px-3 py-2 bg-[#00667C] text-white text-[10px] sm:text-[12px] rounded-md hover:bg-[#7CCA9A] hover:cursor-pointer">Learn More</button>
             </div>
           </div>
         ))}

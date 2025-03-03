@@ -10,7 +10,7 @@ const Sensing = () => {
           From sensing to connecting, from data to the power that transforms the
           world, what we do matters.
         </p>
-        <button className="w-fit mt-2 px-8 py-2 cursor-pointer text-white hover:-translate-y-2 bg-blue-500 rounded-md hover:bg-blue-400 transition">
+        <button className="w-fit mt-2 px-8 py-2 cursor-pointer text-white hover:-translate-y-2 bg-[#00667C] rounded-md hover:bg-[#7CCA9A] transition">
           Learn More
         </button>
       </div>

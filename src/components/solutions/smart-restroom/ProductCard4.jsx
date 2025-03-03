@@ -20,7 +20,7 @@ const data = [
 
 function ProductCard4() {
   return (
-    <div className="bg-[#5281bc] rounded-4xl p-4">
+    <div className="bg-[#7CCA9A] rounded-4xl p-4">
       <div className="flex items-center gap-4 border-b pb-2 border-b-[#b9b9b9]">
         <img
           className="w-20"

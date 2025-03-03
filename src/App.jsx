@@ -31,6 +31,8 @@ import PeopleCounting from "./pages/PeopleCounting";
 import SpaceOccupancy from "./pages/SpaceOccupancy";
 import Events from "./components/company/events/Events";
 import NDAAProducts from "./pages/NDAAProducts";
+import Partners from "./pages/Partners";
+import PartnersOther from "./pages/PartnersOther";
 
 const MainLayout = () => (
   <div className="w-full max-w-[1536px] mx-auto">
@@ -117,6 +119,7 @@ const router = createBrowserRouter([
         path: "/company/our-brand",
         element: <OurBrand />,
       },
+
       {
         path: "/resources/download-center",
         element: <DownloadCenter />,
@@ -140,6 +143,14 @@ const router = createBrowserRouter([
       {
         path: "/products/NDAA-Compilant",
         element: <NDAAProducts />,
+      },
+      {
+        path: "/solutions/find-technology-partner",
+        element: <Partners />,
+      },
+      {
+        path: "solutions/find-channel-partner",
+        element: <PartnersOther />,
       },
     ],
   },

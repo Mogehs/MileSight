@@ -38,7 +38,7 @@ function HowSection() {
             backgroundImage: "url('/Solution/smart-hvac/how-bg.png')",
           }}
         ></div>
-        <div className="bg-[#f5f6f8] p-4">
+        <div className="bg-[#7CCA9A] p-4">
           <div>
             <div className="flex flex-col gap-4 items-center">
               <h2 className="md:text-[2rem] text-[20px] text-[#333]">
@@ -48,8 +48,8 @@ function HowSection() {
                 <button
                   className={`hover:cursor-pointer px-2 py-1 transition-all duration-300 text-sm ${
                     activeSection === "monitoring"
-                      ? "text-[#0299f4] border-b-4 border-[#0299f4] font-semibold"
-                      : "text-gray-600"
+                      ? "text-[#00667C] border-b-4 border-[#00667C] font-semibold"
+                      : "text-[#333]"
                   }`}
                   onClick={() => setActiveSection("monitoring")}
                 >
@@ -58,8 +58,8 @@ function HowSection() {
                 <button
                   className={`hover:cursor-pointer px-2 py-1 transition-all duration-300 text-sm ${
                     activeSection === "optimization"
-                      ? "text-[#0299f4] border-b-4 border-[#0299f4] font-semibold"
-                      : "text-gray-600"
+                      ? "text-[#00667C] border-b-4 border-[#00667C] font-semibold"
+                      : "text-[#333]"
                   }`}
                   onClick={() => setActiveSection("optimization")}
                 >
@@ -87,7 +87,7 @@ function HowSection() {
                         With smart thermostats, you can be informed in real-time
                         and have ALL under control. We can help you:
                       </p>
-                      <button className="bg-[#0299f4] px-4 py-1 rounded text-white text-sm hover:cursor-pointer ">
+                      <button className="bg-[#7CCA9A] hover:bg-[#00667C] px-4 py-1 rounded text-white text-sm hover:cursor-pointer ">
                         Work Better with Predictive Maintenance
                       </button>
                       <div className="flex items-center my-4">
@@ -135,7 +135,7 @@ function HowSection() {
                         take a step further with smart thermostat to utilize the
                         performance.
                       </p>
-                      <button className="bg-[#0299f4] px-4 py-1 rounded text-white text-sm hover:cursor-pointer ">
+                      <button className="bg-[#7CCA9A] hover:bg-[#00667C] px-4 py-1 rounded text-white text-sm hover:cursor-pointer ">
                         Improve More with Predictive Maintenance
                       </button>
                       <div className="flex items-center my-4">
