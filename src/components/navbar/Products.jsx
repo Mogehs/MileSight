@@ -4,20 +4,21 @@ import { useMenu } from "../menueContext";
 
 // Import all series components
 import MiniSeries from "../products/video-servillance/MiniSeries";
-import ProSeries from "../products/video-servillance/ProSeries";
+import ProSeries from "./network-camera/ProSeries";
 import Traffic from "./traffic-management/Traffic";
+import NetworkCamera from "./network-camera/NetworkCamera";
 
 // Map series names to components
 const seriesComponents = {
-  "Mini Series": MiniSeries,
+  "Mini Series": NetworkCamera,
   "Pro Series": ProSeries,
-  "Open Vision Series": MiniSeries,
+  "Open Vision Series": NetworkCamera,
   Accessories: ProSeries,
 };
 const videoSeriesComponents = {
-  NVR: MiniSeries,
+  NVR: NetworkCamera,
   "PoE NVR": ProSeries,
-  "Enterprise NVR": MiniSeries,
+  "Enterprise NVR": NetworkCamera,
 };
 
 const trafficComponents = {
@@ -63,9 +64,9 @@ const Products = () => {
     : null;
 
   return (
-    <div className="flex flex-col md:flex-row bg-white h-fit z-50 w-full">
+    <div className="flex flex-col md:flex-row bg-gray-700  h-fit z-50 sm:max-w-[60rem] mx-auto mt-2 rounded-2xl">
       {/* Sidebar */}
-      <div className="w-full md:w-[13rem] bg-gray-50 shadow-lg p-6">
+      <div className="w-full md:w-[13rem] bg-[#00667C] rounded-xl sm:rounded-l-2xl  shadow-lg p-6">
         <ul className="space-y-2">
           {[
             { name: "IoT Sensing", link: "/products/iot-sensing" },
@@ -87,7 +88,7 @@ const Products = () => {
           ].map((item, index) => (
             <li
               key={index}
-              className="text-gray-700 hover:text-[#7CCA9A] text-nowrap transition-colors duration-300 relative"
+              className="text-white hover:text-[#7CCA9A] text-nowrap transition-colors duration-300 relative"
               onMouseEnter={() => {
                 setShowVideoOptions(item.name === "Video Surveillance");
                 setShowIoT(item.name === "IoT Sensing");
@@ -111,7 +112,7 @@ const Products = () => {
               className={`cursor-pointer ${
                 activeOption === "Network Camera"
                   ? "text-[#7CCA9A] font-semibold"
-                  : "text-gray-700"
+                  : "text-white"
               }`}
               onMouseEnter={() => {
                 setActiveOption("Network Camera");
@@ -128,7 +129,7 @@ const Products = () => {
               className={`cursor-pointer ${
                 activeOption === "Network Video Recorder"
                   ? "text-[#7CCA9A] font-semibold"
-                  : "text-gray-700"
+                  : "text-white"
               }`}
               onMouseEnter={() => {
                 setActiveOption("Network Video Recorder");
@@ -160,14 +161,14 @@ const Products = () => {
 
       {/* IoT Sensing Options */}
       {showIoT && (
-        <div className="pt-5 flex flex-col gap-4 px-2">
+        <div className="pt-5 flex flex-col gap-2 px-2">
           {iotList.map((iot, index) => (
             <a
               key={index}
               href={`/solutions/${iot.toLowerCase().replace(" ", "-")}`}
             >
               <p
-                className="cursor-pointer text-gray-700 hover:text-[#7CCA9A]"
+                className="cursor-pointer text-white hover:text-[#7CCA9A]"
                 onMouseEnter={() => {
                   setShowSeries(false);
                   setShowVideoSeries(false);
@@ -184,11 +185,11 @@ const Products = () => {
         </div>
       )}
       {showIntelligent && (
-        <div className="pt-5 flex flex-col gap-4 px-2">
+        <div className="pt-4 flex flex-col gap-4 px-2">
           {intellList.map((intell, index) => (
             <a key={index} href={`/solutions/intelligent-traffic-solution`}>
               <p
-                className="cursor-pointer text-gray-700 hover:text-[#7CCA9A]"
+                className="cursor-pointer text-white hover:text-[#7CCA9A]"
                 onMouseEnter={() => {
                   setShowSeries(false);
                   setShowVideoSeries(false);
@@ -206,9 +207,9 @@ const Products = () => {
       )}
 
       {/* Series Section */}
-      <div className="w-full md:flex-1 p-6">
+      <div className="w-full md:flex-1 p-2">
         {showSeries && (
-          <div className="flex gap-2 cursor-pointer">
+          <div className="flex gap-2 cursor-pointer flex-wrap">
             {seriesList.map((series, idx) => (
               <div
                 key={idx}
@@ -244,7 +245,7 @@ const Products = () => {
 
         {/* Display Selected Series Component */}
         {(selectedSeries || selectedVideoSeries || selectedTrafficSeries) && (
-          <div className="mt-4" onClick={closeMenu}>
+          <div className="text-white font-light" onClick={closeMenu}>
             <strong>
               {selectedSeries || selectedVideoSeries || selectedTrafficSeries}
             </strong>

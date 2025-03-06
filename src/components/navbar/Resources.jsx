@@ -50,11 +50,11 @@ const Resources = () => {
   const { closeMenu } = useMenu();
 
   return (
-    <div className="flex justify-center items-center h-fit bg-gray-50 p-6 absolute w-full z-50">
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-5">
+    <div className="flex justify-center h-[25rem] w-full p-6 sm:px-6 absolute sm:w-[50rem] sm:ml-60 mt-2 rounded-2xl sm:h-[12rem] mx-auto z-50 bg-[#00667C] ">
+      <div className="grid grid-cols-2 md:grid-cols-3 sm:gap-10 md:gap-5">
         {resourcesData.map((section, index) => (
           <div key={index}>
-            <h2 className="text-sm sm:text-md font-semibold mb-2">
+            <h2 className="text-sm sm:text-lg font-semibold mb-1 text-black">
               {section.title}
             </h2>
             <ul className="space-y-2 text-sm">
@@ -62,7 +62,7 @@ const Resources = () => {
                 <li key={linkIndex} onClick={closeMenu}>
                   <a
                     href={item.link}
-                    className="text-gray-700 text-[12px] sm:text-[14px] hover:text-[#7CCA9A] transition-colors duration-300"
+                    className="text-white text-[12px] text-nowrap sm:text-[14px] hover:text-[#7CCA9A] transition-colors duration-300"
                   >
                     {item.title}
                   </a>

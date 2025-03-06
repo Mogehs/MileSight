@@ -39,19 +39,19 @@ const Partners = () => {
   const { closeMenu } = useMenu();
 
   return (
-    <div className="flex justify-center items-center h-fit bg-gray-50 p-6 absolute w-full z-50">
+    <div className="flex justify-center items-center h-fit   p-6 absolute sm:w-[50rem] sm:ml-60 mt-2 rounded-2xl sm:h-[14rem] mx-auto z-50 bg-[#00667C] ">
       <div className="grid grid-cols-2 md:grid-cols-2 gap-10 md:gap-16">
         {partnersData.map((section, index) => (
           <div key={index}>
-            <h2 className="text-md sm:text-md font-semibold mb-2">
+            <h2 className="text-xs sm:text-lg font-semibold mb-2 text-black">
               {section.title}
             </h2>
-            <ul className="space-y-3 text-sm">
+            <ul className="sm:space-y-3 text-xs sm:text-lg text-nowrap space-y-2 text-white">
               {section.links.map((item, linkIndex) => (
                 <li key={linkIndex} onClick={closeMenu}>
                   <a
                     href={item.path}
-                    className="text-gray-700 text-[12px] sm:text-[14px] hover:text-[#7CCA9A] transition-colors duration-300"
+                    className=" text-[12px] sm:text-[14px] hover:text-[#7CCA9A] transition-colors duration-300"
                   >
                     {item.title}
                   </a>

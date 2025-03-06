@@ -62,7 +62,7 @@ const Solutions = () => {
   const { closeMenu } = useMenu();
 
   return (
-    <div className="flex justify-center items-center h-fit bg-gray-50 p-6 absolute w-full z-50">
+    <div className="flex justify-center items-center h-fit   p-6 absolute sm:w-[50rem] sm:ml-60 mt-2 rounded-2xl sm:h-[14rem] mx-auto z-50 bg-[#00667C] ">
       <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-16">
         {solutionsData.map((column, colIndex) => (
           <div key={colIndex}>
@@ -71,7 +71,7 @@ const Solutions = () => {
                 <li key={index} onClick={closeMenu}>
                   <a
                     href={item.link}
-                    className="text-gray-700 text-[12px] sm:text-[14px] hover:text-[#7CCA9A] transition-colors duration-300"
+                    className="text-white text-[14px] sm:text-[0.9rem] hover:text-[#7CCA9A] transition-colors duration-300"
                   >
                     {item.label}
                   </a>

@@ -25,10 +25,10 @@ const actionLinks = [
       "bg-[#00667C] px-3 sm:py-1 text-white rounded-3xl hover:bg-[#7CCA9A] text-[0.7rem] py-3 sm:ml-10",
   },
   {
-    name: "Online Demo",
+    name: "Get Started",
     path: "/",
     className:
-      "px-2 py-3 sm:py-1 rounded-3xl border flex items-center justify-center gap-1 text-nowrap text-[0.7rem]",
+      "px-2 py-3 sm:py-1 rounded-3xl border flex items-center justify-center gap-1 text-nowrap text-[0.7rem] hover:text-[#7CCA9A]",
   },
 ];
 
@@ -40,7 +40,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="flex sticky w-full z-[300] items-center justify-between bg-white text-black pr-1 sm:px-4 py-3 shadow-lg top-0"
+        className="flex sticky w-full  z-[300] items-center justify-between bg-white text-[#00667C] cursor-pointer pr-1 sm:px-4 py-3 shadow-lg top-0"
         onMouseLeave={() => setActiveDropdown(null)}
       >
         <a href="/" onClick={closeMenu}>
@@ -71,7 +71,7 @@ export default function Navbar() {
                     animate={{ y: 0 }}
                     exit={{ y: -10 }}
                     transition={{ duration: 0.1 }}
-                    className="absolute left-0 top-full z-50 w-full bg-white shadow-lg rounded-md"
+                    className="absolute left-0 top-full z-50 w-full rounded-md"
                   >
                     {item.component}
                   </motion.div>

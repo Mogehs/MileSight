@@ -29,7 +29,7 @@ const Traffic = () => {
   ];
   return (
     <div>
-      <div className="w-[15rem] grid grid-cols-2">
+      <div className="w-[20rem] grid grid-cols-3 text-white">
         {data.map((item, index) => (
           <>
             <img src={item.img} alt="missing" className="w-full" />
