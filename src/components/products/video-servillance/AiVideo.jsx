@@ -31,7 +31,7 @@ export default function AiVideo() {
 
   return (
     <div className="w-full">
-      <div className="w-full sm:w-[90%] mx-auto">
+      <div className="w-full sm:w-[90%] mx-auto ">
         {/* AI Video Surveillance */}
         <div className="mb-5 sm:mb-10">
           <h1 className="text-xl sm:text-2xl font-semibold hidden sm:inline">
@@ -72,8 +72,8 @@ export default function AiVideo() {
             <div
               key={index}
               onClick={() => setSelectedProduct(item)}
-              className={`border px-4 py-2 transition-all ease-in-out delay-100 hover:bg-[#00667C] hover:text-white hover:shadow-md hover:shadow-blue-200 cursor-pointer rounded-3xl border-gray-500 ${
-                selectedProduct === item ? "bg-[#7CCA9A] text-white" : ""
+              className={`border px-4 py-2 transform transition-all ease-in-out delay-100 hover:bg-[#00667C] hover:text-white hover:shadow-lg  hover:shadow-[#7CCA9A] cursor-pointer rounded-3xl border-[#00667C] ${
+                selectedProduct === item ? "bg-[#7CCA9A] text-black" : ""
               }`}
             >
               <span className="text-nowrap">{item}</span>

@@ -1,0 +1,79 @@
+.buttonAnim {
+  font-size: 13px;
+  color: #00667c;
+  font-family: inherit;
+  font-weight: 450;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.buttonAnim:focus,
+.buttonAnim:hover {
+  color: gray;
+}
+
+.buttonAnim:focus:after,
+.buttonAnim:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.buttonAnim:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #7cca9a;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+/*******/
+.buttonAnim2 {
+  font-size: 15px;
+  color: white;
+  font-family: inherit;
+  font-weight: 450;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.buttonAnim2:focus,
+.buttonAnim2:hover {
+  color: white;
+}
+
+.buttonAnim2:focus:after,
+.buttonAnim2:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.buttonAnim2:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #7cca9a;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}

@@ -34,6 +34,7 @@ import NDAAProducts from "./pages/NDAAProducts";
 import Partners from "./pages/Partners";
 import PartnersOther from "./pages/PartnersOther";
 import Security from "./pages/Security";
+import "./App.css";
 
 const MainLayout = () => (
   <div className="w-full max-w-[1536px] mx-auto">

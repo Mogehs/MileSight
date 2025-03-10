@@ -1,32 +1,31 @@
-import React from "react";
-import cam1 from "/TrafficIntelecence/solar.png";
-import cam2 from "/TrafficIntelecence/ai.png";
-import airoad from "/TrafficIntelecence/airoad.png";
-import ptz2 from "/TrafficIntelecence/ptz2.png";
-import ptz3 from "/TrafficIntelecence/ptz3.png";
-
 import { useMenu } from "../../menueContext";
 
-export default function Traffic({ filter }) {
+import one from "/navbar-iot/ai-stereo-vision-people-counter-for-navigation-bar.png";
+import two from "/navbar-iot/lorawan-ai-tof-people-counting-sensor-vs133.png";
+import three from "/navbar-iot/lorawan-ai-workplace-occupancy-sensor-vs121.png";
+import four from "/navbar-iot/vs135.png";
+import five from "/navbar-iot/vs341-product.png";
+
+export default function PeopleSensing({ filter }) {
   const { closeMenu } = useMenu();
 
   const camerAray = [
     {
       name: "VS121",
-      img: cam1,
+      img: one,
       category: "Mini",
       path: "/products/ai-motorized-mini-dome",
     },
-    { name: "VS125", img: cam2, category: "Mini" },
-    { name: "VS224", img: ptz2, category: "Mini" },
+    { name: "VS125", img: two, category: "Mini" },
+    { name: "VS224", img: three, category: "Mini" },
     {
       name: "VS133",
-      img: ptz3,
+      img: four,
       category: "Mini",
     },
     {
       name: "VS135",
-      img: airoad,
+      img: five,
       category: "Mini",
     },
   ];

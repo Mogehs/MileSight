@@ -62,7 +62,7 @@ const Resources = () => {
                 <li key={linkIndex} onClick={closeMenu}>
                   <a
                     href={item.link}
-                    className="text-white text-[12px] text-nowrap sm:text-[14px] hover:text-[#7CCA9A] transition-colors duration-300"
+                    className="text-white text-[12px] text-nowrap sm:text-[14px] hover:text-[#7CCA9A] transition-colors duration-300 buttonAnim2"
                   >
                     {item.title}
                   </a>

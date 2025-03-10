@@ -8,6 +8,7 @@ import Partners from "./navbar/Partners";
 import Resources from "./navbar/Resources";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
 
 const navLinks = [
   { name: "Products", path: "/products/iot-sensing", component: <Products /> },
@@ -19,16 +20,23 @@ const navLinks = [
 
 const actionLinks = [
   {
+    name: "Create Live Meeting",
+    path: "/",
+    className:
+      "p-2  border flex items-center justify-center gap-1 text-nowrap text-[0.8rem] text-[#7CCA9A] hover:text-[#00667C]  transition-all ease-in rounded-md font-bold",
+  },
+
+  {
     name: "Contact",
     path: "/contact",
     className:
-      "bg-[#00667C] px-3 sm:py-1 text-white rounded-3xl hover:bg-[#7CCA9A] text-[0.7rem] py-3 sm:ml-10",
+      "bg-[#00667C] px-3 sm:py-1 text-white rounded-3xl hover:bg-[#7CCA9A] text-[0.9rem] py-3 text-[#7CCA9A]",
   },
   {
     name: "Get Started",
     path: "/",
     className:
-      "px-2 py-3 sm:py-1 rounded-3xl border flex items-center justify-center gap-1 text-nowrap text-[0.7rem] hover:text-[#7CCA9A]",
+      "px-2 py-3 sm:py-1 rounded-3xl border flex items-center justify-center gap-1 text-nowrap text-[0.9rem] hover:text-[#7CCA9A]",
   },
 ];
 
@@ -36,32 +44,44 @@ export default function Navbar() {
   const { menuOpen, toggleMenu, closeMenu } = useMenu();
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileDropdown, setMobileDropdown] = useState(null);
-
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
     <>
       <nav
-        className="flex sticky w-full  z-[300] items-center justify-between bg-white text-[#00667C] cursor-pointer pr-1 sm:px-4 py-3 shadow-lg top-0"
+        className="flex sticky w-full z-[300] justify-between items-center gap-15  bg-white text-[#00667C] cursor-pointer pr-1 sm:px-4 py-3 shadow-lg top-0"
         onMouseLeave={() => setActiveDropdown(null)}
       >
         <a href="/" onClick={closeMenu}>
           <img
             src="/Nexyws.png"
             alt="Logo"
-            className="w-35 sm:w-40 h-12 object-cover"
+            className="w-35 sm:w-40 h-12 object-cover transform transition-all ease-in dela-1 hover:shadow-md hover:shadow-[#7CCA9A] rounded-lg"
           />
         </a>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden lg:flex space-x-6">
           {navLinks.map((item, index) => (
             <div
               key={index}
               onMouseEnter={() =>
                 item.component ? setActiveDropdown(item.name) : null
               }
-              onMouseLeave={() => setActiveDropdown(null)}
+              onMouseLeave={() => {
+                setActiveDropdown(null);
+                setHoveredIndex(index);
+              }}
             >
-              <div className="hover:text-gray-600">{item.name}</div>
+              <div
+                className={`hover:text-gray-600 mt-1  ${
+                  hoveredIndex === index
+                    ? "shadow-lg shadow-[#7CCA9A] text-gray-600"
+                    : "hover:text-gray-600 hover:shadow-lg hover:shadow-[#7CCA9A]"
+                } px-2 rounded-lg py-1`}
+                onMouseEnter={() => setHoveredIndex(true)}
+              >
+                {item.name}
+              </div>
 
               {/* Dropdown Component with Animation */}
               <AnimatePresence>
@@ -82,16 +102,17 @@ export default function Navbar() {
         </div>
 
         {/* Action Buttons - Desktop */}
-        <div className="hidden md:flex items-center space-x-2">
+        <div className="hidden lg:flex items-center space-x-4 mt-2">
           {actionLinks.map((item, index) => (
             <Link key={index} to={item.path} className={item.className}>
+              {index === 0 && <FaGithub className="text-2xl" />}
               {item.name}
             </Link>
           ))}
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-2xl" onClick={toggleMenu}>
+        <button className="lg:hidden text-2xl" onClick={toggleMenu}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
 

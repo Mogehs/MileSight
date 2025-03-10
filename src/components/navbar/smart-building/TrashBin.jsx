@@ -1,32 +1,31 @@
-import React from "react";
-import cam1 from "/TrafficIntelecence/solar.png";
-import cam2 from "/TrafficIntelecence/ai.png";
-import airoad from "/TrafficIntelecence/airoad.png";
-import ptz2 from "/TrafficIntelecence/ptz2.png";
-import ptz3 from "/TrafficIntelecence/ptz3.png";
-
 import { useMenu } from "../../menueContext";
 
-export default function Traffic({ filter }) {
+import one from "/navbar-iot/lorawan-insertion-temperature-sensor-ts101.png";
+import two from "/navbar-iot/lorawan-platinum-temperature-sensor-em500-pt100.png";
+import three from "/navbar-iot/lorawan-temperature-and-humidity-sensor-em300-th.png";
+import four from "/navbar-iot/lorawan-temperature-and-humidity-sensor-em320-th.png";
+import five from "/navbar-iot/ts301-ts302.png";
+
+export default function TrashBin({ filter }) {
   const { closeMenu } = useMenu();
 
   const camerAray = [
     {
       name: "VS121",
-      img: cam1,
+      img: one,
       category: "Mini",
       path: "/products/ai-motorized-mini-dome",
     },
-    { name: "VS125", img: cam2, category: "Mini" },
-    { name: "VS224", img: ptz2, category: "Mini" },
+    { name: "VS125", img: two, category: "Mini" },
+    { name: "VS224", img: three, category: "Mini" },
     {
       name: "VS133",
-      img: ptz3,
+      img: four,
       category: "Mini",
     },
     {
       name: "VS135",
-      img: airoad,
+      img: five,
       category: "Mini",
     },
   ];

@@ -22,8 +22,8 @@ const Academy = () => {
         >
           <a href="/resources/academy/product-training">
             <div
-              className={`bg-gray-200 w-[80%] sm:w-[30%] h-[15rem] mx-auto lg:m-0 absolute top-0 left-0 rounded-lg cursor-pointer transition-all linear ${
-                entered && "z-40 top-10 left-10"
+              className={`bg-gray-200 w-[80%] sm:w-[30%] h-[15rem] mx-auto lg:m-0 absolute top-0 left-10 rounded-lg cursor-pointer transition-all linear ${
+                entered && "z-40 top-10 left-25"
               }`}
             >
               <p className="text-black m-auto flex justify-center items-center p-10 text-center">
@@ -34,7 +34,7 @@ const Academy = () => {
             </div>
           </a>
           <div
-            className={`w-[80%] sm:w-[30%] h-[15rem] mx-auto lg:m-0 absolute top-7 left-7 cursor-pointer transition-all linear ${
+            className={`w-[80%] sm:w-[30%] h-[15rem] mx-auto lg:m-0 absolute top-7 left-20  cursor-pointer transition-all linear ${
               !entered && " left-0"
             }`}
           >
@@ -52,8 +52,8 @@ const Academy = () => {
         >
           <a href="/resources/academy/product-training">
             <div
-              className={`bg-gray-200 w-[80%] sm:w-[30%] h-[15rem] mx-auto lg:m-0 absolute top-0 left-0 rounded-lg cursor-pointer transition-all linear ${
-                entered2 && "z-40 top-10 left-10"
+              className={`bg-gray-200 w-[80%] sm:w-[30%] h-[15rem] mx-auto lg:m-0 absolute top-0 left-10 rounded-lg cursor-pointer transition-all linear ${
+                entered2 && "z-40 top-10 left-20"
               }`}
             >
               <p className="text-black m-auto flex justify-center items-center p-10 text-center">
@@ -64,8 +64,8 @@ const Academy = () => {
             </div>
           </a>
           <div
-            className={`w-[80%] sm:w-[30%] h-[15rem] mx-auto lg:m-0 absolute top-7 left-7 cursor-pointer transition-all linear ${
-              !entered2 && " left-0"
+            className={`w-[80%] sm:w-[30%] h-[15rem] mx-auto lg:m-0 absolute top-7 left-18 cursor-pointer transition-all linear ${
+              !entered2 && " left-10"
             }`}
           >
             <img

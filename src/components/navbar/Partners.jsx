@@ -51,7 +51,7 @@ const Partners = () => {
                 <li key={linkIndex} onClick={closeMenu}>
                   <a
                     href={item.path}
-                    className=" text-[12px] sm:text-[14px] hover:text-[#7CCA9A] transition-colors duration-300"
+                    className=" text-[12px] sm:text-[14px] hover:text-[#7CCA9A] transition-colors duration-300 buttonAnim2"
                   >
                     {item.title}
                   </a>

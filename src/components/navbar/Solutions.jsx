@@ -71,7 +71,7 @@ const Solutions = () => {
                 <li key={index} onClick={closeMenu}>
                   <a
                     href={item.link}
-                    className="text-white text-[14px] sm:text-[0.9rem] hover:text-[#7CCA9A] transition-colors duration-300"
+                    className="text-white text-[14px] sm:text-[0.9rem] hover:text-[#7CCA9A] transition-colors duration-300 buttonAnim2"
                   >
                     {item.label}
                   </a>
