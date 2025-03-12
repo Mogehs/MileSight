@@ -6,7 +6,7 @@ const resourcesData = [
     links: [
       { title: "Submit a Ticket", link: "/resources/submit-ticket" },
       { title: "Help Center", link: "/resources/submit-ticket" },
-      { title: "Online Demo", link: "/resources/submit-ticket" },
+      { title: "Online Demo", link: "/resources/online-demo" },
     ],
   },
   {
