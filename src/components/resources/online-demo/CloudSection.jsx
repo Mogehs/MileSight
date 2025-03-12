@@ -58,7 +58,7 @@ function CloudSection() {
           <img src="/resources/online-demo/cloudimg.png" alt="not found" />
           <div className="flex flex-col gap-4">
             <p className="text-sm text-[#666]">Milesight IoT Cloud</p>
-            <button className="bg-[#f5f5f5] text-[#666] py-1 px-4 rounded-lg hover:bg-[#0299f4] hover:text-[#fff] hover:border-[#0299f4] border border-[#999999] transition cursor-pointer text-sm w-[fit-content]">
+            <button className="bg-[#f5f5f5] text-[#666] py-1 px-4 rounded-lg hover:bg-[#00677A] hover:text-[#fff] hover:border-[#00677A] border border-[#999999] transition cursor-pointer text-sm w-[fit-content]">
               Learn More
             </button>
           </div>

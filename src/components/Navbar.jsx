@@ -6,9 +6,10 @@ import Solutions from "./navbar/Solutions";
 import Company from "./navbar/Company";
 import Partners from "./navbar/Partners";
 import Resources from "./navbar/Resources";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
+import axios from "axios";
 
 const navLinks = [
   { name: "Products", path: "/products/iot-sensing", component: <Products /> },
@@ -31,32 +32,31 @@ const navLinks = [
   { name: "Contact", path: "/contact" },
 ];
 
-const actionLinks = [
-  {
-    name: "Create Live Meeting",
-    path: "/",
-    className:
-      "p-2  border flex items-center justify-center gap-1 text-nowrap text-[0.8rem] text-[#00667C]  hover:text-[#7CCA9A]  transition-all ease-in rounded-md font-bold",
-  },
-  {
-    name: "Online Demo",
-    path: "/",
-    className:
-      "bg-[#00667C] text-nowrap px-3 sm:py-1 text-white rounded-3xl hover:bg-[#7CCA9A] text-[0.9rem] py-3 text-[#7CCA9A] transition-all transform ease-in-out ",
-  },
-  {
-    name: "Get Started",
-    path: "/register",
-    className:
-      "bg-[#7FC99D] text-nowrap px-3 sm:py-1 text-white rounded-3xl hover:bg-[#006878] text-[0.9rem] py-3 text-[#006878] transition-all transform ease-in-out ",
-  },
-];
-
 export default function Navbar() {
   const { menuOpen, toggleMenu, closeMenu } = useMenu();
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileDropdown, setMobileDropdown] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [user, setUser] = useState(null); // State to store user info
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const USER_API = import.meta.env.VITE_USER_API_END_POINT;
+        const res = await axios.get(`${USER_API}/user`, {
+          withCredentials: true,
+        });
+        if (res.status === 200) {
+          setUser(res.data);
+        }
+      } catch (err) {
+        setUser(null); // If request fails, assume user is not logged in
+      }
+    };
+
+    fetchUser();
+  }, []);
+
   return (
     <>
       <nav
@@ -117,12 +117,33 @@ export default function Navbar() {
 
         {/* Action Buttons - Desktop */}
         <div className="hidden lg:flex items-center space-x-2 mt-2">
-          {actionLinks.map((item, index) => (
-            <Link key={index} to={item.path} className={item.className}>
-              {index === 0 && <FaGithub className="text-2xl" />}
-              {item.name}
-            </Link>
-          ))}
+          <a
+            href="https://github.com"
+            className="p-2 border flex items-center gap-1 text-[0.8rem] text-[#00667C] hover:text-[#7CCA9A] transition-all ease-in rounded-md font-bold"
+          >
+            <FaGithub className="text-2xl" />
+            Create Live Meeting
+          </a>
+          <a
+            href="/resources/online-demo"
+            className="bg-[#00667C] text-nowrap px-3 sm:py-1 text-white rounded-3xl hover:bg-[#7CCA9A] text-[0.9rem] py-3 transition-all transform ease-in-out"
+          >
+            Online Demo
+          </a>
+
+          {/* Show user initial if logged in, otherwise show "Get Started" */}
+          {user ? (
+            <div className="w-10 h-10 bg-[#7FC99D] text-white rounded-full flex items-center justify-center font-bold text-lg uppercase">
+              {user?.name?.charAt(0)}
+            </div>
+          ) : (
+            <a
+              href="/register"
+              className="bg-[#7FC99D] text-nowrap px-3 sm:py-1 text-white rounded-3xl hover:bg-[#006878] text-[0.9rem] py-3 transition-all transform ease-in-out"
+            >
+              Get Started
+            </a>
+          )}
         </div>
 
         {/* Mobile Menu Button */}
@@ -130,7 +151,7 @@ export default function Navbar() {
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
-        {/* Mobile Menu (Slide-in effect) */}
+        {/* Mobile Menu */}
         <div
           className={`absolute top-16 left-0 w-full bg-white shadow-md p-6 space-y-4 flex flex-col transition-transform duration-300 z-[200] h-screen overflow-y-auto ${
             menuOpen ? "translate-x-0" : "-translate-x-full"
@@ -154,7 +175,6 @@ export default function Navbar() {
                 )}
               </button>
 
-              {/* Mobile Dropdown Menu */}
               <AnimatePresence>
                 {mobileDropdown === item.name && item.component && (
                   <motion.div
@@ -173,16 +193,26 @@ export default function Navbar() {
 
           {/* Action Buttons - Mobile */}
           <div className="flex flex-col space-y-2 items-center w-full">
-            {actionLinks.map((item, index) => (
-              <Link
-                key={index}
-                to={item.path}
-                className={`${item.className} text-center w-full`}
-                onClick={closeMenu}
+            <a
+              href="/resources/online-demo"
+              className="bg-[#00667C] px-3 py-2 text-white rounded-lg hover:bg-[#7CCA9A]"
+            >
+              Online Demo
+            </a>
+
+            {/* User Initial for Mobile */}
+            {user ? (
+              <div className="w-10 h-10 bg-[#7FC99D] text-white rounded-full flex items-center justify-center font-bold text-lg uppercase">
+                {user?.name?.charAt(0)}
+              </div>
+            ) : (
+              <a
+                href="/register"
+                className="bg-[#7FC99D] px-3 py-2 text-white rounded-lg hover:bg-[#006878]"
               >
-                {item.name}
-              </Link>
-            ))}
+                Get Started
+              </a>
+            )}
           </div>
         </div>
       </nav>

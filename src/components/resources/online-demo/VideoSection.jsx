@@ -70,13 +70,20 @@ function VideoSection() {
                 className="w-full h-40 object-cover rounded-md mb-4"
               />
             )}
-            <div className={`flex flex-col lg:w-1/2 gap-2 ${index === 5 ? "w-[100%] text-sm" : ""}`}>
+            <div
+              className={`flex flex-col lg:w-1/2 gap-2 ${
+                index === 5 ? "w-[100%] text-sm" : ""
+              }`}
+            >
               <h3 className={`font-semibold text-[#333]`}>{item.title}</h3>
               {item.desc1 && (
-                <p className="text-sm text-[#666]">{item.desc1} <br />{item.desc2}</p>
+                <p className="text-sm text-[#666]">
+                  {item.desc1} <br />
+                  {item.desc2}
+                </p>
               )}
               {item.btn && (
-                <button className="bg-[#f5f5f5] text-[#666] py-1 px-4 rounded-lg hover:bg-[#0299f4] hover:text-[#fff] hover:border-[#0299f4] border border-[#999999] transition cursor-pointer text-sm w-[fit-content]">
+                <button className="bg-[#f5f5f5] text-[#666] py-1 px-4 rounded-lg hover:bg-[#00677A] hover:text-[#fff] hover:border-[#00677A] border border-[#999999] transition cursor-pointer text-sm w-[fit-content]">
                   {item.btn}
                 </button>
               )}

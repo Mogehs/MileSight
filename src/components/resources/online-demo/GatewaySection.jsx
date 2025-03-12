@@ -66,7 +66,7 @@ function GatewaySection() {
                 </p>
               )}
               {item.btn && (
-                <button className="bg-[#f5f5f5] text-[#666] py-1 px-4 rounded-lg hover:bg-[#0299f4] hover:text-[#fff] hover:border-[#0299f4] border border-[#999999] transition cursor-pointer text-sm w-[fit-content]">
+                <button className="bg-[#f5f5f5] text-[#666] py-1 px-4 rounded-lg hover:bg-[#00677A] hover:text-[#fff] hover:border-[#00677A] border border-[#999999] transition cursor-pointer text-sm w-[fit-content]">
                   {item.btn}
                 </button>
               )}
