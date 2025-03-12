@@ -16,7 +16,7 @@ const Footer = () => {
         <div>
           <div className="flex gap-2">
             <img
-              src="/Nexyws.png"
+              src="/Nexyos.png"
               alt="Milesight"
               className="w-40 object-cover"
             />
