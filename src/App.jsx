@@ -35,6 +35,8 @@ import Partners from "./pages/Partners";
 import PartnersOther from "./pages/PartnersOther";
 import Security from "./pages/Security";
 import "./App.css";
+import Register from "./components/Register";
+import Login from "./components/Login";
 
 const MainLayout = () => (
   <div className="w-full max-w-[1536px] mx-auto">
@@ -159,6 +161,14 @@ const router = createBrowserRouter([
         element: <Security />,
       },
     ],
+  },
+  {
+    path: "/register",
+    element: <Register />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);
 

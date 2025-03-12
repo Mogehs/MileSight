@@ -17,7 +17,7 @@ const Company = () => {
   const { closeMenu } = useMenu();
 
   return (
-    <div className="flex h-fit p-6 sm:px-6 absolute sm:w-[50rem] sm:ml-60 mt-2 rounded-2xl sm:h-[10rem] mx-auto z-50 bg-[#00667C] ">
+    <div className="flex h-fit p-6 sm:px-6 absolute sm:w-[50rem] sm:ml-60 mt-2 rounded-2xl sm:h-[10rem] mx-auto z-50 bg-white/30 backdrop-blur-[6px]">
       <div className="grid grid-cols-4 gap-10 md:gap-16">
         {companyData.map((section, index) => (
           <div key={index}>

@@ -41,9 +41,9 @@
 /*******/
 .buttonAnim2 {
   font-size: 15px;
-  color: white;
+  color: black;
   font-family: inherit;
-  font-weight: 450;
+  font-weight: 500;
   cursor: pointer;
   position: relative;
   border: none;
@@ -55,7 +55,7 @@
 
 .buttonAnim2:focus,
 .buttonAnim2:hover {
-  color: white;
+  color: black;
 }
 
 .buttonAnim2:focus:after,

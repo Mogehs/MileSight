@@ -12,10 +12,23 @@ import { FaGithub } from "react-icons/fa";
 
 const navLinks = [
   { name: "Products", path: "/products/iot-sensing", component: <Products /> },
-  { name: "Solutions", path: "/solutions", component: <Solutions /> },
-  { name: "Company", path: "/company", component: <Company /> },
-  { name: "Partners", path: "/partners", component: <Partners /> },
-  { name: "Resources", path: "/resources", component: <Resources /> },
+  {
+    name: "Solutions",
+    path: "/products/video-surveillance",
+    component: <Solutions />,
+  },
+  { name: "Company", path: "/company/about-us", component: <Company /> },
+  {
+    name: "Partners",
+    path: "/solutions/find-technology-partner",
+    component: <Partners />,
+  },
+  {
+    name: "Resources",
+    path: "/resources/submit-ticket",
+    component: <Resources />,
+  },
+  { name: "Contact", path: "/contact" },
 ];
 
 const actionLinks = [
@@ -23,20 +36,19 @@ const actionLinks = [
     name: "Create Live Meeting",
     path: "/",
     className:
-      "p-2  border flex items-center justify-center gap-1 text-nowrap text-[0.8rem] text-[#7CCA9A] hover:text-[#00667C]  transition-all ease-in rounded-md font-bold",
+      "p-2  border flex items-center justify-center gap-1 text-nowrap text-[0.8rem] text-[#00667C]  hover:text-[#7CCA9A]  transition-all ease-in rounded-md font-bold",
   },
-
   {
-    name: "Contact",
-    path: "/contact",
+    name: "Online Demo",
+    path: "/",
     className:
-      "bg-[#00667C] px-3 sm:py-1 text-white rounded-3xl hover:bg-[#7CCA9A] text-[0.9rem] py-3 text-[#7CCA9A]",
+      "bg-[#00667C] text-nowrap px-3 sm:py-1 text-white rounded-3xl hover:bg-[#7CCA9A] text-[0.9rem] py-3 text-[#7CCA9A] transition-all transform ease-in-out ",
   },
   {
     name: "Get Started",
-    path: "/",
+    path: "/register",
     className:
-      "px-2 py-3 sm:py-1 rounded-3xl border flex items-center justify-center gap-1 text-nowrap text-[0.9rem] hover:text-[#7CCA9A]",
+      "bg-[#7FC99D] text-nowrap px-3 sm:py-1 text-white rounded-3xl hover:bg-[#006878] text-[0.9rem] py-3 text-[#006878] transition-all transform ease-in-out ",
   },
 ];
 
@@ -48,19 +60,21 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="flex sticky w-full z-[300] justify-between items-center gap-15  bg-white text-[#00667C] cursor-pointer pr-1 sm:px-4 py-3 shadow-lg top-0"
+        className="flex sticky w-full z-[300] justify-between lg:justify-center flex-wrap items-center gap-3  bg-white text-[#00667C] cursor-pointer px-2 lg:px-4 py-3 shadow-lg top-0"
         onMouseLeave={() => setActiveDropdown(null)}
       >
-        <a href="/" onClick={closeMenu}>
-          <img
-            src="/Nexyws.png"
-            alt="Logo"
-            className="w-35 sm:w-40 h-12 object-cover transform transition-all ease-in dela-1 hover:shadow-md hover:shadow-[#7CCA9A] rounded-lg"
-          />
-        </a>
+        <div>
+          <a href="/" onClick={closeMenu}>
+            <img
+              src="/logo.jpg"
+              alt="Logo"
+              className="w-35 sm:w-40 h-12 object-cover transform transition-all ease-in dela-1 hover:shadow-md hover:shadow-[#7CCA9A] rounded-lg"
+            />
+          </a>
+        </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex space-x-6">
+        <div className="hidden lg:flex space-x-6 text-black">
           {navLinks.map((item, index) => (
             <div
               key={index}
@@ -73,14 +87,14 @@ export default function Navbar() {
               }}
             >
               <div
-                className={`hover:text-gray-600 mt-1  ${
+                className={`hover:text-gray-600 mt-1 text-lg max-w-28 transform transition-all ease-in-out delay-75 font-medium  ${
                   hoveredIndex === index
                     ? "shadow-lg shadow-[#7CCA9A] text-gray-600"
                     : "hover:text-gray-600 hover:shadow-lg hover:shadow-[#7CCA9A]"
                 } px-2 rounded-lg py-1`}
                 onMouseEnter={() => setHoveredIndex(true)}
               >
-                {item.name}
+                <a href={item.path}>{item.name}</a>
               </div>
 
               {/* Dropdown Component with Animation */}
@@ -102,7 +116,7 @@ export default function Navbar() {
         </div>
 
         {/* Action Buttons - Desktop */}
-        <div className="hidden lg:flex items-center space-x-4 mt-2">
+        <div className="hidden lg:flex items-center space-x-2 mt-2">
           {actionLinks.map((item, index) => (
             <Link key={index} to={item.path} className={item.className}>
               {index === 0 && <FaGithub className="text-2xl" />}

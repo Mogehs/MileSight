@@ -33,7 +33,7 @@ export default function NetworkCamera({ filter }) {
     : camerAray;
 
   return (
-    <div className="w-full sm:mt-5">
+    <div className="w-full sm:mt-5 text-black font-bold">
       <div className="sm:w-[90%]">
         {/* <span className="text-gray-500 block text-center mb-3 mt-3 text-sm sm:text-base">
           Entry-level · Compact · Stylish

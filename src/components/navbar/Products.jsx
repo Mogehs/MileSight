@@ -77,9 +77,9 @@ const Products = () => {
     : null;
 
   return (
-    <div className="flex flex-col md:flex-row bg-gray-700  h-fit z-50 sm:max-w-[60rem] mx-auto mt-2 rounded-2xl">
+    <div className="flex flex-col md:flex-row bg-white/30 backdrop-blur-[6px]  h-fit z-50 sm:max-w-[60rem] mx-auto mt-2 rounded-2xl ">
       {/* Sidebar */}
-      <div className="w-full md:w-[14rem] bg-[#00667C] rounded-xl sm:rounded-l-2xl  shadow-lg px-1 py-6">
+      <div className="w-full md:w-[14rem] bg-white/30 backdrop-blur-[40px]  rounded-xl sm:rounded-l-2xl  shadow-lg px-1 py-6">
         <ul className="space-y-2">
           {[
             { name: "IoT Sensing", link: "/products/iot-sensing" },
@@ -101,7 +101,7 @@ const Products = () => {
           ].map((item, index) => (
             <li
               key={index}
-              className="text-white hover:text-[#7CCA9A] text-nowrap transition-colors duration-300 relative hover:shadow-md hover:shadow-[#7CCA9A] cursor-pointer rounded-lg px-1  w-fit"
+              className="text-black font-bold hover:text-[#00667C] text-nowrap transition-colors duration-300 relative hover:shadow-md hover:shadow-[#7CCA9A] cursor-pointer rounded-lg px-1  w-fit"
               onMouseEnter={() => {
                 setShowVideoOptions(item.name === "Video Surveillance");
                 setShowIoT(item.name === "IoT Sensing");
@@ -135,7 +135,7 @@ const Products = () => {
               className={`cursor-pointer buttonAnim2 w-fit ${
                 activeOption === "Network Camera"
                   ? "text-[#7CCA9A] font-semibold"
-                  : "text-white"
+                  : "text-black"
               }`}
               onMouseEnter={() => {
                 setActiveOption("Network Camera");
@@ -170,7 +170,7 @@ const Products = () => {
           </a>
           <a href="/products/NDAA-Compilant">
             <p
-              className="cursor-pointer border border-[#7CCA9A]rounded-md p-2 text-[#7CCA9A] hover:shadow-md hover:shadow-[#7CCA9A]"
+              className="cursor-pointer border border-[#00667C] rounded-md p-2 text-[#00667C] hover:shadow-md hover:shadow-[#00667C] font-extrabold"
               onMouseEnter={() => {
                 setActiveOption("NDAA Compliant Products");
                 setShowSeries(false);
@@ -196,7 +196,7 @@ const Products = () => {
               href={`/solutions/${iot.toLowerCase().replace(" ", "-")}`}
             >
               <p
-                className="cursor-pointer text-white hover:text-[#7CCA9A] buttonAnim2 w-fit"
+                className="cursor-pointer text-black hover:text-[#7CCA9A] buttonAnim2 w-fit"
                 onMouseEnter={() => {
                   setShowSeries(false);
                   setShowVideoSeries(false);
@@ -218,7 +218,7 @@ const Products = () => {
           {intellList.map((intell, index) => (
             <a key={index} href={`/solutions/intelligent-traffic-solution`}>
               <p
-                className="cursor-pointer text-white hover:text-[#7CCA9A] buttonAnim2 w-fit"
+                className="cursor-pointer text-black hover:text-[#7CCA9A] buttonAnim2 w-fit"
                 onMouseEnter={() => {
                   setShowSeries(false);
                   setShowVideoSeries(false);
@@ -278,7 +278,7 @@ const Products = () => {
           selectedVideoSeries ||
           selectedTrafficSeries ||
           selectedIotSensing) && (
-          <div className="text-white font-light pt-3" onClick={closeMenu}>
+          <div className="text-black font-light pt-3" onClick={closeMenu}>
             <strong>
               {selectedSeries || selectedVideoSeries || selectedTrafficSeries}
             </strong>

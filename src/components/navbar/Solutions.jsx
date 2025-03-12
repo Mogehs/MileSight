@@ -62,7 +62,7 @@ const Solutions = () => {
   const { closeMenu } = useMenu();
 
   return (
-    <div className="flex justify-center items-center h-fit   p-6 absolute sm:w-[50rem] sm:ml-60 mt-2 rounded-2xl sm:h-[14rem] mx-auto z-50 bg-[#00667C] ">
+    <div className="flex justify-center items-center h-fit   p-6 absolute sm:w-[50rem] sm:ml-60 mt-2 rounded-2xl sm:h-[14rem] mx-auto z-50 bg-white/30 backdrop-blur-[6px] ">
       <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-16">
         {solutionsData.map((column, colIndex) => (
           <div key={colIndex}>
