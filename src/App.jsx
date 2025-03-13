@@ -39,6 +39,13 @@ import "./App.css";
 import Register from "./components/Register";
 import Login from "./components/Login";
 
+import ProjectRegistration from "./pages/ProjectRegistration";
+import IotCollab from "./pages/IotCollab";
+import TechnoPartner from "./pages/TechnoPartner";
+import PartnerProgram from "./pages/PartnerProgram";
+import CompanyBlog from "./pages/CompanyBlog";
+import CompanyNews from "./pages/CompanyNews";
+
 const MainLayout = () => (
   <div className="w-full max-w-[1536px] mx-auto">
     <Navbar />
@@ -154,6 +161,32 @@ const router = createBrowserRouter([
         path: "/solutions/find-technology-partner",
         element: <Partners />,
       },
+
+      {
+        path: "/partner/project",
+        element: <ProjectRegistration />,
+      },
+      {
+        path: "/partner/iot-collaboration-start-guide",
+        element: <IotCollab />,
+      },
+      {
+        path: "/partner/find-technology-partner",
+        element: <TechnoPartner />,
+      },
+      {
+        path: "/partner/technology-partner-program",
+        element: <PartnerProgram />,
+      },
+      {
+        path: "/company/blog",
+        element: <CompanyBlog />,
+      },
+      {
+        path: "/company/news",
+        element: <CompanyNews />,
+      },
+
       {
         path: "/solutions/find-channel-partner",
         element: <PartnersOther />,
