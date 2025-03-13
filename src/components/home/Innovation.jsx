@@ -8,11 +8,11 @@ const Innovation = () => {
           Innovation
         </h1>
         <p className="text-[#333333] mt-3 w-[95%] mb-10 sm:mb-0 md:w-[35%]">
-          Milesight strongly believes that innovative technologies are essential
+          Nexyos strongly believes that innovative technologies are essential
           and key to lead success for our partners.
         </p>
       </div>
-      <div className="w-[98%] h-85 rounded-r-2xl relative max-w-screen-xl">
+      <div className="w-full h-85 rounded-r-2xl relative">
         <img
           src="/home/5g.jpg"
           alt=""
@@ -21,7 +21,7 @@ const Innovation = () => {
         <img
           src="/home/5g.jpg"
           alt=""
-          className="object-cover absolute -top-6 h-90 sm:right-50 rounded-md"
+          className="object-cover absolute -top-6 h-90 -right-1 sm:right-50 rounded-md"
         />
       </div>
     </div>

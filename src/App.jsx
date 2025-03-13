@@ -112,6 +112,7 @@ const router = createBrowserRouter([
         path: "/solutions/waste-management",
         element: <WasteManagement />,
       },
+
       {
         path: "/company/about-us",
         element: <Company />,
