@@ -50,7 +50,7 @@ const Resources = () => {
   const { closeMenu } = useMenu();
 
   return (
-    <div className="flex justify-center h-[25rem] w-full p-6 sm:px-6 absolute sm:w-[50rem] sm:ml-60 mt-2 rounded-2xl sm:h-[12rem] mx-auto z-50  bg-white/30 backdrop-blur-[6px] ">
+    <div className="flex justify-center h-[25rem] w-full p-6 sm:px-6 absolute sm:w-[50rem] sm:ml-45 mt-2 rounded-2xl sm:h-[12rem] mx-auto z-50  bg-white/30 backdrop-blur-[6px] ">
       <div className="grid grid-cols-2 md:grid-cols-3 sm:gap-10 md:gap-5">
         {resourcesData.map((section, index) => (
           <div key={index}>
