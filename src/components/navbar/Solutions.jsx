@@ -68,7 +68,7 @@ const Solutions = () => {
   const { closeMenu } = useMenu();
 
   return (
-    <div className="flex justify-center items-center h-fit   p-6 absolute sm:w-[52rem] sm:ml-60 mt-2 rounded-2xl sm:h-[14rem] mx-auto z-50 bg-white/30 backdrop-blur-[6px] ">
+    <div className="flex justify-center items-center h-fit   p-6 absolute sm:w-[52rem] sm:ml-45 mt-2 rounded-2xl sm:h-[14rem] mx-auto z-50 bg-white/30 backdrop-blur-[6px] ">
       <div className="grid grid-cols-2 md:grid-cols-4  gap-10 md:gap-5">
         {solutionsData.map((column, colIndex) => (
           <div key={colIndex}>
