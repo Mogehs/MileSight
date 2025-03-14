@@ -20,6 +20,35 @@ const resourcesData = [
         title: "Solution Training",
         link: "/resources/academy/solution-training",
       },
+      {
+        title: "Technical Training",
+        link: "/resources/academy/solution-training",
+      },
+      {
+        title: "Road Map",
+        link: "/resources/academy/solution-training",
+      },
+    ],
+  },
+  {
+    title: "Video Center",
+    links: [
+      {
+        title: "Products",
+        link: "/resources/video-center#products",
+      },
+      {
+        title: "Solutions",
+        link: "/resources/video-center#solutions",
+      },
+      {
+        title: "Technology Innovations",
+        link: "/resources/video-center#technology",
+      },
+      {
+        title: "Tutorials",
+        link: "/resources/video-center#tutorials",
+      },
     ],
   },
 
@@ -51,12 +80,13 @@ const Resources = () => {
 
   return (
     <div className="flex justify-center h-[25rem] w-full p-6 sm:px-6 absolute sm:w-[50rem] sm:ml-45 mt-2 rounded-2xl sm:h-[12rem] mx-auto z-50  bg-white/30 backdrop-blur-[6px] ">
-      <div className="grid grid-cols-2 md:grid-cols-3 sm:gap-10 md:gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 sm:gap-10 md:gap-5">
         {resourcesData.map((section, index) => (
           <div key={index}>
-            <h2 className="text-sm sm:text-lg font-semibold mb-1 text-black">
+            <h2 className="text-sm sm:text-lg font-semibold text-black">
               {section.title}
             </h2>
+            <hr className="mb-2" />
             <ul className="space-y-2 text-sm">
               {section.links.map((item, linkIndex) => (
                 <li key={linkIndex} onClick={closeMenu}>
