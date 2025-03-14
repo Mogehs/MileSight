@@ -13,7 +13,7 @@ function Last() {
             Get started with Milesight and join our growing network of
             technology partners.
           </p>
-          <button className="text-white bg-[#469bff] rounded-md py-1 px-2">
+          <button className="text-white bg-[#469bff] rounded-md py-1 px-2 hover:cursor-pointer">
             Apply Now
           </button>
         </div>
@@ -22,7 +22,7 @@ function Last() {
           <p className="text-[#666]">
             Grow your business and develop joint offerings with us.
           </p>
-          <button className="text-white bg-[#469bff] rounded-md py-1 px-2">
+          <button className="text-white bg-[#469bff] rounded-md py-1 px-2 hover:cursor-pointer">
             Learn More
           </button>
         </div>
