@@ -1,14 +1,16 @@
-import pc from "/VideoSurivilence/pc.png";
-import miles from "/VideoSurivilence/miles.png";
-import camera from "/VideoSurivilence/camera.png";
+import img1 from "/client-pic/Panoramic Series/AI 360° Panoramic Fisheye/AI 360° Panoramic Fisheye-21.png";
+import img2 from "/client-pic/Panoramic Series/AI Multi-directional Camera/AI Multi-directional Camera-31.png";
+import img3 from "/client-pic/Panoramic Series/ai-180-panoramic-mini-bullet-camera/ai-180-panoramic-mini-bullet-camera-25.png";
+import img4 from "/client-pic/Panoramic Series/ai-180-panoramic-mini-CAmera/ai-180-panoramic-mini-CAmera-23.png";
+import img5 from "/client-pic/Panoramic Series/dual-sensor-panoramic-camera-/dual-sensor-panoramic-camera--28.png";
 
 export default function Panoramic() {
   const camerAray = [
-    { name: "AI 180° Panoramic Mini Bullet Camera", img: pc },
-    { name: "AI Dual-sensor 180° Panoramic Camera", img: camera },
-    { name: "AI 180° Panoramic Mini Dome Camera", img: pc },
-    { name: "AI Multi-directional Camera", img: miles },
-    { name: "AI 360° Panoramic Fisheye Camera", img: miles },
+    { name: "AI 180° Panoramic Mini Bullet Camera", img: img1 },
+    { name: "AI Dual-sensor 180° Panoramic Camera", img: img2 },
+    { name: "AI 180° Panoramic Mini Dome Camera", img: img3 },
+    { name: "AI Multi-directional Camera", img: img4 },
+    { name: "AI 360° Panoramic Fisheye Camera", img: img5 },
   ];
 
   return (
@@ -27,7 +29,7 @@ export default function Panoramic() {
               <img
                 src={item.img}
                 alt={item.name}
-                className="transition-transform ease-in-out delay-400 h-[90px] w-[140px] sm:h-[100px] sm:w-[180px] hover:scale-110"
+                className="transition-transform ease-in-out delay-400 h-[90px] w-[140px] sm:h-[100px] sm:w-[100px] hover:scale-110 object-cover"
               />
               <span className="text-xs sm:text-sm text-center mt-2">
                 {item.name}

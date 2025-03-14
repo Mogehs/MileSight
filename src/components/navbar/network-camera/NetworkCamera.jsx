@@ -1,29 +1,43 @@
-import camera from "/VideoSurivilence/camera.png";
-import cam from "/VideoSurivilence/cam.png";
-import vandal from "/VideoSurivilence/vandal.png";
-import statics from "/VideoSurivilence/static.png";
 import { useMenu } from "../../menueContext";
+import img1 from "/client-pic/Mini Series/AI IR Mini Dome Camera/AI IR Mini Dome Camera-42.png";
+import img2 from "/client-pic/Mini Series/AI Motorized Bullet Network Camera _ Mini/AI Motorized Bullet Network Camera _ Mini-48.png";
+import img3 from "/client-pic/Mini Series/AI Motorized Dome Network Camera/AI Motorized Dome Network Camera-36.png";
+import img4 from "/client-pic/Mini Series/AI Vandal-proof Mini Bullet Network Camera/AI Vandal-proof Mini Bullet Network Camera-51.png";
+import img5 from "/client-pic/Mini Series/AI Vandal-proof Mini Dome/AI Vandal-proof Mini Do-33.png";
+import img6 from "/client-pic/Mini Series/AI Weather proof Mini Bullet/AI Weather proof Mini Bullet Camera-39.png";
 
 export default function NetworkCamera({ filter }) {
   const { closeMenu } = useMenu();
 
   const camerAray = [
     {
-      name: "AI Motorized Dome Camera",
-      img: camera,
-      category: "Mini",
+      name: "AI IR Mini Dome Camera",
+      img: img1,
       path: "/products/ai-motorized-mini-dome",
     },
-    { name: "AI Motorized Bullet Camera", img: cam, category: "Mini" },
-    { name: "AI Vandal-proof Mini Dome Camera", img: vandal, category: "Mini" },
     {
-      name: "AI Vandal-proof Mini Bullet Camera",
-      img: statics,
+      name: "AI Motorized Bullet Camera Mini",
+      img: img2,
+      category: "Mini",
+    },
+    {
+      name: "AI Motorized Dome Camera",
+      img: img3,
+      category: "Mini",
+    },
+    {
+      name: "AI Vandal-proof Mini Bullet Network Camera",
+      img: img4,
       category: "Mini",
     },
     {
       name: "AI Weather proof Mini Dome Camera",
-      img: "/VideoSurivilence/ai-weather-prof-mini-dome-camera.png",
+      img: img5,
+      category: "Mini",
+    },
+    {
+      name: "AI Weather proof Mini Bullet",
+      img: img6,
       category: "Mini",
     },
   ];
@@ -51,7 +65,7 @@ export default function NetworkCamera({ filter }) {
                     <img
                       src={item.img}
                       alt={item.name}
-                      className="transition-transform ease-in-out delay-400 h-[70px] w-[120px] sm:h-[70px] sm:w-[110px] hover:scale-110"
+                      className="transition-transform ease-in-out delay-400 h-[70px] w-[120px] sm:h-[70px] sm:w-[110px] hover:scale-110 object-contain"
                     />
                     <span className="text-xs sm:text-xs text-center mt-2">
                       {item.name}
