@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 
 // Import all series components
 import ProSeries from "./network-camera/ProSeries";
-import ColorSeries from "./network-camera/ColorSeries";
+import Color from "./network-camera/Color";
 import Traffic from "./traffic-management/Traffic";
 import NetworkCamera from "./network-camera/NetworkCamera";
 import PeopleSensing from "./smart-building/PeopleSensing";
@@ -53,7 +53,7 @@ const loraWanComponent = {
 const seriesComponents = {
   "Mini Series": NetworkCamera,
   "Pro Series": ProSeries,
-  "Color Series": ColorSeries,
+  "Color Series": Color,
   "Ptz Series": PtzSeries,
 };
 const videoSeriesComponents = {
