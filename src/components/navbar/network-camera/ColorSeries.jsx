@@ -1,17 +1,15 @@
+import img1 from "/client-pic/Color-Series/AI Color+ Vandal-proof Mini Bullet Network Camera-70.png";
+import img2 from "/client-pic/Color-Series/AI Color+ Vandal-proof Mini Bullet Network Camera-71.png";
+import img3 from "/client-pic/Color-Series/AI Color+ Vandal-proof Mini Bullet Network Camera-72.png";
+
 export default function ColorSeries() {
   const cameraArray = [
     {
       name: "AI Color+ Vandal-proof Mini Bullet Network Camera-70",
-      img: "/client-pic/Color Series/AI Color+ Vandal-proof Mini Bullet Network Camera-70.png",
+      img: img1,
     },
-    {
-      name: "AI Color+ Vandal-proof Mini Bullet Network Camera-71",
-      img: "/client-pic/Color Series/AI Color+ Vandal-proof Mini Bullet Network Camera-71.png",
-    },
-    {
-      name: "AI Color+ Vandal-proof Mini Bullet Network Camera-72",
-      img: "/client-pic/Color Series/AI Color+ Vandal-proof Mini Bullet Network Camera-72.png",
-    },
+    { name: "AI Color+ Vandal-proof Mini Bullet Network Camera-71", img: img2 },
+    { name: "AI Color+ Vandal-proof Mini Bullet Network Camera-72", img: img3 },
   ];
 
   return (
