@@ -47,6 +47,7 @@ import CompanyBlog from "./pages/CompanyBlog";
 import CompanyNews from "./pages/CompanyNews";
 
 import VideoCenter from "./pages/VideoCenter";
+import SmartAgriculture from "./pages/SmartAgriculture";
 
 const MainLayout = () => (
   <div className="w-full max-w-[1536px] mx-auto">
@@ -120,6 +121,10 @@ const router = createBrowserRouter([
       {
         path: "/solutions/waste-management",
         element: <WasteManagement />,
+      },
+      {
+        path: "/solution/smart-agriculture",
+        element: <SmartAgriculture />,
       },
 
       {
