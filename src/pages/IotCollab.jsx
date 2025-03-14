@@ -1,10 +1,11 @@
-import React from "react";
-import Hero from "../components/partners/iot-collab/Hero";
+
+import MainIot from "../components/partners/iot-collab/MainIot";
+
 
 function IotCollab() {
   return (
     <div>
-      <Hero />
+      <MainIot />
     </div>
   );
 }

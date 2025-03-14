@@ -59,7 +59,7 @@ function VideoSection() {
               onMouseLeave={() => setHoveredId(null)}
             >
               <img src={item.img} alt="not found" />
-              <h3 className="font-bold text-[20px]">{item.title}</h3>
+              <h3 className="font-bold text-[15px]">{item.title}</h3>
               <button className="border border-[#469bff] rounded-lg text-[#469bff] hover:cursor-pointer hover:bg-[#469bff] hover:text-white px-2 py-1">
                 {item.btn}
               </button>

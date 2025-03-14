@@ -39,7 +39,7 @@ const Partners = () => {
   const { closeMenu } = useMenu();
 
   return (
-    <div className="flex justify-center items-center h-fit   p-6 absolute sm:w-[50rem] sm:ml-60 mt-2 rounded-2xl sm:h-[14rem] mx-auto z-50 bg-white/30 backdrop-blur-[6px] ">
+    <div className="flex justify-center items-center h-fit   p-6 absolute sm:w-[50rem] sm:ml-45 mt-2 rounded-2xl sm:h-[14rem] mx-auto z-50 bg-white/30 backdrop-blur-[6px] ">
       <div className="grid grid-cols-2 md:grid-cols-2 gap-10 md:gap-16">
         {partnersData.map((section, index) => (
           <div key={index}>

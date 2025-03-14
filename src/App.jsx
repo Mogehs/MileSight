@@ -46,6 +46,8 @@ import PartnerProgram from "./pages/PartnerProgram";
 import CompanyBlog from "./pages/CompanyBlog";
 import CompanyNews from "./pages/CompanyNews";
 
+import VideoCenter from "./pages/VideoCenter";
+
 const MainLayout = () => (
   <div className="w-full max-w-[1536px] mx-auto">
     <Navbar />
@@ -119,6 +121,7 @@ const router = createBrowserRouter([
         path: "/solutions/waste-management",
         element: <WasteManagement />,
       },
+
       {
         path: "/company/about-us",
         element: <Company />,
@@ -135,6 +138,10 @@ const router = createBrowserRouter([
       {
         path: "/resources/download-center",
         element: <DownloadCenter />,
+      },
+      {
+        path: "/resources/video-center",
+        element: <VideoCenter />,
       },
       {
         path: "/resources/developer-zone",

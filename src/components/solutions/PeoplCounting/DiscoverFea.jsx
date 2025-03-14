@@ -16,12 +16,15 @@ export default function DiscoverFea({
         </h1>
         <p>{description}</p>
 
-        {btn && mouse && (
-          <button className="mt-4 flex items-center gap-2 bg-blue-500 text-white text-sm sm:text-lg rounded-2xl px-5 py-3 transform transition-all ease-in duration-200 hover:scale-105 cursor-pointer">
+        {btn && (
+          <button className="mt-4 flex items-center bg-[#00667C] hover:bg-[#7CCA9A] text-white py-2 px-6 rounded cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1">
+              
             <span>{btn}</span>
-            <span className="p-[0.5px] bg-white rounded-md">
-              <img src={mouse} alt="Mouse Icon" className="w-5 sm:w-6" />
-            </span>
+            {mouse && (
+              <span className="p-[0.5px] bg-white rounded-md">
+                <img src={mouse} alt="Mouse Icon" className="w-5 sm:w-6" />
+              </span>
+            )}
           </button>
         )}
       </div>
