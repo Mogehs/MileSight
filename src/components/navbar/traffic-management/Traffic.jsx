@@ -1,9 +1,6 @@
 import React from "react";
-import cam1 from "/TrafficIntelecence/solar.png";
-import cam2 from "/TrafficIntelecence/ai.png";
-import airoad from "/TrafficIntelecence/airoad.png";
-import ptz2 from "/TrafficIntelecence/ptz2.png";
-import ptz3 from "/TrafficIntelecence/ptz3.png";
+import img1 from "/traffic-navbar/trafficx-camera.png";
+import img2 from "/traffic-navbar/trafficx-enforcement-camera.png";
 
 import { useMenu } from "../../menueContext";
 
@@ -12,22 +9,16 @@ export default function Traffic({ filter }) {
 
   const camerAray = [
     {
-      name: "VS121",
-      img: cam1,
+      name: "TrafficX Camera",
+      img: img1,
       category: "Mini",
       path: "/products/ai-motorized-mini-dome",
     },
-    { name: "VS125", img: cam2, category: "Mini" },
-    { name: "VS224", img: ptz2, category: "Mini" },
     {
-      name: "VS133",
-      img: ptz3,
+      name: "TrafficX Enforcement Camera",
+      img: img2,
       category: "Mini",
-    },
-    {
-      name: "VS135",
-      img: airoad,
-      category: "Mini",
+      path: "/products/vs125",
     },
   ];
 
@@ -36,7 +27,7 @@ export default function Traffic({ filter }) {
     : camerAray;
 
   return (
-    <div className="w-full sm:mt-5 sm:pl-20 text-black font-bold">
+    <div className="w-full sm:mt-5 text-black font-bold">
       <div className="sm:w-[90%]">
         {/* <span className="text-gray-500 block text-center mb-3 mt-3 text-sm sm:text-base">
           Entry-level · Compact · Stylish

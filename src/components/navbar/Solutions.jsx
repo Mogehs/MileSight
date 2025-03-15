@@ -59,7 +59,7 @@ const solutionsData = [
   [
     {
       label: "Smart Agriculture",
-      link: "/solutions/waste-management",
+      link: "/solution/smart-agriculture",
     },
   ],
 ];

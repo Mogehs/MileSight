@@ -1,32 +1,35 @@
 import { useMenu } from "../../menueContext";
-
-import one from "/navbar-iot/ai-stereo-vision-people-counter-for-navigation-bar.png";
-import two from "/navbar-iot/lorawan-ai-tof-people-counting-sensor-vs133.png";
-import three from "/navbar-iot/lorawan-ai-workplace-occupancy-sensor-vs121.png";
-import four from "/navbar-iot/vs135.png";
-import five from "/navbar-iot/vs341-product.png";
-
+import img1 from "/traffic-navbar/4g-solar-powered-anpr-camera (1).png";
+import img2 from "/traffic-navbar/4g-solar-powered-traffic-sensing-camera (1).png";
+import img3 from "/traffic-navbar/ai-road-traffic-pro-bullet-plus-camera.png";
+import img4 from "/traffic-navbar/ai-road-traffic-supplement-light-pro-bullet-plus-camera (1).png";
 export default function RoadTraffic({ filter }) {
   const { closeMenu } = useMenu();
 
   const camerAray = [
     {
-      name: "VS121",
-      img: one,
+      name: "4G Solar-powered ANPR Camera",
+      img: img1,
       category: "Mini",
       path: "/products/ai-motorized-mini-dome",
     },
-    { name: "VS125", img: two, category: "Mini" },
-    { name: "VS224", img: three, category: "Mini" },
     {
-      name: "VS133",
-      img: four,
+      name: "4G Solar-powered Traffic Sensing Camera",
+      img: img2,
       category: "Mini",
+      path: "/products/vs125",
     },
     {
-      name: "VS135",
-      img: five,
+      name: "AI Road Traffic Supplement Light Pro Bullet Plus Camera",
+      img: img3,
       category: "Mini",
+      path: "/products/ai-motorized-mini-dome",
+    },
+    {
+      name: "AI Road Traffic PTZ Bullet Plus Camera",
+      img: img4,
+      category: "Mini",
+      path: "/products/vs125",
     },
   ];
 
@@ -35,13 +38,9 @@ export default function RoadTraffic({ filter }) {
     : camerAray;
 
   return (
-    <div className="w-full sm:mt-5 sm:pl-20 text-black font-bold">
-      <div className="sm:w-[90%]">
-        {/* <span className="text-gray-500 block text-center mb-3 mt-3 text-sm sm:text-base">
-          Entry-level · Compact · Stylish
-        </span> */}
-
-        <div className="grid grid-cols-3 gap-y-10">
+    <div className="w-full sm:mt-5  text-black font-bold">
+      <div className="sm:w-[100%]">
+        <div className="grid grid-cols-3 gap-y-5">
           {filteredCameras.length > 0 ? (
             filteredCameras.map((item, index) => (
               <>

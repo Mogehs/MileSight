@@ -28,9 +28,11 @@ const Company = () => {
       <div className="grid grid-cols-2 gap-10 sm:gap-0 w-100">
         {companyData.map((section, index) => (
           <div key={index} className="flex flex-col">
-            <h2 className="text-lg sm:text-xl font-semibold mb-4 text-black">
+            <h2 className="text-lg sm:text-xl font-semibold text-black w-fit">
               {section.title}
+              <hr className="mb-2" />
             </h2>
+
             <ul className="space-y-2">
               {section.links.map((item, linkIndex) => (
                 <li key={linkIndex} onClick={closeMenu}>

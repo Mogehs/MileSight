@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa";
 
 // Import all series components
 import ProSeries from "./network-camera/ProSeries";
+import Color from "./network-camera/Color";
 import Traffic from "./traffic-management/Traffic";
 import NetworkCamera from "./network-camera/NetworkCamera";
 import PeopleSensing from "./smart-building/PeopleSensing";
@@ -19,6 +20,13 @@ import Developement from "./software/Developement";
 import IoT from "./software/IoT";
 import VideoSurvellience from "./software/VideoSurvellience";
 import CoProducts from "./co-created/CoProducts";
+import PtzSeries from "./network-camera/PtzSeries";
+import NVR from "./video-series/NVR";
+import PoeNvr from "./video-series/PoeNvr";
+import EnterPrise from "./video-series/EnterPrise";
+import ParkingManagement from "./traffic-management/ParkingManagment";
+import Agriculture from "./smart-building/Agriculture";
+import Xinfinity from "./smart-building/Xinfinity";
 
 const softwareComponents = {
   "Development Platform": Developement,
@@ -45,34 +53,36 @@ const loraWanComponent = {
 const seriesComponents = {
   "Mini Series": NetworkCamera,
   "Pro Series": ProSeries,
-  "Open Vision Series": NetworkCamera,
-  Accessories: ProSeries,
+  "Color Series": Color,
+  "Ptz Series": PtzSeries,
 };
 const videoSeriesComponents = {
-  NVR: NetworkCamera,
-  "PoE NVR": ProSeries,
-  "Enterprise NVR": NetworkCamera,
+  NVR: NVR,
+  "PoE NVR": PoeNvr,
+  "Enterprise NVR": EnterPrise,
 };
 
 const trafficComponents = {
   "Traffic X Series": Traffic,
   "Road Traffic Management": RoadTraffic,
-  "Parking Management": Traffic,
+  "Parking Management": ParkingManagement,
 };
 const iotSensingComponents = {
   "Smart Building": PeopleSensing,
   "Smart City": TrashBin,
+  "Smart Agriculture": Agriculture,
+  "X Infinity": Xinfinity,
 };
 
-const seriesList = [
-  "Mini Series",
-  "Pro Series",
-  "Open Vision Series",
-  "Accessories",
-];
+const seriesList = ["Mini Series", "Pro Series", "Color Series", "Ptz Series"];
 
 const videoSeriesList = ["NVR", "PoE NVR", "Enterprise NVR"];
-const iotList = ["Smart Building", "Smart City"];
+const iotList = [
+  "Smart Building",
+  "Smart City",
+  "Smart Agriculture",
+  "X Infinity",
+];
 const intellList = [
   "Traffic X Series",
   "Road Traffic Management",
@@ -173,7 +183,6 @@ const Products = () => {
                   setShowVideoOptions(true);
                 } else if (item.name === "IoT Sensing") {
                   setSelected5G(null);
-
                   setSelectedIotSensing(null);
                   setSelectedVideoSeries(null);
                   setSelectedTrafficSeries(null);
