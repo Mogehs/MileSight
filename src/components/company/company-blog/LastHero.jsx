@@ -3,7 +3,7 @@ import React from "react";
 const LastHero = () => {
   return (
     <div
-      className="relative flex items-center justify-center mt-12 h-[300px] sm:h-[350px] md:h-[400px] lg:h-[250px] mx-auto max-w-6xl rounded-md bg-cover bg-center px-4"
+      className="relative flex items-center justify-center mt-8 mb-10 h-[300px] sm:h-[350px] md:h-[400px] lg:h-[250px] mx-auto max-w-6xl sm:rounded-md bg-cover bg-center "
       style={{ backgroundImage: "url('/company/blog/lsbg.png')" }}
     >
      {/* Content */}

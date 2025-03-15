@@ -50,7 +50,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl mx-auto py-10 px-6">
+    <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl mx-auto py-8 px-4">
       {/* Left Side: Image */}
       <div className="w-full md:w-1/2">
         <img
