@@ -47,6 +47,9 @@ import CompanyBlog from "./pages/CompanyBlog";
 import CompanyNews from "./pages/CompanyNews";
 
 import VideoCenter from "./pages/VideoCenter";
+import SmartAgriculture from "./pages/SmartAgriculture";
+import ImpactAward from "./pages/ImpactAward";
+import CompanyNewsletter from "./pages/CompanyNewsletter";
 
 const MainLayout = () => (
   <div className="w-full max-w-[1536px] mx-auto">
@@ -121,10 +124,18 @@ const router = createBrowserRouter([
         path: "/solutions/waste-management",
         element: <WasteManagement />,
       },
+      {
+        path: "/solution/smart-agriculture",
+        element: <SmartAgriculture />,
+      },
 
       {
         path: "/company/about-us",
         element: <Company />,
+      },
+      {
+        path: "/company/impact-awards",
+        element: <ImpactAward />,
       },
       {
         path: "/contact",
@@ -191,6 +202,10 @@ const router = createBrowserRouter([
       {
         path: "/company/news",
         element: <CompanyNews />,
+      },
+      {
+        path: "/company/newsletter",
+        element: <CompanyNewsletter />,
       },
 
       {
