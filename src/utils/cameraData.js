@@ -1,8 +1,3 @@
-import { useSearchParams } from "react-router-dom";
-import NavSection from "../../components/ai-mini-dome/NavSection";
-import NdaaSection from "../../components/ai-mini-dome/NdaaSection";
-import FormSection from "../../components/ai-mini-dome/FormSection";
-
 const cameraData = {
   "AI IR Mini Dome Camera": {
     subtitle: "Intelligent and Robust for Mission-critical Applications",
@@ -289,30 +284,4 @@ const cameraData = {
   },
 };
 
-const AiMiniDome = () => {
-  const [searchParams] = useSearchParams();
-  const title = searchParams.get("title") || "AI Motorized Dome Camera";
-
-  const selectedCamera = cameraData[title];
-
-  if (!selectedCamera) {
-    return <div className="text-center text-red-500">Camera not found!</div>;
-  }
-
-  return (
-    <div>
-      <NdaaSection
-        title={title}
-        subtitle={selectedCamera.subtitle}
-        list={selectedCamera.list}
-        images={selectedCamera.images}
-      />
-
-      <NavSection modelData={selectedCamera.images} />
-
-      <FormSection />
-    </div>
-  );
-};
-
-export default AiMiniDome;
+export default cameraData;

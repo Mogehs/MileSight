@@ -3,7 +3,7 @@ import React from "react";
 function Section4() {
   return (
     <div
-      className="h-[80vh] bg-no-repeat bg-cover bg-center flex flex-col justify-center px-8 gap-6 mb-8"
+      className="h-[24rem] bg-no-repeat bg-cover bg-center flex flex-col justify-center px-8 gap-6 mb-8"
       style={{ backgroundImage: "url('/mini-dome/section4-bg-img.jpg')" }}
     >
       <h2 className="md:text-[2.5rem] text-[20px] text-[#333] md:block hidden">

@@ -19,8 +19,8 @@ function NavSection({ modelData }) {
     <div>
       {/* Navbar */}
       <div className="sticky flex top-16 bg-white z-10">
-        <div className="btns text-[#666] w-full flex flex-row justify-between px-8 items-center shadow-2xs border-b-[#f5f5f5] py-4">
-          <div className="flex flex-row flex-wrap items-center gap-8 w-full text-sm md:text-[15px]">
+        <div className=" text-[#666] w-full flex flex-row justify-between px-8 items-center shadow-2xs border-b-[#f5f5f5] py-4">
+          <div className="flex flex-row flex-wrap  items-center sm:gap-8 text-xs md:text-[15px]">
             {[
               { id: "features", label: "FEATURES" },
               { id: "models", label: "MODELS" },

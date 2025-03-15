@@ -2,7 +2,7 @@ import React from "react";
 
 function Section7({ modelData }) {
   return (
-    <div className="my-8 p-4 flex flex-col md:gap-8 gap-4 md:items-center">
+    <div className="my-8 p-4 flex flex-col md:gap-8 gap-4 md:items-center h-[27rem]">
       <h1 className="md:text-[3rem] text-[20px] text-[#333]">
         Versatile Interfaces (Optional)
       </h1>
@@ -11,11 +11,23 @@ function Section7({ modelData }) {
         available in the Multi-interface Version, offering more choices for easy
         management and various needs.
       </p>
-      <img
-        className="md:w-[70%]"
-        src={`${modelData.modelImg2 || modelData.modelImg}`}
-        alt="not found"
-      />
+      <div className="flex flex-wrap gap-4 md:gap-8 justify-center">
+        <img
+          className="md:w-[20%]"
+          src={`${modelData.modelImg}`}
+          alt="not found"
+        />
+        <img
+          className="md:w-[20%]"
+          src={`${modelData.modelImg2}`}
+          alt="not found"
+        />
+        <img
+          className="md:w-[20%]"
+          src={`${modelData.modelImg3}`}
+          alt="not found"
+        />
+      </div>
     </div>
   );
 }
