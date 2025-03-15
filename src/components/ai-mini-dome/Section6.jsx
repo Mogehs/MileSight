@@ -3,8 +3,8 @@ import React from "react";
 function Section6({ modelData }) {
   return (
     <div
-      className="h-[80vh] bg-no-repeat bg-cover bg-center flex flex-col justify-start md:pt-8 pt-2 md:items-center md:gap-6 gap-2 mb-8 md:px-0 px-4 text-white"
-      style={{ backgroundImage: `url(${modelData.modelImg})` }}
+      className="h-[80vh] bg-no-repeat bg-cover bg-center flex flex-col justify-start md:pt-8 pt-2 md:items-center md:gap-6 gap-2 mb-8 md:px-0 px-4 text-black"
+      style={{ backgroundImage: `url(${modelData.modelImg || modelImg2})` }}
     >
       <h2 className="md:text-[2.5rem] text-[20px] md:block hidden">
         IP67 & IK10

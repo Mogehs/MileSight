@@ -4,7 +4,9 @@ function Section8({ modelData }) {
   return (
     <div
       className="h-[80vh] bg-no-repeat bg-cover bg-center flex flex-col justify-center md:px-8 px-2 gap-6 mb-8"
-      style={{ backgroundImage: `url(${modelData.modelImg3})` }}
+      style={{
+        backgroundImage: `url(${modelData.modelImg3 || modelData.modelImg})`,
+      }}
     >
       <h2 className="md:text-[2.5rem] text-[20px] text-[#333]">
         Integrated Junction Box

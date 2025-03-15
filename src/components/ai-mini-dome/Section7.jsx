@@ -13,7 +13,7 @@ function Section7({ modelData }) {
       </p>
       <img
         className="md:w-[70%]"
-        src={`${modelData.modelImg2}`}
+        src={`${modelData.modelImg2 || modelData.modelImg}`}
         alt="not found"
       />
     </div>

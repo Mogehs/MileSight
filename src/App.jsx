@@ -71,7 +71,7 @@ const router = createBrowserRouter([
       { path: "/products/software-platform", element: <SoftwarePlatform /> },
       { path: "/products/co-created", element: <CoCreatedProgram /> },
       {
-        path: "/products/ai-motorized-mini-dome",
+        path: "/products/detail",
         element: <AiMiniDome />,
       },
       {

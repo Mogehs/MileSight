@@ -5,7 +5,7 @@ function Section9({ modelData }) {
     <div className="flex md:flex-row flex-col items-center gap-4 justify-around p-4 my-8">
       <img
         className="md:w-[40%]"
-        src={`${modelData.modelImg4}`}
+        src={`${modelData.modelImg || modelData.modelImg}`}
         alt="not found"
       />
       <div className="md:w-[50%]">

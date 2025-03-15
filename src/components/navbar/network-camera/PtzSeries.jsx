@@ -10,7 +10,7 @@ export default function PtzSeries({ filter }) {
 
   const camerAray = [
     {
-      name: "AI 5X_20X_23X PTZ Bullet Plus Network Camera _",
+      name: "AI 5X_20X_23X PTZ Bullet Plus Network Camera",
       img: img1,
       path: "/products/ai-motorized-mini-dome",
     },
@@ -25,7 +25,7 @@ export default function PtzSeries({ filter }) {
       category: "Mini",
     },
     {
-      name: "AI 36X_42X Speed Dome Network Camera with Wiper _",
+      name: "AI 36X_42X Speed Dome Network Camera with Wiper",
       img: img4,
       category: "Mini",
     },
@@ -47,7 +47,10 @@ export default function PtzSeries({ filter }) {
           {filteredCameras.length > 0 ? (
             filteredCameras.map((item, index) => (
               <>
-                <a href="/products/ai-motorized-mini-dome" onClick={closeMenu}>
+                <a
+                  href={`/products/detail?title=${item.name}`}
+                  onClick={closeMenu}
+                >
                   <div
                     className="p-1 transition-all ease-in-out delay-100 hover:shadow-md hover:shadow-blue-200 cursor-pointer h-auto flex flex-col items-center justify-center border sm:border-0 rounded-lg shadow-sm w-30"
                     key={index}
