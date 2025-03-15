@@ -12,7 +12,6 @@ export default function Gateway({ filter }) {
       name: "SG50 Ultra Low Paower Lorawan Gateway",
       img: cam,
       category: "Mini",
-      path: "/products/ai-motorized-mini-dome",
     },
     { name: "UG63 Mini Lorawan Gateway", img: camera, category: "Mini" },
     { name: "AI Vandal-proof Mini Dome Camera", img: vandal, category: "Mini" },
@@ -43,7 +42,7 @@ export default function Gateway({ filter }) {
           {filteredCameras.length > 0 ? (
             filteredCameras.map((item, index) => (
               <>
-                <a href="/products/ai-motorized-mini-dome" onClick={closeMenu}>
+                <a href="" onClick={closeMenu}>
                   <div
                     className="p-1 transition-all ease-in-out delay-100 hover:shadow-md hover:shadow-blue-200 cursor-pointer h-auto flex flex-col items-center justify-center border sm:border-0 rounded-lg shadow-sm w-30"
                     key={index}

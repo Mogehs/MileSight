@@ -11,7 +11,6 @@ export default function ParkingManagement({ filter }) {
       name: "4G Solar-powered ANPR Camera",
       img: img1,
       category: "Mini",
-      path: "/products/ai-motorized-mini-dome",
     },
     {
       name: "4G Solar-powered Traffic Sensing Camera",
@@ -44,7 +43,7 @@ export default function ParkingManagement({ filter }) {
           {filteredCameras.length > 0 ? (
             filteredCameras.map((item, index) => (
               <>
-                <a href="/products/ai-motorized-mini-dome" onClick={closeMenu}>
+                <a href="" onClick={closeMenu}>
                   <div
                     className="p-1 transition-all ease-in-out delay-100 hover:shadow-md hover:shadow-blue-200 cursor-pointer h-auto flex flex-col items-center justify-center border sm:border-0 rounded-lg shadow-sm w-30"
                     key={index}
