@@ -34,9 +34,9 @@ const CardFilter = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto p-4">
+    <div className="max-w-7xl mx-auto ">
       {/* Navbar */}
-      <div className="flex flex-wrap justify-between items-center mb-6 gap-4 md:gap-2">
+      <div className="flex flex-wrap justify-between items-center mb-6 gap-4 md:gap-2 py-5 px-4">
         <nav className="flex flex-wrap gap-2 md:space-x-4 text-[#333]">
           {categories.map((category) => (
             <button
@@ -68,7 +68,7 @@ const CardFilter = () => {
           <div className="relative">
             <input
               type="text"
-              className="border border-[#666] px-2 py-1 rounded pl-8 w-full md:w-48"
+              className="border border-[#666] px-2 py-1 rounded pl-8 w-full md:w-auto"
               placeholder="Search..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -79,7 +79,7 @@ const CardFilter = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
         {filteredCards.length > 0 ? (
           filteredCards.map((card, index) => (
             <div key={index} className="p-4 bg-gray-50 shadow-md rounded-lg">

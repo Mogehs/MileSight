@@ -325,8 +325,8 @@ const ContactForm = () => {
           </div>
           <div>
             <p className="flex items-center text-[13px] sm:text-[14px] text-nowrap">Dilwar colony street #4,Bahawalpur</p>
-            <p className="flex items-center text-[13px] sm:text-[14px] text-nowrap">+1 234 567 890</p>
-            <p className="flex items-center text-[13px] sm:text-[14px] text-nowrap">email@example.com</p>
+            <p className="flex items-center text-[13px] sm:text-[14px] text-nowrap">+92 123 456789</p>
+            <p className="flex items-center text-[13px] sm:text-[14px] text-nowrap">codesthinker@gmail.com</p>
           </div>
         </div>
       </div>

@@ -48,6 +48,8 @@ import CompanyNews from "./pages/CompanyNews";
 
 import VideoCenter from "./pages/VideoCenter";
 import SmartAgriculture from "./pages/SmartAgriculture";
+import ImpactAward from "./pages/ImpactAward";
+import CompanyNewsletter from "./pages/CompanyNewsletter";
 
 const MainLayout = () => (
   <div className="w-full max-w-[1536px] mx-auto">
@@ -132,6 +134,10 @@ const router = createBrowserRouter([
         element: <Company />,
       },
       {
+        path: "/company/impact-awards",
+        element: <ImpactAward />,
+      },
+      {
         path: "/contact",
         element: <Contact />,
       },
@@ -196,6 +202,10 @@ const router = createBrowserRouter([
       {
         path: "/company/news",
         element: <CompanyNews />,
+      },
+      {
+        path: "/company/newsletter",
+        element: <CompanyNewsletter />,
       },
 
       {
